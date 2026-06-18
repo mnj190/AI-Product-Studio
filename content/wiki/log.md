@@ -77,3 +77,21 @@
   - `/ask?q=...` query string 기반 Local Wiki Lookup을 구현했다.
   - 답변 생성 없이 관련 문서 후보, 점수, 매칭된 term을 보여준다.
   - 다음 단계는 LLM Answer API 설계이다.
+
+## [2026-06-18] interface | Draft Answer Guard
+
+- Source: 현재 프로젝트 작업 흐름
+- Created:
+  - `knowledge/LLM_ANSWER_API_DESIGN.md`
+  - `lib/answer-draft.ts`
+- Updated:
+  - `app/ask/page.tsx`
+  - `app/globals.css`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `knowledge/ASK_ABOUT_ME_INTERFACE_DESIGN.md`
+  - `content/projects/ask-about-me-chatbot.md`
+- Notes:
+  - 외부 LLM API 호출 전 단계로 deterministic draft answer를 구현했다.
+  - 민감 정보 요청과 투자 권유성 질문을 guard한다.
+  - `/ask` 페이지에서 LLM에 전달할 source context 후보를 보여준다.
+  - 다음 단계는 질문/답변을 Wiki에 반영하는 feedback loop 설계이다.

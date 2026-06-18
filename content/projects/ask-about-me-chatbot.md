@@ -78,7 +78,9 @@
 
 질문 입력을 받아 LLM Wiki 관련 문서를 찾아주는 Local Wiki Lookup을 구현했다.
 
-다음 단계는 검색 결과를 기반으로 LLM 답변 API를 설계하는 것이다.
+검색 결과를 기반으로 LLM 답변 API 설계와 deterministic draft answer를 구현했다.
+
+다음 단계는 질문/답변을 Wiki에 다시 반영하는 feedback loop를 설계하는 것이다.
 
 ## Lessons Learned
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { createDraftAnswer } from "@/lib/answer-draft";
 import { lookupWiki, tokenizeQuery } from "@/lib/wiki-lookup";
 
 const questions = [
@@ -71,6 +72,7 @@ export default function AskPage({
   const query = searchParams?.q?.trim() ?? "";
   const results = query ? lookupWiki(query, 6) : [];
   const terms = query ? tokenizeQuery(query).slice(0, 10) : [];
+  const draft = query ? createDraftAnswer(query, results) : null;
 
   return (
     <main className="container">
@@ -128,6 +130,37 @@ export default function AskPage({
                   </div>
                 ) : null}
               </div>
+              {draft ? (
+                <div className={`draft-answer ${draft.status}`}>
+                  <div className="result-meta">
+                    <span>Draft Answer</span>
+                    <span>{draft.status}</span>
+                  </div>
+                  <h3>문서 기반 답변 초안</h3>
+                  <p>{draft.answer}</p>
+                  {draft.warnings.length > 0 ? (
+                    <div className="warning-list">
+                      {draft.warnings.map((warning) => (
+                        <span key={warning}>{warning}</span>
+                      ))}
+                    </div>
+                  ) : null}
+                  {draft.sources.length > 0 ? (
+                    <div className="draft-sources">
+                      <h3>LLM에 전달할 source context 후보</h3>
+                      {draft.sources.map((source) => (
+                        <Link className="source-excerpt" href={source.href} key={`${source.section}-${source.title}`}>
+                          <div className="result-meta">
+                            <span>{source.section}</span>
+                            <span>{source.title}</span>
+                          </div>
+                          <p>{source.excerpt || source.summary}</p>
+                        </Link>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              ) : null}
               {results.length > 0 ? (
                 <div className="result-list">
                   {results.map((result) => (

@@ -66,6 +66,12 @@ Ask About Me는 단순 챗봇 UI가 아니다.
 - 모르는 내용은 추측하지 않는다.
 - 답변에 사용한 문서를 표시한다.
 
+현재 상태:
+
+- API 호출 전 단계의 설계와 deterministic draft answer 구현 완료.
+- `/ask` 페이지에서 source context 후보와 답변 초안을 보여준다.
+- 실제 외부 LLM API 호출은 아직 하지 않는다.
+
 ### Phase 4. Wiki Feedback Loop
 
 목표:
