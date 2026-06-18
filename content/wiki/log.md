@@ -131,3 +131,19 @@
   - 실제 외부 LLM API 연동은 보류하고 mock mode를 유지한다.
   - `/api/ask`는 Local Wiki Lookup, draft answer, feedback candidate를 JSON으로 반환한다.
   - 다음 단계는 real provider adapter와 rate limit 정책 설계 여부를 결정하는 것이다.
+
+## [2026-06-18] content | Core Wiki Expansion
+
+- Source: 현재 프로젝트 Roadmap과 누락 문서 점검
+- Created:
+  - `content/projects/webgpu-game.md`
+  - `content/wiki/mcp.md`
+  - `content/wiki/ai-agent.md`
+  - `content/wiki/context-engineering.md`
+  - `content/wiki/webgpu.md`
+- Updated:
+  - `content/wiki/index.md`
+  - `knowledge/NEXT_ACTIONS.md`
+- Notes:
+  - Ask About Me lookup 품질을 높이기 위해 자주 언급되지만 비어 있던 핵심 개념 문서를 추가했다.
+  - WebGPU Game은 장기 목표 프로젝트로 문서화했다.
