@@ -39,3 +39,23 @@
 - Notes:
   - raw source 보존 규칙, Wiki ingest 절차, Wiki lint 체크리스트를 추가했다.
   - 다음 단계는 Ask About Me 답변 기준과 질문형 인터페이스 설계이다.
+
+## [2026-06-18] interface | Ask About Me Mock Page
+
+- Source: 현재 프로젝트 작업 흐름
+- Created:
+  - `knowledge/ASK_ABOUT_ME_ANSWER_POLICY.md`
+  - `knowledge/ASK_ABOUT_ME_INTERFACE_DESIGN.md`
+  - `app/ask/page.tsx`
+- Updated:
+  - `app/layout.tsx`
+  - `app/page.tsx`
+  - `app/globals.css`
+  - `content/projects/ask-about-me-chatbot.md`
+  - `content/wiki/index.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `knowledge/ROADMAP.md`
+- Notes:
+  - 실제 LLM API를 붙이기 전, 예시 질문과 참고 문서를 보여주는 `/ask` mock 페이지를 만들었다.
+  - 답변은 Wiki first, no guessing, source shown, safety 원칙을 따른다.
+  - 다음 단계는 Local Wiki Lookup이다.

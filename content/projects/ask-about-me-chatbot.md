@@ -70,9 +70,13 @@
 
 ## Result
 
-아직 구현 전 단계이다.
+초기 mock 인터페이스를 구현했다.
 
-현재는 챗봇이 참조할 LLM Wiki를 먼저 구축하고 있다.
+현재 `/ask` 페이지에서는 예시 질문과 참고 문서를 보여준다.
+
+실제 LLM API 호출은 아직 붙이지 않았다.
+
+다음 단계는 질문 입력을 받아 LLM Wiki 관련 문서를 찾아주는 Local Wiki Lookup이다.
 
 ## Lessons Learned
 
@@ -82,4 +86,6 @@
 
 ## Links
 
-추후 추가 예정.
+- `/ask`
+- `/wiki/index`
+- `/wiki/llm-wiki-pattern`
