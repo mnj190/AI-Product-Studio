@@ -70,7 +70,7 @@ content/about/
 - AI 활용 개발
 - Vibe Coding
 - LLM
-- RAG
+- LLM Wiki
 - 자동매매봇
 - WebGPU Game
 
@@ -212,7 +212,7 @@ content/ai-stack/
 
 \`\`\`text
 content/wiki/
-├── rag.md
+├── llm-wiki-pattern.md
 ├── mcp.md
 ├── ai-agent.md
 ├── vibe-coding.md
@@ -220,9 +220,9 @@ content/wiki/
 └── webgpu.md
 \`\`\`
 
-## Chatbot Knowledge Rule
+## LLM Wiki Knowledge Rule
 
-챗봇은 기본적으로 아래 문서를 검색 대상으로 사용한다.
+LLM Wiki와 향후 챗봇은 기본적으로 아래 문서를 우선 지식 계층으로 사용한다.
 
 - content/about
 - content/projects
@@ -231,7 +231,7 @@ content/wiki/
 - content/ai-stack
 - content/wiki
 
-단, 공개하면 안 되는 정보는 \`content/private\` 또는 별도 비공개 저장소에 둔다.
+단, 공개하면 안 되는 정보는 \`content/private\`, \`raw/private\` 또는 별도 비공개 저장소에 둔다.
 
 ## First Documents To Create
 
@@ -243,4 +243,3 @@ content/wiki/
 - content/projects/ask-about-me-chatbot.md
 - content/projects/trading-bot.md
 - content/logs/2026-06-18-portfolio-planning.md
-

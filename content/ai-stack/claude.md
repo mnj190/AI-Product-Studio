@@ -32,7 +32,7 @@
 ```
 
 ```text
-이 설계가 RAG 챗봇으로 확장하기에 적합한지 장단점을 비교해줘.
+이 설계가 LLM Wiki 기반 질문형 인터페이스로 확장하기에 적합한지 장단점을 비교해줘.
 ```
 
 ## Related Projects
@@ -40,4 +40,3 @@
 - Personal LLM Wiki
 - Prompt Library
 - AI Build Log
-

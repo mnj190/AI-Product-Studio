@@ -51,5 +51,4 @@ Static Portfolio MVP에 Prompt Library와 AI Stack 섹션을 추가했다.
 
 ## Next Step
 
-RAG 챗봇 준비를 위해 문서 청크 구조와 검색 API 후보를 설계한다.
-
+LLM Wiki 준비를 위해 Wiki index, log, ingest workflow를 설계한다.

@@ -73,7 +73,7 @@ AI를 활용한 개발 과정을 기록한다.
 - Tailwind CSS
 - shadcn/ui
 - MDX 또는 Markdown
-- RAG 기반 챗봇
+- LLM Wiki 기반 질문형 인터페이스
 
 ## Prompt Examples
 
@@ -84,8 +84,8 @@ AI를 활용한 개발 과정을 기록한다.
 1. 프로젝트 방향과 정보 구조를 정리한다.
 2. Markdown 기반 지식 베이스를 만든다.
 3. 포트폴리오 웹사이트를 구현한다.
-4. 문서를 RAG 데이터로 연결한다.
-5. 챗봇 UI를 만든다.
+4. LLM Wiki index/log/schema를 정리한다.
+5. Wiki 기반 질문형 인터페이스를 만든다.
 6. 프로젝트, 프롬프트, 로그를 지속적으로 추가한다.
 
 ## Result
@@ -101,4 +101,3 @@ AI를 활용한 개발 과정을 기록한다.
 ## Links
 
 추후 추가 예정.
-

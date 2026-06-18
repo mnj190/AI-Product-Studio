@@ -33,7 +33,7 @@
 - `content/about/interests.md`
 - `content/projects/llm-wiki.md`
 - `content/wiki/vibe-coding.md`
-- `content/wiki/rag.md`
+- `content/wiki/llm-wiki-pattern.md`
 
 ## Problems
 
@@ -44,4 +44,3 @@
 ## Next Step
 
 Next.js 프로젝트를 생성하고, `content/`의 Markdown 문서를 페이지로 보여주는 구조를 만든다.
-

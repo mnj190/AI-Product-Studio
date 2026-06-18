@@ -9,7 +9,7 @@ export default function WikiPage() {
       <div className="document-header">
         <p className="eyebrow">Wiki</p>
         <h1>AI 실험과 개념 노트.</h1>
-        <p>RAG, Vibe Coding, Agent, MCP 같은 관심 주제를 정리합니다.</p>
+        <p>LLM Wiki, Vibe Coding, Agent, MCP 같은 관심 주제를 정리합니다.</p>
       </div>
       {entries.length > 0 ? (
         <div className="cards">
@@ -23,4 +23,3 @@ export default function WikiPage() {
     </main>
   );
 }
-

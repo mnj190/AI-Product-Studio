@@ -41,6 +41,5 @@ AI 활용 포트폴리오의 방향을 정리했다.
 - Next.js 프로젝트 생성
 - Tailwind CSS 및 shadcn/ui 적용
 - Markdown 또는 MDX 콘텐츠 로딩 구조 설계
-- RAG용 문서 인덱싱 구조 설계
-- 챗봇 UI 초안 구현
-
+- LLM Wiki index/log/schema 설계
+- Wiki 기반 질문형 인터페이스 초안 구현

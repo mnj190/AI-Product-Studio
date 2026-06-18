@@ -9,7 +9,7 @@ AI 활용 과정을 보여주는 개인 포트폴리오 프로젝트.
 ## Core Structure
 
 - `knowledge/`: 프로젝트 방향, 작업 규칙, 대화 요약, 아이디어 저장소
-- `content/`: 웹사이트와 챗봇이 사용할 공개 콘텐츠 원본
+- `content/`: 웹사이트와 LLM Wiki가 사용할 공개 콘텐츠 원본
 
 ## First Principle
 
@@ -33,4 +33,4 @@ AI 활용 과정을 보여주는 개인 포트폴리오 프로젝트.
 
 다음 단계는 Next.js 기반 Static Portfolio MVP를 만드는 것이다.
 
-우선 `content/`의 Markdown 문서를 웹에서 탐색할 수 있게 만들고, 이후 RAG 챗봇으로 확장한다.
+우선 `content/`의 Markdown 문서를 웹에서 탐색할 수 있게 만들고, 이후 LLM이 유지보수하는 Wiki와 질문형 인터페이스로 확장한다.

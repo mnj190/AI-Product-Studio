@@ -61,5 +61,4 @@ npm run build
 - AI Stack 페이지 추가
 - Tailwind CSS 도입 여부 결정
 - 기본 UI를 더 포트폴리오답게 다듬기
-- 챗봇 MVP를 위한 문서 검색 구조 설계
-
+- LLM Wiki index/log/schema 설계
