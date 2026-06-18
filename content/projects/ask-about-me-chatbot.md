@@ -80,7 +80,9 @@
 
 검색 결과를 기반으로 LLM 답변 API 설계와 deterministic draft answer를 구현했다.
 
-다음 단계는 질문/답변을 Wiki에 다시 반영하는 feedback loop를 설계하는 것이다.
+질문/답변을 Wiki에 다시 반영하는 feedback candidate를 구현했다.
+
+다음 단계는 실제 LLM API 연동 여부와 보안 정책을 결정하는 것이다.
 
 ## Lessons Learned
 

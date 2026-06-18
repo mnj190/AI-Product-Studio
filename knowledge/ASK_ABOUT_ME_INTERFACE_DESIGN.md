@@ -84,6 +84,12 @@ Ask About Me는 단순 챗봇 UI가 아니다.
 - 유용한 답변은 Build Log 또는 Wiki 문서로 남길 수 있다.
 - 질문이 새로운 문서 작성 후보로 이어진다.
 
+현재 상태:
+
+- 설계 완료.
+- `/ask` 페이지에서 feedback candidate를 보여준다.
+- 아직 자동 파일 수정이나 저장은 하지 않는다.
+
 ## Page Layout
 
 `/ask` 페이지의 초기 구성:

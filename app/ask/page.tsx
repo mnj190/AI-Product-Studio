@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { createDraftAnswer } from "@/lib/answer-draft";
+import { createFeedbackCandidate } from "@/lib/feedback-candidate";
 import { lookupWiki, tokenizeQuery } from "@/lib/wiki-lookup";
 
 const questions = [
@@ -73,6 +74,7 @@ export default function AskPage({
   const results = query ? lookupWiki(query, 6) : [];
   const terms = query ? tokenizeQuery(query).slice(0, 10) : [];
   const draft = query ? createDraftAnswer(query, results) : null;
+  const feedback = query ? createFeedbackCandidate(query, draft) : null;
 
   return (
     <main className="container">
@@ -155,6 +157,33 @@ export default function AskPage({
                             <span>{source.title}</span>
                           </div>
                           <p>{source.excerpt || source.summary}</p>
+                        </Link>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              ) : null}
+              {feedback ? (
+                <div className={`feedback-card ${feedback.safety}`}>
+                  <div className="result-meta">
+                    <span>Wiki Feedback Candidate</span>
+                    <span>{feedback.action}</span>
+                  </div>
+                  <h3>이 질문을 Wiki에 반영할까요?</h3>
+                  <p>{feedback.reason}</p>
+                  {feedback.targetPath ? (
+                    <div className="target-path">
+                      <span>추천 target</span>
+                      <code>{feedback.targetPath}</code>
+                    </div>
+                  ) : null}
+                  <p>{feedback.nextStep}</p>
+                  {feedback.sourceHrefs.length > 0 ? (
+                    <div className="source-list">
+                      <span>연결된 source</span>
+                      {feedback.sourceHrefs.slice(0, 5).map((href) => (
+                        <Link href={href} key={href}>
+                          {href} →
                         </Link>
                       ))}
                     </div>

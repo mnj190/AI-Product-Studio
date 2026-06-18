@@ -95,3 +95,21 @@
   - 민감 정보 요청과 투자 권유성 질문을 guard한다.
   - `/ask` 페이지에서 LLM에 전달할 source context 후보를 보여준다.
   - 다음 단계는 질문/답변을 Wiki에 반영하는 feedback loop 설계이다.
+
+## [2026-06-18] interface | Ask Feedback Loop
+
+- Source: 현재 프로젝트 작업 흐름
+- Created:
+  - `knowledge/ASK_FEEDBACK_LOOP_DESIGN.md`
+  - `lib/feedback-candidate.ts`
+- Updated:
+  - `app/ask/page.tsx`
+  - `app/globals.css`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `knowledge/ASK_ABOUT_ME_INTERFACE_DESIGN.md`
+  - `content/projects/ask-about-me-chatbot.md`
+- Notes:
+  - 질문과 draft answer를 보고 Wiki 반영 후보를 생성한다.
+  - 추천 action, target path, next step을 `/ask` 페이지에 표시한다.
+  - 자동 저장은 하지 않는다. 사용자가 가치 있다고 판단하면 ingest workflow로 수동 반영한다.
+  - 다음 단계는 실제 LLM API 연동 여부와 보안 정책 결정이다.
