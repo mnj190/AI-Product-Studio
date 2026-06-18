@@ -4,6 +4,7 @@ import { getEntries } from "@/lib/content";
 
 export default function HomePage() {
   const projects = getEntries("projects").slice(0, 3);
+  const prompts = getEntries("prompts").slice(0, 3);
   const logs = getEntries("logs").slice(0, 2);
 
   return (
@@ -68,6 +69,23 @@ export default function HomePage() {
       <section className="section">
         <div className="section-header">
           <div>
+            <p className="eyebrow">Prompt Library</p>
+            <h2>재사용 가능한 프롬프트.</h2>
+          </div>
+          <Link className="button" href="/prompts">
+            프롬프트 보기
+          </Link>
+        </div>
+        <div className="cards">
+          {prompts.map((entry) => (
+            <ContentCard entry={entry} href={`/prompts/${entry.slug}`} key={entry.slug} />
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-header">
+          <div>
             <p className="eyebrow">Build Log</p>
             <h2>AI와 함께 만든 기록.</h2>
           </div>
@@ -84,4 +102,3 @@ export default function HomePage() {
     </main>
   );
 }
-

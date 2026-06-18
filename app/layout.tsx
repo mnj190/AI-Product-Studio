@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 const navItems = [
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
+  { href: "/prompts", label: "Prompts" },
   { href: "/logs", label: "Build Log" },
+  { href: "/ai-stack", label: "AI Stack" },
   { href: "/wiki", label: "Wiki" },
 ];
 
@@ -44,4 +46,3 @@ export default function RootLayout({
     </html>
   );
 }
-

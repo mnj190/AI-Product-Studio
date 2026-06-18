@@ -66,7 +66,15 @@ Markdown 콘텐츠를 읽어서 보여주는 최소 포트폴리오 웹사이트
 - `content/about` 문서를 웹에서 볼 수 있다.
 - `content/projects` 문서를 웹에서 볼 수 있다.
 - `content/logs` 문서를 웹에서 볼 수 있다.
+- `content/prompts` 문서를 웹에서 볼 수 있다.
+- `content/ai-stack` 문서를 웹에서 볼 수 있다.
 - 새 Markdown 문서를 추가하면 페이지에 반영할 수 있다.
+
+### Current Status
+
+기본 MVP 구현 완료.
+
+홈, About, Projects, Prompt Library, Build Log, AI Stack, Wiki 페이지가 Markdown 문서를 읽어 렌더링한다.
 
 ## Phase 2. Content Expansion
 
@@ -110,6 +118,12 @@ AI 활용 과정 자체를 포트폴리오 콘텐츠로 만든다.
 - 프로젝트에 사용한 프롬프트를 선별해 저장할 수 있다.
 - 날짜별 작업 기록을 누적할 수 있다.
 - 결과뿐 아니라 과정이 포트폴리오에 드러난다.
+
+### Current Status
+
+초기 Prompt Library와 Build Log 페이지 구현 완료.
+
+이후에는 실제 프로젝트 진행에 맞춰 프롬프트와 로그를 계속 추가한다.
 
 ## Phase 4. Ask About Me Chatbot MVP
 
@@ -181,4 +195,3 @@ AI 활용 포트폴리오의 차별화 요소를 추가한다.
 - `agent-experiments`: AI Agent 워크플로우 실험
 
 초기에는 메인 레포 안에서 소개 문서와 로그를 먼저 관리하고, 실행 가능한 앱이나 서비스가 되는 시점에 별도 레포로 분리한다.
-

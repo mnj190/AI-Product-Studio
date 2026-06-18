@@ -1,7 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
 
-export type ContentSection = "about" | "projects" | "logs" | "wiki";
+export type ContentSection =
+  | "about"
+  | "projects"
+  | "prompts"
+  | "logs"
+  | "ai-stack"
+  | "wiki";
 
 export type ContentEntry = {
   slug: string;
@@ -69,4 +75,3 @@ export const getEntry = (section: ContentSection, slug: string): ContentEntry =>
 
 export const hasEntry = (section: ContentSection, slug: string) =>
   fs.existsSync(filePath(section, slug));
-

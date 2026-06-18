@@ -4,7 +4,7 @@
 
 ## Current Priority
 
-Phase 0을 마무리하고, Phase 1 Static Portfolio MVP로 넘어갈 준비를 한다.
+Phase 1 Static Portfolio MVP를 확장하고, Phase 4 Ask About Me Chatbot을 준비한다.
 
 ## Immediate Tasks
 
@@ -34,6 +34,8 @@ Phase 0을 마무리하고, Phase 1 Static Portfolio MVP로 넘어갈 준비를 
 - [x] 기본 레이아웃 설계
 - [x] Markdown 로딩 방식 결정
 - [x] 콘텐츠 목록/상세 라우팅 설계
+- [x] Prompt Library 페이지 추가
+- [x] AI Stack 페이지 추가
 
 ### 4. 챗봇 준비
 
@@ -41,7 +43,9 @@ Phase 0을 마무리하고, Phase 1 Static Portfolio MVP로 넘어갈 준비를 
 - [ ] 공개/비공개 정보 기준 재확인
 - [ ] 답변 불가 문구 확정
 - [ ] 출처 표시 방식 결정
+- [ ] 문서 청크 구조 설계
+- [ ] 검색 API 후보 결정
 
 ## Next Recommended Step
 
-다음 작업은 Tailwind CSS와 shadcn/ui 도입 여부를 결정하고, Prompt Library 및 AI Stack 페이지를 추가하는 것이다.
+다음 작업은 RAG 챗봇 준비를 위해 문서 청크 구조와 검색 API의 첫 설계를 만드는 것이다.
