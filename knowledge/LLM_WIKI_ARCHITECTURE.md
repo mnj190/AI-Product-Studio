@@ -71,6 +71,7 @@ raw sources
 - 문서 업데이트 규칙 정하기
 - 문서 간 연결 규칙 정하기
 - Wiki lint 체크리스트 만들기
+- raw source 보존 정책 만들기
 
 ### Phase C. Web Integration
 
@@ -112,7 +113,8 @@ LLM Wiki 전환이 성공한 상태:
 
 - 프로젝트가 RAG 우선이 아니라 Wiki 우선 구조로 설명된다.
 - `LLM_WIKI_SCHEMA.md`가 Wiki 관리 규칙 역할을 한다.
+- `LLM_WIKI_INGEST_WORKFLOW.md`가 새 자료 반영 절차 역할을 한다.
+- `LLM_WIKI_LINT_CHECKLIST.md`가 Wiki 건강 점검 기준 역할을 한다.
 - `content/wiki`에 LLM Wiki 패턴 설명이 있다.
-- `NEXT_ACTIONS.md`의 다음 작업이 RAG 검색 API가 아니라 Wiki index/log/workflow 구축으로 바뀐다.
+- `NEXT_ACTIONS.md`의 다음 작업이 Wiki 기반 Ask About Me 인터페이스 설계로 이어진다.
 - Ask About Me Chatbot은 Wiki를 기반으로 하는 후속 기능으로 남는다.
-

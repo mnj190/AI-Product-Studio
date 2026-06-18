@@ -12,6 +12,22 @@ content/
 └── wiki/
 \`\`\`
 
+## Raw Source Structure
+
+LLM Wiki에 반영하기 전 원본 자료는 `raw/`에 저장한다.
+
+\`\`\`text
+raw/
+├── conversations/
+├── articles/
+├── notes/
+└── assets/
+\`\`\`
+
+Raw source는 원본성을 보존하는 레이어이다.
+
+LLM은 raw source를 읽고 `content/` 아래 Wiki 문서에 통합할 수 있지만, 원본 자료 자체를 임의로 요약본으로 덮어쓰지 않는다.
+
 ## About
 
 조정민에 대한 기본 정보를 저장한다.

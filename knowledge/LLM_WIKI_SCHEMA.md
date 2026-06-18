@@ -87,6 +87,9 @@ content/
 knowledge/
 ├── LLM_WIKI_SCHEMA.md
 ├── LLM_WIKI_ARCHITECTURE.md
+├── LLM_WIKI_INGEST_WORKFLOW.md
+├── LLM_WIKI_LINT_CHECKLIST.md
+├── RAW_SOURCE_POLICY.md
 └── conversations/
 ```
 
@@ -149,6 +152,8 @@ content/wiki/log.md
 
 새로운 source가 들어왔을 때 실행한다.
 
+상세 절차는 `knowledge/LLM_WIKI_INGEST_WORKFLOW.md`를 따른다.
+
 작업 순서:
 
 1. source를 읽는다.
@@ -174,6 +179,8 @@ content/wiki/log.md
 ### Lint
 
 주기적으로 Wiki 상태를 점검한다.
+
+상세 체크리스트는 `knowledge/LLM_WIKI_LINT_CHECKLIST.md`를 따른다.
 
 확인할 것:
 
@@ -202,4 +209,3 @@ LLM은 단순히 새 문서를 계속 추가하지 않는다.
 새 정보가 들어오면 기존 문서를 갱신하고, 관련 문서와 연결하고, 필요한 경우 이전 설명을 수정한다.
 
 목표는 문서 수를 늘리는 것이 아니라, 시간이 지날수록 더 쓸모 있는 Wiki를 만드는 것이다.
-

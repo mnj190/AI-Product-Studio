@@ -20,3 +20,22 @@
   - RAG 인프라를 먼저 만드는 계획에서 LLM Wiki를 먼저 구축하는 계획으로 변경했다.
   - Vector DB와 embedding은 필수가 아니라, Wiki 규모가 커진 뒤 선택적으로 붙이는 보조 도구로 둔다.
 
+## [2026-06-18] workflow | Raw Source and Maintenance Rules
+
+- Source: 현재 프로젝트 작업 흐름
+- Created:
+  - `raw/README.md`
+  - `raw/conversations/README.md`
+  - `raw/articles/README.md`
+  - `raw/notes/README.md`
+  - `raw/assets/README.md`
+  - `knowledge/RAW_SOURCE_POLICY.md`
+  - `knowledge/LLM_WIKI_INGEST_WORKFLOW.md`
+  - `knowledge/LLM_WIKI_LINT_CHECKLIST.md`
+- Updated:
+  - `knowledge/LLM_WIKI_SCHEMA.md`
+  - `content/wiki/index.md`
+  - `content/wiki/log.md`
+- Notes:
+  - raw source 보존 규칙, Wiki ingest 절차, Wiki lint 체크리스트를 추가했다.
+  - 다음 단계는 Ask About Me 답변 기준과 질문형 인터페이스 설계이다.

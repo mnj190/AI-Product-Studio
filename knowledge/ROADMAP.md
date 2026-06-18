@@ -136,11 +136,12 @@ LLM이 지속적으로 유지보수할 수 있는 Markdown Wiki 운영 구조를
 
 - `knowledge/LLM_WIKI_SCHEMA.md`
 - `knowledge/LLM_WIKI_ARCHITECTURE.md`
+- `knowledge/LLM_WIKI_INGEST_WORKFLOW.md`
+- `knowledge/LLM_WIKI_LINT_CHECKLIST.md`
+- `knowledge/RAW_SOURCE_POLICY.md`
 - `content/wiki/index.md`
 - `content/wiki/log.md`
-- ingest workflow
-- wiki lint checklist
-- raw source 관리 기준
+- `raw/` source folder structure
 
 ### Completion Criteria
 
@@ -148,6 +149,12 @@ LLM이 지속적으로 유지보수할 수 있는 Markdown Wiki 운영 구조를
 - Wiki index를 통해 주요 문서를 찾을 수 있다.
 - Wiki log를 통해 변경 이력을 추적할 수 있다.
 - RAG/vector DB 없이도 중간 규모의 Markdown Wiki를 운영할 수 있다.
+
+### Current Status
+
+초기 운영 구조 구현 완료.
+
+Raw source 보관 구조, ingest workflow, lint checklist, wiki index/log가 준비되었다.
 
 ## Phase 5. Ask About Me Interface
 
