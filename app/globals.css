@@ -269,6 +269,78 @@ p {
   padding: 1rem;
 }
 
+.lookup-panel {
+  display: grid;
+  gap: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, var(--panel), rgba(18, 18, 22, 0.7));
+  padding: 1.25rem;
+}
+
+.ask-form {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.ask-form input {
+  width: 100%;
+  min-height: 2.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  padding: 0 1rem;
+}
+
+.ask-form input::placeholder {
+  color: var(--muted);
+}
+
+.lookup-results,
+.result-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.lookup-summary {
+  display: grid;
+  gap: 0.7rem;
+  color: var(--muted);
+}
+
+.lookup-summary strong {
+  color: var(--text);
+  font-size: 1.2rem;
+}
+
+.result-card {
+  display: grid;
+  gap: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1.1rem;
+  background: var(--panel-soft);
+  padding: 1rem;
+}
+
+.result-card:hover {
+  border-color: rgba(139, 92, 246, 0.65);
+}
+
+.result-card p {
+  margin-bottom: 0;
+}
+
+.result-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-bottom: 0.45rem;
+}
+
 .document {
   max-width: 840px;
 }
@@ -353,6 +425,11 @@ p {
 
   .section-header {
     align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ask-form {
+    align-items: stretch;
     flex-direction: column;
   }
 }

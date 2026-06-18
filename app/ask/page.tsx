@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { lookupWiki, tokenizeQuery } from "@/lib/wiki-lookup";
 
 const questions = [
   {
@@ -62,7 +63,15 @@ const policies = [
   ["Safety", "민감 정보와 투자 권유성 답변은 차단합니다."],
 ];
 
-export default function AskPage() {
+export default function AskPage({
+  searchParams,
+}: {
+  searchParams?: { q?: string };
+}) {
+  const query = searchParams?.q?.trim() ?? "";
+  const results = query ? lookupWiki(query, 6) : [];
+  const terms = query ? tokenizeQuery(query).slice(0, 10) : [];
+
   return (
     <main className="container">
       <section className="hero">
@@ -79,6 +88,77 @@ export default function AskPage() {
           <Link className="button" href="/projects/ask-about-me-chatbot">
             프로젝트 문서 보기
           </Link>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="lookup-panel">
+          <div>
+            <p className="eyebrow">Local Wiki Lookup</p>
+            <h2>질문을 입력하면 관련 문서를 먼저 찾습니다.</h2>
+            <p>
+              아직 답변을 생성하지는 않습니다. 대신 LLM Wiki와 공개 Markdown 문서 중
+              어떤 자료를 근거로 삼을 수 있는지 보여줍니다.
+            </p>
+          </div>
+          <form className="ask-form" action="/ask">
+            <input
+              aria-label="질문"
+              defaultValue={query}
+              name="q"
+              placeholder="예: AI를 어떻게 활용하나요?"
+              type="search"
+            />
+            <button className="button primary" type="submit">
+              문서 찾기
+            </button>
+          </form>
+          {query ? (
+            <div className="lookup-results">
+              <div className="lookup-summary">
+                <span>검색어</span>
+                <strong>{query}</strong>
+                {terms.length > 0 ? (
+                  <div className="pill-row">
+                    {terms.map((term) => (
+                      <span className="pill" key={term}>
+                        {term}
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+              {results.length > 0 ? (
+                <div className="result-list">
+                  {results.map((result) => (
+                    <Link className="result-card" href={result.href} key={`${result.entry.section}-${result.entry.slug}`}>
+                      <div>
+                        <div className="result-meta">
+                          <span>{result.entry.section}</span>
+                          <span>score {result.score}</span>
+                        </div>
+                        <h3>{result.entry.title}</h3>
+                        <p>{result.entry.summary}</p>
+                      </div>
+                      {result.matchedTerms.length > 0 ? (
+                        <div className="pill-row">
+                          {result.matchedTerms.slice(0, 6).map((term) => (
+                            <span className="pill" key={`${result.entry.slug}-${term}`}>
+                              {term}
+                            </span>
+                          ))}
+                        </div>
+                      ) : null}
+                    </Link>
+                  ))}
+                </div>
+              ) : (
+                <div className="empty">
+                  현재 LLM Wiki에는 해당 질문과 강하게 연결되는 문서가 충분히 정리되어 있지 않습니다.
+                </div>
+              )}
+            </div>
+          ) : null}
         </div>
       </section>
 
@@ -145,4 +225,3 @@ export default function AskPage() {
     </main>
   );
 }
-

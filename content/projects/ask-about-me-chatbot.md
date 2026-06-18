@@ -76,7 +76,9 @@
 
 실제 LLM API 호출은 아직 붙이지 않았다.
 
-다음 단계는 질문 입력을 받아 LLM Wiki 관련 문서를 찾아주는 Local Wiki Lookup이다.
+질문 입력을 받아 LLM Wiki 관련 문서를 찾아주는 Local Wiki Lookup을 구현했다.
+
+다음 단계는 검색 결과를 기반으로 LLM 답변 API를 설계하는 것이다.
 
 ## Lessons Learned
 

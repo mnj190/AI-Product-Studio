@@ -59,3 +59,21 @@
   - 실제 LLM API를 붙이기 전, 예시 질문과 참고 문서를 보여주는 `/ask` mock 페이지를 만들었다.
   - 답변은 Wiki first, no guessing, source shown, safety 원칙을 따른다.
   - 다음 단계는 Local Wiki Lookup이다.
+
+## [2026-06-18] interface | Local Wiki Lookup
+
+- Source: 현재 프로젝트 작업 흐름
+- Created:
+  - `knowledge/LOCAL_WIKI_LOOKUP_DESIGN.md`
+  - `lib/wiki-lookup.ts`
+- Updated:
+  - `lib/content.ts`
+  - `app/ask/page.tsx`
+  - `app/globals.css`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `knowledge/ASK_ABOUT_ME_INTERFACE_DESIGN.md`
+  - `content/projects/ask-about-me-chatbot.md`
+- Notes:
+  - `/ask?q=...` query string 기반 Local Wiki Lookup을 구현했다.
+  - 답변 생성 없이 관련 문서 후보, 점수, 매칭된 term을 보여준다.
+  - 다음 단계는 LLM Answer API 설계이다.

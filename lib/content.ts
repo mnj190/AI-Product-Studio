@@ -75,3 +75,23 @@ export const getEntry = (section: ContentSection, slug: string): ContentEntry =>
 
 export const hasEntry = (section: ContentSection, slug: string) =>
   fs.existsSync(filePath(section, slug));
+
+export const contentSections: ContentSection[] = [
+  "wiki",
+  "about",
+  "projects",
+  "prompts",
+  "ai-stack",
+  "logs",
+];
+
+export const getAllEntries = () =>
+  contentSections.flatMap((section) => getEntries(section));
+
+export const getEntryHref = (entry: Pick<ContentEntry, "section" | "slug">) => {
+  if (entry.section === "about") {
+    return "/about";
+  }
+
+  return `/${entry.section}/${entry.slug}`;
+};
