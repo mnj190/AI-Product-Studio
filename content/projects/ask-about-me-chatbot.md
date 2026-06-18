@@ -82,7 +82,11 @@
 
 질문/답변을 Wiki에 다시 반영하는 feedback candidate를 구현했다.
 
-다음 단계는 실제 LLM API 연동 여부와 보안 정책을 결정하는 것이다.
+현재 `/api/ask`는 mock mode로 구현되어 있다.
+
+외부 LLM API를 호출하지 않고 Local Wiki Lookup, draft answer, feedback candidate를 JSON으로 반환한다.
+
+다음 단계는 real provider adapter와 rate limit 정책을 설계할지, UI/콘텐츠 품질을 먼저 다듬을지 결정하는 것이다.
 
 ## Lessons Learned
 

@@ -19,12 +19,18 @@
 
 ## Request Shape
 
-초기 API 후보:
+초기 API:
 
 ```ts
 type AskRequest = {
   question: string;
 };
+```
+
+Route:
+
+```text
+POST /api/ask
 ```
 
 서버 내부에서는 다음 컨텍스트를 구성한다.
@@ -58,11 +64,19 @@ type AnswerSource = {
 ```ts
 type AskResponse = {
   status: "answered" | "unknown" | "blocked";
+  query: string;
   answer: string;
   sources: AnswerSource[];
+  results: LookupResult[];
   warnings: string[];
+  feedback: FeedbackCandidate | null;
+  mode: "mock" | "real";
 };
 ```
+
+현재 구현은 `mode: "mock"`만 지원한다.
+
+외부 LLM API는 호출하지 않는다.
 
 ## Answer Guard
 
@@ -157,9 +171,7 @@ LLM API를 붙이기 전에는 deterministic draft answer를 사용한다.
 
 ## Next Implementation Step
 
-1. `lib/answer-draft.ts`를 만든다.
-2. Local Wiki Lookup 결과를 AnswerSource로 변환한다.
-3. guard를 적용한다.
-4. `/ask` 페이지에 draft answer 영역을 추가한다.
-5. 나중에 `/api/ask`로 분리할 수 있게 타입을 정리한다.
-
+1. `ASK_API_MODE=mock`을 유지한다.
+2. `/api/ask` route의 response contract를 안정화한다.
+3. 실제 LLM 연동이 필요해지면 provider adapter를 추가한다.
+4. 공개 배포 전 rate limit과 비용 제한을 적용한다.

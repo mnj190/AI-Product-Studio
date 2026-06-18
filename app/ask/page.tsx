@@ -101,8 +101,8 @@ export default function AskPage({
             <p className="eyebrow">Local Wiki Lookup</p>
             <h2>질문을 입력하면 관련 문서를 먼저 찾습니다.</h2>
             <p>
-              아직 답변을 생성하지는 않습니다. 대신 LLM Wiki와 공개 Markdown 문서 중
-              어떤 자료를 근거로 삼을 수 있는지 보여줍니다.
+              현재 `/api/ask`는 mock mode로 동작합니다. 외부 LLM API를 호출하지 않고,
+              LLM Wiki와 공개 Markdown 문서 중 어떤 자료를 근거로 삼을 수 있는지 보여줍니다.
             </p>
           </div>
           <form className="ask-form" action="/ask">
@@ -270,17 +270,17 @@ export default function AskPage({
         <div className="card feature-card">
           <div>
             <p className="eyebrow">Next Step</p>
-            <h2>다음은 실제 질문 입력과 Wiki lookup입니다.</h2>
+            <h2>다음은 real LLM API 연동 여부 결정입니다.</h2>
             <p>
-              다음 구현 단계에서는 사용자가 질문을 입력하면 LLM Wiki index와 관련
-              문서를 찾아 보여주는 로컬 lookup을 먼저 만들고, 그 다음 LLM API를
-              연결합니다.
+              지금은 mock API route가 Local Wiki Lookup과 draft answer를 반환합니다.
+              실제 LLM API를 붙이기 전에는 환경 변수, 비용 제한, rate limit, 출처 강제
+              정책을 먼저 확정해야 합니다.
             </p>
           </div>
           <div className="pill-row">
-            <span className="pill">Local Wiki Lookup</span>
-            <span className="pill">Answer API</span>
-            <span className="pill">Wiki Feedback Loop</span>
+            <span className="pill">/api/ask mock</span>
+            <span className="pill">Security policy</span>
+            <span className="pill">Real mode later</span>
           </div>
         </div>
       </section>

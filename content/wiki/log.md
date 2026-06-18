@@ -113,3 +113,21 @@
   - 추천 action, target path, next step을 `/ask` 페이지에 표시한다.
   - 자동 저장은 하지 않는다. 사용자가 가치 있다고 판단하면 ingest workflow로 수동 반영한다.
   - 다음 단계는 실제 LLM API 연동 여부와 보안 정책 결정이다.
+
+## [2026-06-18] api | Mock Ask API Route
+
+- Source: 현재 프로젝트 작업 흐름
+- Created:
+  - `knowledge/LLM_API_SECURITY_POLICY.md`
+  - `app/api/ask/route.ts`
+  - `.env.example`
+- Updated:
+  - `knowledge/LLM_ANSWER_API_DESIGN.md`
+  - `app/ask/page.tsx`
+  - `README.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/projects/ask-about-me-chatbot.md`
+- Notes:
+  - 실제 외부 LLM API 연동은 보류하고 mock mode를 유지한다.
+  - `/api/ask`는 Local Wiki Lookup, draft answer, feedback candidate를 JSON으로 반환한다.
+  - 다음 단계는 real provider adapter와 rate limit 정책 설계 여부를 결정하는 것이다.

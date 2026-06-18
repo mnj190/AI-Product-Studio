@@ -36,3 +36,11 @@ Static Portfolio MVP 구현 완료.
 다음 단계는 Ask About Me 답변 기준을 정리하고, LLM Wiki를 읽는 질문형 인터페이스의 첫 설계를 만드는 것이다.
 
 우선 LLM Wiki의 index, log, ingest workflow, lint checklist를 기반으로 문서 관리 흐름을 안정화한 뒤 질문형 인터페이스로 확장한다.
+
+## Ask API Mode
+
+현재 `/api/ask`는 mock mode로 동작한다.
+
+외부 LLM API를 호출하지 않고, Local Wiki Lookup과 deterministic draft answer만 반환한다.
+
+실제 API 연동 전에는 `knowledge/LLM_API_SECURITY_POLICY.md`를 먼저 확인한다.
