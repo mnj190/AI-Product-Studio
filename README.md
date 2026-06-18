@@ -20,9 +20,17 @@ AI 활용 과정을 보여주는 개인 포트폴리오 프로젝트.
 - `knowledge/PROJECT_CONTEXT.md`
 - `knowledge/AI_WORK_RULES.md`
 - `knowledge/CONTENT_STRUCTURE.md`
+- `knowledge/ROADMAP.md`
+- `knowledge/NEXT_ACTIONS.md`
 
 ## Current Status
 
 초기 기초 작업 단계.
 
 현재는 웹사이트 구현보다 Markdown 기반 지식 구조와 원본 콘텐츠를 먼저 구축하고 있다.
+
+## Next Direction
+
+다음 단계는 Next.js 기반 Static Portfolio MVP를 만드는 것이다.
+
+우선 `content/`의 Markdown 문서를 웹에서 탐색할 수 있게 만들고, 이후 RAG 챗봇으로 확장한다.
