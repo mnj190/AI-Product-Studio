@@ -28,12 +28,12 @@ Phase 0을 마무리하고, Phase 1 Static Portfolio MVP로 넘어갈 준비를 
 
 ### 3. 웹 MVP 준비
 
-- [ ] Next.js 생성
-- [ ] TypeScript 적용
+- [x] Next.js 생성
+- [x] TypeScript 적용
 - [ ] Tailwind CSS 적용
-- [ ] 기본 레이아웃 설계
-- [ ] Markdown 로딩 방식 결정
-- [ ] 콘텐츠 목록/상세 라우팅 설계
+- [x] 기본 레이아웃 설계
+- [x] Markdown 로딩 방식 결정
+- [x] 콘텐츠 목록/상세 라우팅 설계
 
 ### 4. 챗봇 준비
 
@@ -44,4 +44,4 @@ Phase 0을 마무리하고, Phase 1 Static Portfolio MVP로 넘어갈 준비를 
 
 ## Next Recommended Step
 
-다음 작업은 Next.js 프로젝트를 생성하고, Markdown 콘텐츠를 읽어 보여주는 Static Portfolio MVP를 시작하는 것이다.
+다음 작업은 Tailwind CSS와 shadcn/ui 도입 여부를 결정하고, Prompt Library 및 AI Stack 페이지를 추가하는 것이다.
