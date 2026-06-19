@@ -2,6 +2,8 @@ type RateLimitInput = {
   key: string;
   limit: number;
   windowMs: number;
+  store?: string;
+  productionReady?: boolean;
 };
 
 type RateLimitBucket = {
@@ -14,13 +16,21 @@ export type RateLimitResult = {
   limit: number;
   remaining: number;
   resetAt: number;
+  store: string;
+  productionReady: boolean;
 };
 
 const store = new Map<string, RateLimitBucket>();
 
 const getNow = () => Date.now();
 
-export const checkRateLimit = ({ key, limit, windowMs }: RateLimitInput): RateLimitResult => {
+export const checkRateLimit = ({
+  key,
+  limit,
+  windowMs,
+  store: storeName = "memory",
+  productionReady = false,
+}: RateLimitInput): RateLimitResult => {
   const now = getNow();
   const current = store.get(key);
 
@@ -33,6 +43,8 @@ export const checkRateLimit = ({ key, limit, windowMs }: RateLimitInput): RateLi
       limit,
       remaining: limit - 1,
       resetAt,
+      store: storeName,
+      productionReady,
     };
   }
 
@@ -42,6 +54,8 @@ export const checkRateLimit = ({ key, limit, windowMs }: RateLimitInput): RateLi
       limit,
       remaining: 0,
       resetAt: current.resetAt,
+      store: storeName,
+      productionReady,
     };
   }
 
@@ -52,6 +66,8 @@ export const checkRateLimit = ({ key, limit, windowMs }: RateLimitInput): RateLi
     limit,
     remaining: Math.max(0, limit - current.count),
     resetAt: current.resetAt,
+    store: storeName,
+    productionReady,
   };
 };
 

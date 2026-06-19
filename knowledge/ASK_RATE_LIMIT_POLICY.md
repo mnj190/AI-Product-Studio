@@ -60,10 +60,14 @@ Retry-After: <seconds>
 
 ## Production Upgrade
 
-공개 real mode 배포 전에는 in-memory limit을 다음 중 하나로 교체한다.
+공개 real mode 배포 전에는 in-memory limit을 persistent store로 교체한다.
 
-- Vercel KV / Redis
-- Upstash Redis
+선택한 1순위:
+
+- Upstash Redis via Vercel Marketplace
+
+보류:
+
 - hosted database counter
 - provider/API gateway rate limit
 
@@ -91,4 +95,14 @@ Rate limit 외에도 다음 제한을 함께 사용한다.
 
 현재 구현은 adapter-ready 단계이다.
 
-real mode를 공개로 켜기 전에는 persistent rate limit store와 비용 알림을 추가해야 한다.
+local/mock mode에서는 `RATE_LIMIT_STORE=memory`를 유지한다.
+
+real mode를 공개로 켜기 전에는 다음을 설정한다.
+
+```text
+RATE_LIMIT_STORE=upstash
+UPSTASH_REDIS_REST_URL=...
+UPSTASH_REDIS_REST_TOKEN=...
+```
+
+자세한 결정 기록은 `knowledge/PRODUCTION_RATE_LIMIT_STORE_DECISION.md`를 따른다.

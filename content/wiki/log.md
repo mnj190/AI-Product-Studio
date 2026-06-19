@@ -242,3 +242,25 @@
   - answerable, blocked, unknown, feedback 샘플 질문을 추가했다.
   - `/ask/eval` 페이지에서 평가 샘플과 readiness checklist를 볼 수 있게 했다.
   - 다음 단계는 production persistent rate limit store를 결정하는 것이다.
+
+## [2026-06-19] infra | Production Rate Limit Store Decision
+
+- Source: Next Recommended Step
+- Created:
+  - `lib/rate-limit-config.ts`
+  - `knowledge/PRODUCTION_RATE_LIMIT_STORE_DECISION.md`
+  - `content/wiki/production-rate-limit-store.md`
+  - `content/logs/2026-06-19-production-rate-limit-store.md`
+- Updated:
+  - `lib/rate-limit.ts`
+  - `app/api/ask/route.ts`
+  - `.env.example`
+  - `knowledge/ASK_RATE_LIMIT_POLICY.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/index.md`
+  - `content/wiki/log.md`
+- Notes:
+  - production persistent rate limit store는 Upstash Redis via Vercel Marketplace를 1순위로 선택했다.
+  - local/mock mode 기본값은 `RATE_LIMIT_STORE=memory`로 유지한다.
+  - `/api/ask` metadata에 rate limit store와 production readiness를 표시하도록 준비했다.
+  - 다음 단계는 real mode 제한 배포 환경을 결정하는 것이다.

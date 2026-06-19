@@ -74,9 +74,9 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 - [x] real LLM provider adapter 설계
 - [x] rate limit 정책 정리
 - [x] real mode 비용/품질 샘플 기준 작성
-- [ ] production persistent rate limit store 결정
+- [x] production persistent rate limit store 결정
 - [ ] real mode 제한 배포 환경 결정
 
 ## Next Recommended Step
 
-다음 작업은 production persistent rate limit store를 선택하고, real mode를 제한적으로 켤 배포 환경을 결정하는 것이다.
+다음 작업은 real mode를 제한적으로 켤 배포 환경을 결정하고, Vercel preview deployment 기준의 설정 체크리스트를 만드는 것이다.

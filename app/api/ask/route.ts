@@ -3,14 +3,13 @@ import { getAskConfig, getAskRuntimeLabel } from "@/lib/ask-config";
 import { type AnswerStatus, createDraftAnswer } from "@/lib/answer-draft";
 import { createFeedbackCandidate } from "@/lib/feedback-candidate";
 import { generateLlmAnswer } from "@/lib/llm-provider";
+import { getRateLimitConfig } from "@/lib/rate-limit-config";
 import { checkRateLimit, getClientRateLimitKey } from "@/lib/rate-limit";
 import { lookupWiki, tokenizeQuery } from "@/lib/wiki-lookup";
 
 export const runtime = "nodejs";
 
 const maxQuestionLength = 500;
-const rateLimitWindowMs = 10 * 60 * 1000;
-const rateLimitMaxRequests = 20;
 
 type AskRequest = {
   question?: unknown;
@@ -18,6 +17,7 @@ type AskRequest = {
 
 export async function GET() {
   const config = getAskConfig();
+  const rateLimitConfig = getRateLimitConfig();
 
   return NextResponse.json({
     name: "Ask About Me API",
@@ -33,8 +33,10 @@ export async function GET() {
     },
     limits: {
       maxQuestionLength,
-      rateLimitMaxRequests,
-      rateLimitWindowSeconds: rateLimitWindowMs / 1000,
+      rateLimitMaxRequests: rateLimitConfig.limit,
+      rateLimitWindowSeconds: rateLimitConfig.windowMs / 1000,
+      rateLimitStore: rateLimitConfig.store,
+      rateLimitProductionReady: rateLimitConfig.productionReady,
     },
   });
 }
@@ -43,10 +45,13 @@ export async function POST(request: Request) {
   let payload: AskRequest;
   const config = getAskConfig();
   const runtimeMode = getAskRuntimeLabel(config);
+  const rateLimitConfig = getRateLimitConfig();
   const rateLimit = checkRateLimit({
     key: `ask:${getClientRateLimitKey(request)}`,
-    limit: rateLimitMaxRequests,
-    windowMs: rateLimitWindowMs,
+    limit: rateLimitConfig.limit,
+    windowMs: rateLimitConfig.windowMs,
+    store: rateLimitConfig.store,
+    productionReady: rateLimitConfig.productionReady,
   });
 
   if (!rateLimit.allowed) {
