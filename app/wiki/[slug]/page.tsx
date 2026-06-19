@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { MarkdownView } from "@/components/markdown-view";
+import { DocumentPage } from "@/components/document-page";
 import { getEntries, getEntry, hasEntry } from "@/lib/content";
 
 export function generateStaticParams() {
@@ -12,14 +12,7 @@ export default function WikiDetailPage({ params }: { params: { slug: string } })
   }
 
   const entry = getEntry("wiki", params.slug);
+  const entries = getEntries("wiki");
 
-  return (
-    <main className="container document">
-      <div className="document-header">
-        <p className="eyebrow">Wiki</p>
-      </div>
-      <MarkdownView body={entry.body} />
-    </main>
-  );
+  return <DocumentPage entry={entry} entries={entries} eyebrow="Wiki" section="wiki" />;
 }
-

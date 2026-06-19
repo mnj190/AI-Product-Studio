@@ -179,3 +179,22 @@
   - Build Log와 Daily Digest를 분리했다.
   - 매일 아침 어제 작업 또는 미기록 작업을 공유용 기록으로 묶는 절차를 정의했다.
   - 중요한 요청과 프롬프트를 초보자용 재사용 패턴으로 남기는 기준을 추가했다.
+
+## [2026-06-19] ui | Document Reading Experience
+
+- Source: Next Recommended Step
+- Created:
+  - `components/document-page.tsx`
+  - `content/logs/2026-06-19-document-reading-experience.md`
+- Updated:
+  - `app/projects/[slug]/page.tsx`
+  - `app/wiki/[slug]/page.tsx`
+  - `app/logs/[slug]/page.tsx`
+  - `app/prompts/[slug]/page.tsx`
+  - `app/ai-stack/[slug]/page.tsx`
+  - `app/globals.css`
+  - `knowledge/NEXT_ACTIONS.md`
+- Notes:
+  - 상세 페이지에 breadcrumb, title, summary, meta, previous/next navigation을 추가했다.
+  - 중복되던 상세 페이지 구조를 공통 컴포넌트로 통합했다.
+  - 다음 단계는 실제 LLM provider adapter와 rate limit 정책 설계 여부를 결정하는 것이다.

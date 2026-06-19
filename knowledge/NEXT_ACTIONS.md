@@ -39,6 +39,7 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 - [x] 기본 레이아웃 설계
 - [x] Markdown 로딩 방식 결정
 - [x] 콘텐츠 목록/상세 라우팅 설계
+- [x] 상세 페이지 읽기 경험 개선
 - [x] Prompt Library 페이지 추가
 - [x] AI Stack 페이지 추가
 
@@ -75,4 +76,4 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 
 ## Next Recommended Step
 
-다음 작업은 프로젝트/위키/로그 상세 페이지의 읽기 경험을 개선하고, 이후 real LLM provider adapter와 rate limit 정책 설계 여부를 결정하는 것이다.
+다음 작업은 real LLM provider adapter와 rate limit 정책을 설계하고, mock Ask API에서 실제 provider로 전환할지 결정하는 것이다.

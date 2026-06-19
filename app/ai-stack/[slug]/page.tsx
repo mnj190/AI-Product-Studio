@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { MarkdownView } from "@/components/markdown-view";
+import { DocumentPage } from "@/components/document-page";
 import { getEntries, getEntry, hasEntry } from "@/lib/content";
 
 export function generateStaticParams() {
@@ -12,14 +12,7 @@ export default function AiStackDetailPage({ params }: { params: { slug: string }
   }
 
   const entry = getEntry("ai-stack", params.slug);
+  const entries = getEntries("ai-stack");
 
-  return (
-    <main className="container document">
-      <div className="document-header">
-        <p className="eyebrow">AI Stack</p>
-      </div>
-      <MarkdownView body={entry.body} />
-    </main>
-  );
+  return <DocumentPage entry={entry} entries={entries} eyebrow="AI Stack" section="ai-stack" />;
 }
-
