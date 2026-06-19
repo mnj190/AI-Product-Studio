@@ -96,6 +96,9 @@ export default function AskPage({
           <Link className="button" href="/api/ask">
             API Route
           </Link>
+          <Link className="button" href="/ask/eval">
+            Eval 기준
+          </Link>
           <Link className="button" href="/projects/ask-about-me-chatbot">
             프로젝트 문서 보기
           </Link>
@@ -311,6 +314,9 @@ export default function AskPage({
           <div className="pill-row">
             <span className="pill">/api/ask adapter-ready</span>
             <span className="pill">Rate limit gate</span>
+            <Link className="pill" href="/ask/eval">
+              Eval sample set
+            </Link>
             <span className="pill">Mock default</span>
           </div>
         </div>

@@ -221,3 +221,24 @@
   - `ASK_API_MODE=real`, `LLM_API_KEY`, `LLM_MODEL`이 모두 설정된 경우에만 provider 호출이 가능하다.
   - `/api/ask`에 in-memory rate limit gate를 추가했다.
   - 다음 단계는 real mode 비용/품질 샘플 기준과 production persistent rate limit store 결정이다.
+
+## [2026-06-19] eval | Ask Real Mode Evaluation
+
+- Source: Next Recommended Step
+- Created:
+  - `lib/ask-evaluation.ts`
+  - `app/ask/eval/page.tsx`
+  - `knowledge/ASK_REAL_MODE_EVALUATION.md`
+  - `content/wiki/ask-real-mode-evaluation.md`
+  - `content/logs/2026-06-19-ask-real-mode-evaluation.md`
+- Updated:
+  - `app/ask/page.tsx`
+  - `app/globals.css`
+  - `content/wiki/index.md`
+  - `content/wiki/log.md`
+  - `knowledge/NEXT_ACTIONS.md`
+- Notes:
+  - real mode 전환 전 품질, 안전, 비용 기준을 정의했다.
+  - answerable, blocked, unknown, feedback 샘플 질문을 추가했다.
+  - `/ask/eval` 페이지에서 평가 샘플과 readiness checklist를 볼 수 있게 했다.
+  - 다음 단계는 production persistent rate limit store를 결정하는 것이다.

@@ -321,6 +321,59 @@ p {
   padding: 1rem;
 }
 
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.checklist-grid.compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1rem;
+}
+
+.check-item {
+  display: flex;
+  gap: 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 1.1rem;
+  background: var(--panel);
+  padding: 1rem;
+}
+
+.check-item span {
+  color: #c4b5fd;
+  font-weight: 800;
+}
+
+.check-item p {
+  margin: 0;
+}
+
+.eval-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.eval-card {
+  display: grid;
+  gap: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, var(--panel), rgba(18, 18, 22, 0.72));
+  padding: 1.2rem;
+}
+
+.eval-card ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.eval-card li {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .timeline-grid,
 .stage-grid {
   display: grid;
@@ -699,6 +752,8 @@ p {
   }
 
   .question-grid,
+  .checklist-grid,
+  .checklist-grid.compact,
   .policy-list,
   .log-guide,
   .timeline-grid,
