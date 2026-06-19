@@ -139,6 +139,33 @@ p {
   max-width: 720px;
 }
 
+.status-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.status-strip div {
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: rgba(18, 18, 22, 0.72);
+  padding: 1rem;
+}
+
+.status-strip span {
+  display: block;
+  color: var(--text);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.status-strip p {
+  margin: 0.2rem 0 0;
+  font-size: 0.86rem;
+}
+
 .actions,
 .grid {
   display: flex;
@@ -262,11 +289,70 @@ p {
   gap: 1rem;
 }
 
+.log-guide {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.log-guide div {
+  border: 1px solid var(--line);
+  border-radius: 1.2rem;
+  background: var(--panel);
+  padding: 1rem;
+}
+
+.log-guide span {
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+  color: #c4b5fd;
+  font-weight: 800;
+}
+
+.log-guide p {
+  margin-bottom: 0;
+}
+
 .policy-item {
   border: 1px solid var(--line);
   border-radius: 1rem;
   background: var(--panel-soft);
   padding: 1rem;
+}
+
+.timeline-grid,
+.stage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.timeline-item,
+.stage-card {
+  border: 1px solid var(--line);
+  border-radius: 1.2rem;
+  background: var(--panel);
+  padding: 1.1rem;
+}
+
+.timeline-item span,
+.stage-card span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: #ddd6fe;
+  font-weight: 800;
+}
+
+.timeline-item p,
+.stage-card p {
+  margin-bottom: 0;
 }
 
 .lookup-panel {
@@ -276,6 +362,22 @@ p {
   border-radius: 1.5rem;
   background: linear-gradient(180deg, var(--panel), rgba(18, 18, 22, 0.7));
   padding: 1.25rem;
+}
+
+.mode-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border: 1px solid rgba(14, 165, 233, 0.4);
+  border-radius: 1rem;
+  background: rgba(14, 165, 233, 0.08);
+  padding: 0.9rem 1rem;
+}
+
+.mode-banner span {
+  color: var(--muted);
 }
 
 .ask-form {
@@ -510,7 +612,11 @@ p {
   }
 
   .question-grid,
-  .policy-list {
+  .policy-list,
+  .log-guide,
+  .timeline-grid,
+  .stage-grid,
+  .status-strip {
     grid-template-columns: 1fr;
   }
 

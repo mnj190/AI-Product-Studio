@@ -89,9 +89,29 @@ export default function AskPage({
           <Link className="button primary" href="/wiki/index">
             Wiki Index 보기
           </Link>
+          <Link className="button" href="/api/ask">
+            API Route
+          </Link>
           <Link className="button" href="/projects/ask-about-me-chatbot">
             프로젝트 문서 보기
           </Link>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="stage-grid">
+          {[
+            ["1", "Lookup", "질문과 관련된 Markdown 문서를 찾습니다."],
+            ["2", "Draft", "검색 결과를 근거로 답변 초안을 만듭니다."],
+            ["3", "Guard", "민감 정보와 투자 권유성 질문을 제한합니다."],
+            ["4", "Feedback", "좋은 질문을 Wiki 반영 후보로 분류합니다."],
+          ].map(([step, title, body]) => (
+            <div className="stage-card" key={step}>
+              <span>{step}</span>
+              <h3>{title}</h3>
+              <p>{body}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -104,6 +124,10 @@ export default function AskPage({
               현재 `/api/ask`는 mock mode로 동작합니다. 외부 LLM API를 호출하지 않고,
               LLM Wiki와 공개 Markdown 문서 중 어떤 자료를 근거로 삼을 수 있는지 보여줍니다.
             </p>
+          </div>
+          <div className="mode-banner">
+            <strong>Current mode: mock</strong>
+            <span>외부 LLM 호출 없음 · API Key 불필요 · 문서 기반 draft answer</span>
           </div>
           <form className="ask-form" action="/ask">
             <input
@@ -255,8 +279,8 @@ export default function AskPage({
               <p>{item.answer}</p>
               <div className="source-list">
                 <span>참고 문서</span>
-                {item.sources.map(([label, href]) => (
-                  <Link href={href} key={`${item.question}-${href}`}>
+                {item.sources.map(([label, href], index) => (
+                  <Link href={href} key={`${item.question}-${href}-${index}`}>
                     {label} →
                   </Link>
                 ))}
@@ -270,11 +294,11 @@ export default function AskPage({
         <div className="card feature-card">
           <div>
             <p className="eyebrow">Next Step</p>
-            <h2>다음은 real LLM API 연동 여부 결정입니다.</h2>
+            <h2>다음은 UI 품질 점검 또는 real LLM adapter 설계입니다.</h2>
             <p>
               지금은 mock API route가 Local Wiki Lookup과 draft answer를 반환합니다.
-              실제 LLM API를 붙이기 전에는 환경 변수, 비용 제한, rate limit, 출처 강제
-              정책을 먼저 확정해야 합니다.
+              실제 API를 붙이기 전에는 화면 흐름을 다듬고, 환경 변수, 비용 제한,
+              rate limit, 출처 강제 정책을 먼저 확정해야 합니다.
             </p>
           </div>
           <div className="pill-row">

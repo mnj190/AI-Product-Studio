@@ -147,3 +147,35 @@
 - Notes:
   - Ask About Me lookup 품질을 높이기 위해 자주 언급되지만 비어 있던 핵심 개념 문서를 추가했다.
   - WebGPU Game은 장기 목표 프로젝트로 문서화했다.
+
+## [2026-06-18] ui | Home and Ask Flow Polish
+
+- Source: 현재 프로젝트 화면 품질 점검
+- Updated:
+  - `app/page.tsx`
+  - `app/ask/page.tsx`
+  - `app/api/ask/route.ts`
+  - `app/globals.css`
+  - `knowledge/NEXT_ACTIONS.md`
+- Notes:
+  - 홈에 Wiki/Project/Build Log 상태와 Ask API mode를 보여주는 status strip을 추가했다.
+  - 홈에 raw source → LLM Wiki → Ask Lookup → Feedback Loop 흐름을 추가했다.
+  - `/ask`에 단계 카드와 mock mode banner를 추가했다.
+  - `/api/ask` GET 요청에 API 설명 JSON을 반환하도록 했다.
+
+## [2026-06-19] workflow | Daily Work Logging System
+
+- Source: 사용자의 매일 작업 기록 요청
+- Created:
+  - `knowledge/DAILY_WORK_LOGGING_SYSTEM.md`
+  - `content/prompts/daily-work-log.md`
+  - `content/logs/2026-06-18-daily-digest.md`
+  - `content/logs/2026-06-19-daily-work-logging-system.md`
+- Updated:
+  - `app/logs/page.tsx`
+  - `app/globals.css`
+  - `knowledge/NEXT_ACTIONS.md`
+- Notes:
+  - Build Log와 Daily Digest를 분리했다.
+  - 매일 아침 어제 작업 또는 미기록 작업을 공유용 기록으로 묶는 절차를 정의했다.
+  - 중요한 요청과 프롬프트를 초보자용 재사용 패턴으로 남기는 기준을 추가했다.

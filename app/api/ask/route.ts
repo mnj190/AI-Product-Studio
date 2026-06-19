@@ -11,6 +11,19 @@ type AskRequest = {
   question?: unknown;
 };
 
+export async function GET() {
+  return NextResponse.json({
+    name: "Ask About Me API",
+    mode: "mock",
+    description:
+      "POST a question to receive Local Wiki Lookup results, a deterministic draft answer, and a Wiki feedback candidate. No external LLM API is called.",
+    endpoint: "POST /api/ask",
+    request: {
+      question: "AI를 어떻게 활용하나요?",
+    },
+  });
+}
+
 export async function POST(request: Request) {
   let payload: AskRequest;
 
@@ -86,4 +99,3 @@ export async function POST(request: Request) {
     mode: "mock",
   });
 }
-

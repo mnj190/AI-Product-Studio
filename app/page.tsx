@@ -6,6 +6,9 @@ export default function HomePage() {
   const projects = getEntries("projects").slice(0, 3);
   const prompts = getEntries("prompts").slice(0, 3);
   const logs = getEntries("logs").slice(0, 2);
+  const wikiCount = getEntries("wiki").length;
+  const projectCount = getEntries("projects").length;
+  const logCount = getEntries("logs").length;
 
   return (
     <main className="container">
@@ -26,6 +29,24 @@ export default function HomePage() {
           <Link className="button" href="/about">
             조정민 알아보기
           </Link>
+        </div>
+        <div className="status-strip">
+          <div>
+            <span>{wikiCount}</span>
+            <p>Wiki docs</p>
+          </div>
+          <div>
+            <span>{projectCount}</span>
+            <p>Projects</p>
+          </div>
+          <div>
+            <span>{logCount}</span>
+            <p>Build logs</p>
+          </div>
+          <div>
+            <span>mock</span>
+            <p>Ask API mode</p>
+          </div>
         </div>
       </section>
 
@@ -64,18 +85,40 @@ export default function HomePage() {
         </div>
         <div className="card feature-card">
           <div>
-            <h3>현재는 LLM Wiki 기반 mock 인터페이스입니다.</h3>
+            <h3>질문 → 문서 검색 → 답변 초안 → Wiki 반영 후보까지 연결했습니다.</h3>
             <p>
-              실제 LLM API를 붙이기 전에, 어떤 질문에 어떤 문서를 근거로 답할지
-              먼저 설계합니다. 답변은 Wiki 문서 기반으로만 생성하고, 모르는 내용은
-              추측하지 않는 방향입니다.
+              실제 LLM API를 붙이기 전, Local Wiki Lookup과 deterministic draft answer로
+              안전한 질문형 포트폴리오 흐름을 먼저 만들었습니다.
             </p>
           </div>
           <div className="pill-row">
-            <span className="pill">Wiki first</span>
-            <span className="pill">Source shown</span>
-            <span className="pill">No guessing</span>
+            <span className="pill">Local lookup</span>
+            <span className="pill">Draft answer</span>
+            <span className="pill">Feedback candidate</span>
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-header">
+          <div>
+            <p className="eyebrow">How It Works</p>
+            <h2>Wiki가 답변으로 바뀌는 흐름.</h2>
+          </div>
+        </div>
+        <div className="timeline-grid">
+          {[
+            ["01", "Raw Source", "대화, 메모, 참고 자료를 원본으로 보관합니다."],
+            ["02", "LLM Wiki", "LLM이 읽기 좋은 Markdown Wiki로 정리합니다."],
+            ["03", "Ask Lookup", "질문이 들어오면 관련 문서를 먼저 찾습니다."],
+            ["04", "Feedback Loop", "좋은 질문은 다시 Wiki 업데이트 후보가 됩니다."],
+          ].map(([step, title, body]) => (
+            <div className="timeline-item" key={step}>
+              <span>{step}</span>
+              <h3>{title}</h3>
+              <p>{body}</p>
+            </div>
+          ))}
         </div>
       </section>
 
