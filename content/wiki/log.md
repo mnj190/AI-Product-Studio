@@ -264,3 +264,22 @@
   - local/mock mode 기본값은 `RATE_LIMIT_STORE=memory`로 유지한다.
   - `/api/ask` metadata에 rate limit store와 production readiness를 표시하도록 준비했다.
   - 다음 단계는 real mode 제한 배포 환경을 결정하는 것이다.
+
+## [2026-06-19] deploy | Real Mode Preview Deployment Decision
+
+- Source: Next Recommended Step
+- Created:
+  - `knowledge/REAL_MODE_DEPLOYMENT_ENVIRONMENT.md`
+  - `content/wiki/real-mode-preview-deployment.md`
+  - `content/logs/2026-06-19-real-mode-preview-deployment.md`
+- Updated:
+  - `README.md`
+  - `.env.example`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/index.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 첫 real mode는 Vercel Preview Deployment에서만 켠다.
+  - Production은 계속 `ASK_API_MODE=mock`을 유지한다.
+  - Preview environment variable에만 real mode secret과 Upstash Redis 설정을 둔다.
+  - 다음 단계는 Vercel 프로젝트 연결과 Preview environment variable 설정 여부를 결정하는 것이다.

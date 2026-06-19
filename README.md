@@ -31,16 +31,24 @@ Static Portfolio MVP 구현 완료.
 
 현재는 Markdown 기반 콘텐츠를 웹에서 탐색할 수 있고, LLM Wiki 운영 구조를 구축하고 있다.
 
+Ask About Me는 mock mode, local wiki lookup, draft answer, feedback loop, provider adapter-ready 구조를 갖춘 상태이다.
+
 ## Next Direction
 
-다음 단계는 Ask About Me 답변 기준을 정리하고, LLM Wiki를 읽는 질문형 인터페이스의 첫 설계를 만드는 것이다.
+다음 단계는 Ask About Me real mode를 제한적으로 검수할 Vercel Preview Deployment 준비 여부를 결정하는 것이다.
 
-우선 LLM Wiki의 index, log, ingest workflow, lint checklist를 기반으로 문서 관리 흐름을 안정화한 뒤 질문형 인터페이스로 확장한다.
+Production은 계속 mock mode를 유지하고, 첫 real mode는 Preview Deployment에서만 켠다.
 
 ## Ask API Mode
 
 현재 `/api/ask`는 mock mode로 동작한다.
 
-외부 LLM API를 호출하지 않고, Local Wiki Lookup과 deterministic draft answer만 반환한다.
+기본값에서는 외부 LLM API를 호출하지 않고, Local Wiki Lookup과 deterministic draft answer만 반환한다.
 
-실제 API 연동 전에는 `knowledge/LLM_API_SECURITY_POLICY.md`를 먼저 확인한다.
+real mode 관련 문서는 다음을 먼저 확인한다.
+
+- `knowledge/LLM_API_SECURITY_POLICY.md`
+- `knowledge/LLM_PROVIDER_ADAPTER_DESIGN.md`
+- `knowledge/ASK_REAL_MODE_EVALUATION.md`
+- `knowledge/PRODUCTION_RATE_LIMIT_STORE_DECISION.md`
+- `knowledge/REAL_MODE_DEPLOYMENT_ENVIRONMENT.md`
