@@ -6,6 +6,8 @@
 
 기존 `content/logs/`는 작업 단위 Build Log로 유지하고, 하루 전체를 공유용으로 묶는 Daily Digest를 추가하는 방식으로 정리했다.
 
+이후 사용자의 추가 요청에 맞춰, “어제 작업”뿐 아니라 “기록되지 않은 모든 작업”을 찾는 기준과 아침 요청 루틴을 더 구체화했다.
+
 ## AI Used
 
 - Codex
@@ -22,6 +24,8 @@
 - Build Log는 작업 단위 원장으로 유지한다.
 - Daily Digest는 하루치 공유용 콘텐츠로 만든다.
 - 중요한 프롬프트는 원문, 의미, 재사용 패턴을 함께 기록한다.
+- Prompt Note는 모든 대화 저장소가 아니라 재사용 가능한 요청 패턴 모음으로 유지한다.
+- AI 사용량은 토큰 수 추정보다 Planning, Building, Reviewing, Reflecting 역할로 설명한다.
 - 민감한 정보는 공개 로그에 넣지 않는다.
 
 ## Documents Added
@@ -29,15 +33,18 @@
 - `knowledge/DAILY_WORK_LOGGING_SYSTEM.md`
 - `content/prompts/daily-work-log.md`
 - `content/logs/2026-06-18-daily-digest.md`
+- `content/wiki/daily-work-logging-system.md`
 
 ## Documents Updated
 
 - `knowledge/NEXT_ACTIONS.md`
 - `content/wiki/log.md`
+- `content/wiki/index.md`
+- `content/prompts/daily-work-log.md`
 
 ## Verification
 
-다음 단계에서 `npm run build`로 새 문서와 Prompt Library 항목이 정상 렌더링되는지 확인한다.
+`npm run build`로 새 문서와 Prompt Library 항목이 정상 렌더링되는지 확인한다.
 
 ## Next Step
 

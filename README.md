@@ -33,6 +33,8 @@ Static Portfolio MVP 구현 완료.
 
 Ask About Me는 mock mode, local wiki lookup, draft answer, feedback loop, provider adapter-ready 구조를 갖춘 상태이다.
 
+Daily Work Logging System을 통해 매일 아침 AI와 함께 한 작업, 중요한 의사결정, 재사용 가능한 프롬프트를 공유용 기록으로 정리한다.
+
 ## Next Direction
 
 다음 단계는 Ask About Me real mode를 제한적으로 검수할 Vercel Preview Deployment 준비 여부를 결정하는 것이다.
@@ -52,3 +54,11 @@ real mode 관련 문서는 다음을 먼저 확인한다.
 - `knowledge/ASK_REAL_MODE_EVALUATION.md`
 - `knowledge/PRODUCTION_RATE_LIMIT_STORE_DECISION.md`
 - `knowledge/REAL_MODE_DEPLOYMENT_ENVIRONMENT.md`
+
+## Work Logging
+
+매일 작업 기록은 다음 문서를 기준으로 운영한다.
+
+- `knowledge/DAILY_WORK_LOGGING_SYSTEM.md`
+- `content/prompts/daily-work-log.md`
+- `content/wiki/daily-work-logging-system.md`

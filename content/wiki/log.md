@@ -283,3 +283,18 @@
   - Production은 계속 `ASK_API_MODE=mock`을 유지한다.
   - Preview environment variable에만 real mode secret과 Upstash Redis 설정을 둔다.
   - 다음 단계는 Vercel 프로젝트 연결과 Preview environment variable 설정 여부를 결정하는 것이다.
+
+## [2026-06-19] workflow | Daily Work Logging System Revision
+
+- Source: 사용자의 매일 작업 기록 운영 방식 보강 요청
+- Created:
+  - `content/wiki/daily-work-logging-system.md`
+- Updated:
+  - `knowledge/DAILY_WORK_LOGGING_SYSTEM.md`
+  - `content/prompts/daily-work-log.md`
+  - `content/wiki/index.md`
+  - `content/wiki/log.md`
+- Notes:
+  - “어제 작업”뿐 아니라 “기록되지 않은 모든 작업”을 찾는 기준을 명확히 했다.
+  - AI 사용량을 토큰 수가 아니라 Planning, Building, Reviewing, Reflecting 역할로 설명하도록 정리했다.
+  - 중요한 요청과 프롬프트를 초보자가 재사용할 수 있는 Prompt Note로 남기는 원칙을 보강했다.
