@@ -198,3 +198,26 @@
   - 상세 페이지에 breadcrumb, title, summary, meta, previous/next navigation을 추가했다.
   - 중복되던 상세 페이지 구조를 공통 컴포넌트로 통합했다.
   - 다음 단계는 실제 LLM provider adapter와 rate limit 정책 설계 여부를 결정하는 것이다.
+
+## [2026-06-19] api | LLM Provider Adapter and Rate Limit
+
+- Source: Next Recommended Step
+- Created:
+  - `lib/ask-config.ts`
+  - `lib/llm-provider.ts`
+  - `lib/rate-limit.ts`
+  - `knowledge/LLM_PROVIDER_ADAPTER_DESIGN.md`
+  - `knowledge/ASK_RATE_LIMIT_POLICY.md`
+  - `content/logs/2026-06-19-llm-provider-adapter-rate-limit.md`
+- Updated:
+  - `app/api/ask/route.ts`
+  - `app/ask/page.tsx`
+  - `.env.example`
+  - `knowledge/LLM_ANSWER_API_DESIGN.md`
+  - `knowledge/LLM_API_SECURITY_POLICY.md`
+  - `knowledge/NEXT_ACTIONS.md`
+- Notes:
+  - 기본값은 mock mode로 유지한다.
+  - `ASK_API_MODE=real`, `LLM_API_KEY`, `LLM_MODEL`이 모두 설정된 경우에만 provider 호출이 가능하다.
+  - `/api/ask`에 in-memory rate limit gate를 추가했다.
+  - 다음 단계는 real mode 비용/품질 샘플 기준과 production persistent rate limit store 결정이다.

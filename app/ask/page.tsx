@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getAskConfig, getAskRuntimeLabel } from "@/lib/ask-config";
 import { createDraftAnswer } from "@/lib/answer-draft";
 import { createFeedbackCandidate } from "@/lib/feedback-candidate";
 import { lookupWiki, tokenizeQuery } from "@/lib/wiki-lookup";
@@ -75,6 +76,8 @@ export default function AskPage({
   const terms = query ? tokenizeQuery(query).slice(0, 10) : [];
   const draft = query ? createDraftAnswer(query, results) : null;
   const feedback = query ? createFeedbackCandidate(query, draft) : null;
+  const askConfig = getAskConfig();
+  const runtimeLabel = getAskRuntimeLabel(askConfig);
 
   return (
     <main className="container">
@@ -82,8 +85,9 @@ export default function AskPage({
         <p className="eyebrow">Ask About Me</p>
         <h1>조정민에 대해 질문해보세요.</h1>
         <p>
-          현재는 실제 LLM API를 붙이기 전 단계입니다. 먼저 LLM Wiki 기반으로 어떤
-          질문에 어떤 문서를 근거로 답할지 보여주는 mock 인터페이스를 만들었습니다.
+          현재는 LLM Wiki 기반으로 어떤 질문에 어떤 문서를 근거로 답할지 보여주는
+          인터페이스입니다. 기본은 mock mode이고, 실제 LLM provider는 환경 변수와
+          rate limit이 준비된 뒤 server route에서만 호출합니다.
         </p>
         <div className="actions">
           <Link className="button primary" href="/wiki/index">
@@ -121,13 +125,16 @@ export default function AskPage({
             <p className="eyebrow">Local Wiki Lookup</p>
             <h2>질문을 입력하면 관련 문서를 먼저 찾습니다.</h2>
             <p>
-              현재 `/api/ask`는 mock mode로 동작합니다. 외부 LLM API를 호출하지 않고,
-              LLM Wiki와 공개 Markdown 문서 중 어떤 자료를 근거로 삼을 수 있는지 보여줍니다.
+              `/api/ask`는 Local Wiki Lookup, answer guard, feedback candidate를 먼저 실행합니다.
+              real mode가 준비되지 않은 상태에서는 외부 LLM API를 호출하지 않고 문서 기반 draft answer를 반환합니다.
             </p>
           </div>
           <div className="mode-banner">
-            <strong>Current mode: mock</strong>
-            <span>외부 LLM 호출 없음 · API Key 불필요 · 문서 기반 draft answer</span>
+            <strong>Current mode: {runtimeLabel}</strong>
+            <span>
+              provider {askConfig.provider} · model {askConfig.model || "not configured"} ·
+              rate limit protected
+            </span>
           </div>
           <form className="ask-form" action="/ask">
             <input
@@ -294,17 +301,17 @@ export default function AskPage({
         <div className="card feature-card">
           <div>
             <p className="eyebrow">Next Step</p>
-            <h2>다음은 UI 품질 점검 또는 real LLM adapter 설계입니다.</h2>
+            <h2>다음은 real mode를 켤지 결정하는 단계입니다.</h2>
             <p>
-              지금은 mock API route가 Local Wiki Lookup과 draft answer를 반환합니다.
-              실제 API를 붙이기 전에는 화면 흐름을 다듬고, 환경 변수, 비용 제한,
-              rate limit, 출처 강제 정책을 먼저 확정해야 합니다.
+              지금은 mock API route가 Local Wiki Lookup과 draft answer를 반환하면서,
+              provider adapter와 rate limit gate를 통과할 수 있는 구조까지 준비했습니다.
+              공개 배포에서 real mode를 켜려면 API key, model, 비용 모니터링을 먼저 확정해야 합니다.
             </p>
           </div>
           <div className="pill-row">
-            <span className="pill">/api/ask mock</span>
-            <span className="pill">Security policy</span>
-            <span className="pill">Real mode later</span>
+            <span className="pill">/api/ask adapter-ready</span>
+            <span className="pill">Rate limit gate</span>
+            <span className="pill">Mock default</span>
           </div>
         </div>
       </section>

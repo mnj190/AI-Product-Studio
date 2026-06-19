@@ -71,9 +71,11 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 - [x] API 연동 시 환경 변수/보안 정책 정리
 - [x] `/api/ask` mock route 구현
 - [x] 홈/Ask UI 품질 개선
-- [ ] real LLM provider adapter 설계
-- [ ] rate limit 정책 정리
+- [x] real LLM provider adapter 설계
+- [x] rate limit 정책 정리
+- [ ] real mode 비용/품질 샘플 기준 작성
+- [ ] production persistent rate limit store 결정
 
 ## Next Recommended Step
 
-다음 작업은 real LLM provider adapter와 rate limit 정책을 설계하고, mock Ask API에서 실제 provider로 전환할지 결정하는 것이다.
+다음 작업은 real mode를 실제로 켤지 결정하기 전 비용/품질 샘플 기준을 만들고, production persistent rate limit store를 선택하는 것이다.

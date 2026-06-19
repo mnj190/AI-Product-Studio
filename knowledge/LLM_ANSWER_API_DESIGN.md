@@ -74,9 +74,11 @@ type AskResponse = {
 };
 ```
 
-현재 구현은 `mode: "mock"`만 지원한다.
+현재 기본 구현은 `mode: "mock"`이다.
 
-외부 LLM API는 호출하지 않는다.
+다만 `/api/ask`는 provider adapter-ready 구조를 갖는다.
+
+`ASK_API_MODE=real`, `LLM_API_KEY`, `LLM_MODEL`이 모두 설정되고 answer guard와 rate limit을 통과한 경우에만 외부 LLM provider를 호출할 수 있다.
 
 ## Answer Guard
 
@@ -173,5 +175,5 @@ LLM API를 붙이기 전에는 deterministic draft answer를 사용한다.
 
 1. `ASK_API_MODE=mock`을 유지한다.
 2. `/api/ask` route의 response contract를 안정화한다.
-3. 실제 LLM 연동이 필요해지면 provider adapter를 추가한다.
-4. 공개 배포 전 rate limit과 비용 제한을 적용한다.
+3. provider adapter-ready 구조를 유지한다.
+4. 공개 real mode 배포 전 persistent rate limit과 비용 제한을 적용한다.

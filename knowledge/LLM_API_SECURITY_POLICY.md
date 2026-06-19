@@ -2,13 +2,15 @@
 
 이 문서는 Ask About Me에 실제 LLM API를 연동할 때 지켜야 할 보안 기준이다.
 
-현재 프로젝트는 아직 외부 LLM API를 호출하지 않는다.
+현재 프로젝트는 기본적으로 외부 LLM API를 호출하지 않는다.
 
 먼저 mock API route와 deterministic draft answer를 사용한다.
 
+단, adapter-ready 구조는 준비되어 있으며 `ASK_API_MODE=real`, `LLM_API_KEY`, `LLM_MODEL`이 모두 설정된 경우에만 server route에서 provider 호출이 가능하다.
+
 ## Decision
 
-실제 LLM API 연동은 아직 보류한다.
+실제 LLM API의 공개 운영은 아직 보류한다.
 
 이유:
 
@@ -111,7 +113,13 @@ LLM에 전달하는 context는 Local Wiki Lookup 결과로 제한한다.
 - 캐싱 전까지는 짧은 답변만 생성
 - source 수 제한
 - output token 제한
-- rate limit 도입 전까지 공개 배포에서 real mode 비활성화
+- persistent rate limit 도입 전까지 공개 배포에서 real mode 비활성화
+
+현재 개발 단계 rate limit:
+
+- 20 requests / 10 minutes / client key
+- in-memory store
+- production에서는 Redis/KV 등 persistent store 필요
 
 ## Deployment Rule
 
@@ -141,5 +149,6 @@ LLM에 전달하는 context는 Local Wiki Lookup 결과로 제한한다.
 
 현재는 mock mode를 유지한다.
 
-다음 단계는 `/api/ask` route를 mock mode로 만들고, 나중에 provider adapter를 추가할 수 있는 구조를 준비하는 것이다.
+`/api/ask`는 provider adapter-ready 구조까지 준비되었다.
 
+다음 단계는 real mode를 실제로 켤지 결정하기 전 비용/품질 샘플 기준과 production persistent rate limit store를 정하는 것이다.
