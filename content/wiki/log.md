@@ -298,3 +298,16 @@
   - “어제 작업”뿐 아니라 “기록되지 않은 모든 작업”을 찾는 기준을 명확히 했다.
   - AI 사용량을 토큰 수가 아니라 Planning, Building, Reviewing, Reflecting 역할로 설명하도록 정리했다.
   - 중요한 요청과 프롬프트를 초보자가 재사용할 수 있는 Prompt Note로 남기는 원칙을 보강했다.
+
+## [2026-06-19] workflow | 2026-06-19 Daily Digest
+
+- Source: Daily Work Logging System 루틴 실행
+- Created:
+  - `content/logs/2026-06-19-daily-digest.md`
+- Updated:
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 2026-06-19의 작업 단위 로그를 하루치 공유용 Daily Digest로 묶었다.
+  - 읽기 경험 개선, Ask About Me real mode 준비, rate limit store 결정, Preview Deployment 결정, 작업 기록 시스템 보강을 하나의 흐름으로 정리했다.
+  - 다음 작업은 Vercel Preview 환경 준비 여부 결정 또는 로컬 readiness 체크리스트 작성이다.

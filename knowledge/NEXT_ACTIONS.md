@@ -57,6 +57,7 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 - [x] Daily Work Logging System 설계
 - [x] Daily Work Logging System 운영 기준 보강
 - [x] 2026-06-18 Daily Digest 작성
+- [x] 2026-06-19 Daily Digest 작성
 
 ### 5. Ask About Me 준비
 
@@ -82,7 +83,6 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 
 ## Next Recommended Step
 
-다음 작업은 두 갈래 중 하나다.
+다음 작업은 Vercel Preview Deployment 연결과 Preview environment variable 설정을 실제로 진행할지 결정하는 것이다.
 
-1. 매일 아침 루틴을 실제로 실행해 2026-06-19 Daily Digest를 작성한다.
-2. Vercel 프로젝트 연결과 Preview environment variable 설정을 실제로 진행할지 결정한다.
+외부 Vercel 계정/프로젝트를 건드리기 전, 로컬에서 Preview 환경 변수 readiness를 점검하는 체크리스트와 스크립트를 먼저 만들 수 있다.
