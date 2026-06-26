@@ -31,6 +31,8 @@ Vercel에 GitHub repo를 연결하되 Production은 mock mode로만 배포한다
 
 현재 추천은 Option B다.
 
+상세 절차는 [Vercel Mock-only Production Runbook](./vercel-mock-production-runbook.md)을 따른다.
+
 ### Option C. Prepare Preview real mode
 
 Vercel Preview 환경에만 real mode secret과 persistent rate limit store를 설정한다.
@@ -64,6 +66,7 @@ Option C로 가자. Vercel Preview에서 real mode 검수까지 준비하자.
 ## Related Files
 
 - `knowledge/VERCEL_CONNECTION_DECISION_BRIEF.md`
+- `knowledge/VERCEL_MOCK_PRODUCTION_RUNBOOK.md`
 - `knowledge/VERCEL_PREVIEW_READINESS_CHECKLIST.md`
 - `knowledge/VERCEL_PREVIEW_SMOKE_TEST_RUNBOOK.md`
 - `content/wiki/vercel-preview-readiness-checklist.md`

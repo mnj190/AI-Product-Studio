@@ -425,3 +425,22 @@
   - 홈 Current Operating Mode 섹션에 Vercel 선택지 링크를 추가했다.
   - `/ask/eval` Deployment Gates의 첫 단계로 Connection decision을 추가했다.
   - 실제 연결 전에 Option A/B/C 선택지를 사용자 화면에서 찾을 수 있게 했다.
+
+## [2026-06-26] deploy | Vercel Mock-only Production Runbook
+
+- Source: Next Recommended Step
+- Created:
+  - `knowledge/VERCEL_MOCK_PRODUCTION_RUNBOOK.md`
+  - `content/wiki/vercel-mock-production-runbook.md`
+  - `content/logs/2026-06-26-vercel-mock-production-runbook.md`
+- Updated:
+  - `README.md`
+  - `knowledge/VERCEL_CONNECTION_DECISION_BRIEF.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/vercel-connection-decision-brief.md`
+  - `content/wiki/index.md`
+  - `content/wiki/log.md`
+- Notes:
+  - Option B 선택 시 따라갈 mock-only Production 배포 절차를 추가했다.
+  - Production에서는 `ASK_API_MODE=mock`을 유지하고 `LLM_API_KEY`를 넣지 않는 것을 명확히 했다.
+  - 배포 후 `npm run check:ask-url -- <production-url>`로 safe smoke test를 실행하도록 정리했다.

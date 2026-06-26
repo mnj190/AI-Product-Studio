@@ -122,6 +122,8 @@ Option C로 가자. Vercel Preview에서 real mode 검수까지 준비하자.
 
 ## If Option B Is Chosen
 
+상세 절차는 `knowledge/VERCEL_MOCK_PRODUCTION_RUNBOOK.md`를 따른다.
+
 진행 순서:
 
 1. Vercel project와 GitHub repo 연결
@@ -156,3 +158,5 @@ Option C로 가자. Vercel Preview에서 real mode 검수까지 준비하자.
 ## Next Step
 
 사용자가 Option A, B, C 중 하나를 선택한다.
+
+현재 추천인 Option B를 선택하면 `VERCEL_MOCK_PRODUCTION_RUNBOOK.md`를 기준으로 mock-only Production 배포를 진행한다.
