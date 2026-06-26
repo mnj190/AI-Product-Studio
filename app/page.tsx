@@ -5,7 +5,7 @@ import { getEntries } from "@/lib/content";
 export default function HomePage() {
   const projects = getEntries("projects").slice(0, 3);
   const prompts = getEntries("prompts").slice(0, 3);
-  const logs = getEntries("logs").slice(0, 2);
+  const logs = getEntries("logs").reverse().slice(0, 3);
   const wikiCount = getEntries("wiki").length;
   const projectCount = getEntries("projects").length;
   const logCount = getEntries("logs").length;
@@ -206,7 +206,7 @@ export default function HomePage() {
         <div className="section-header">
           <div>
             <p className="eyebrow">Build Log</p>
-            <h2>AI와 함께 만든 기록.</h2>
+            <h2>가장 최근에 AI와 함께 만든 기록.</h2>
           </div>
           <Link className="button" href="/logs">
             로그 보기

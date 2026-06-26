@@ -462,3 +462,17 @@
   - Option B 배포 후 결과를 기록하기 위한 Build Log 템플릿을 추가했다.
   - Production URL, `/api/ask` metadata, smoke test 결과, manual page check, 안전 제약을 빠뜨리지 않도록 정리했다.
   - Prompt Library에 mock-only Production 배포 결과 기록 프롬프트를 추가했다.
+
+## [2026-06-26] ui | Home Recent Build Logs
+
+- Source: Home page quality check
+- Created:
+  - `content/logs/2026-06-26-home-recent-build-logs.md`
+- Updated:
+  - `app/page.tsx`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 홈 Build Log 섹션이 오래된 로그를 보여주던 문제를 수정했다.
+  - `getEntries("logs").reverse().slice(0, 3)`로 최신 작업 3개를 보여주도록 변경했다.
+  - 섹션 제목도 “가장 최근에 AI와 함께 만든 기록”으로 갱신했다.
