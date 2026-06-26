@@ -45,3 +45,4 @@ npm run build
 ## Next Step
 
 - 로컬 웹을 직접 확인할 때는 `npm run dev:local`을 우선 사용한다.
+- 후속 작업에서 커밋 전 검증을 위한 `npm run verify` script를 추가했다.

@@ -116,6 +116,21 @@ curl -I http://127.0.0.1:3001
 
 `HTTP/1.1 200 OK`가 나오면 로컬 웹이 정상 응답 중이다.
 
+## Verification
+
+작업 단위를 마무리하기 전에는 다음 명령으로 production build와 Preview 환경 설정 점검을 함께 실행한다.
+
+```bash
+npm run verify
+```
+
+이 명령은 다음을 순서대로 실행한다.
+
+```bash
+npm run build
+npm run check:preview-env
+```
+
 ## Work Logging
 
 매일 작업 기록은 다음 문서를 기준으로 운영한다.

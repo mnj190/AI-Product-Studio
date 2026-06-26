@@ -564,3 +564,18 @@
   - `npm run dev:local` script를 추가했다.
   - 긴 `npm run dev -- -H 127.0.0.1 -p 3001` 명령 대신 짧은 실행 명령을 README에 반영했다.
   - 기본 `npm run dev` 흐름은 유지했다.
+
+## [2026-06-26] dx | Verify Script
+
+- Source: Verification workflow cleanup
+- Created:
+  - `content/logs/2026-06-26-verify-script.md`
+- Updated:
+  - `package.json`
+  - `README.md`
+  - `content/logs/2026-06-26-dev-local-script.md`
+  - `content/wiki/log.md`
+- Notes:
+  - `npm run verify` script를 추가했다.
+  - 이 명령은 `npm run build`와 `npm run check:preview-env`를 순서대로 실행한다.
+  - Preview URL smoke test는 실제 URL이 생긴 뒤 별도로 실행하도록 분리했다.
