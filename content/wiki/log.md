@@ -549,3 +549,18 @@
   - README에 로컬 개발 서버 실행, 재기동, 상태 확인 방법을 추가했다.
   - 기본 `npm run dev`와 포트 충돌 회피용 `127.0.0.1:3001` 실행 방식을 함께 남겼다.
   - `curl -I`로 `200 OK` 응답을 확인하는 기준을 문서화했다.
+
+## [2026-06-26] dx | Dev Local Script
+
+- Source: Local development workflow follow-up
+- Created:
+  - `content/logs/2026-06-26-dev-local-script.md`
+- Updated:
+  - `package.json`
+  - `README.md`
+  - `content/logs/2026-06-26-local-development-docs.md`
+  - `content/wiki/log.md`
+- Notes:
+  - `npm run dev:local` script를 추가했다.
+  - 긴 `npm run dev -- -H 127.0.0.1 -p 3001` 명령 대신 짧은 실행 명령을 README에 반영했다.
+  - 기본 `npm run dev` 흐름은 유지했다.

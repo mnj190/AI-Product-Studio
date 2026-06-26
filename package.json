@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:local": "next dev -H 127.0.0.1 -p 3001",
     "build": "next build",
     "check:ask-url": "node scripts/check-ask-url.mjs",
     "check:preview-env": "node scripts/check-preview-env.mjs",

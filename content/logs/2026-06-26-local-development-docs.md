@@ -44,4 +44,5 @@ npm run build
 
 ## Next Step
 
-- 로컬 개발 명령이 늘어나면 README의 Local Development 섹션에 함께 정리한다.
+- 후속 작업에서 `npm run dev:local` script를 추가해 `127.0.0.1:3001` 실행 명령을 짧게 만들었다.
+- 로컬 개발 명령이 더 늘어나면 README의 Local Development 섹션에 함께 정리한다.
