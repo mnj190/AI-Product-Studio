@@ -178,3 +178,19 @@ push 전에는 먼저 `npm run verify`가 통과했는지 확인한다.
 - `knowledge/DAILY_WORK_LOGGING_SYSTEM.md`
 - `content/prompts/daily-work-log.md`
 - `content/wiki/daily-work-logging-system.md`
+
+## Content Authoring
+
+새 공개 콘텐츠를 추가할 때는 먼저 `knowledge/CONTENT_STRUCTURE.md`의 섹션별 형식을 확인한다.
+
+- 프로젝트 문서: `content/projects/`
+- 프롬프트 문서: `content/prompts/`
+- 작업 기록: `content/logs/`
+- Wiki 문서: `content/wiki/`
+- AI 도구 사용 기록: `content/ai-stack/`
+
+작업 단위 변경은 가능하면 `content/logs/YYYY-MM-DD-topic.md`에 Build Log로 남긴다.
+
+LLM Wiki에 반영하기 전 원본 자료는 `raw/`에 보관하고, 공개 가능한 형태로 정리된 내용만 `content/`에 둔다.
+
+콘텐츠를 추가하거나 수정한 뒤에는 `npm run verify`로 렌더링과 로컬 preview readiness를 확인한다.

@@ -605,3 +605,17 @@
   - README에 Repository Map 섹션을 추가했다.
   - `app`, `components`, `lib`, `scripts`, `content`, `knowledge`, `raw`의 역할을 정리했다.
   - 새 작업자가 코드와 공개 콘텐츠, 기획 문서, 원본 자료 위치를 빠르게 구분할 수 있게 했다.
+
+## [2026-06-26] docs | Content Authoring Docs
+
+- Source: README content workflow check
+- Created:
+  - `content/logs/2026-06-26-content-authoring-docs.md`
+- Updated:
+  - `README.md`
+  - `knowledge/DAILY_WORK_LOGGING_SYSTEM.md`
+  - `content/wiki/log.md`
+- Notes:
+  - README에 Content Authoring 섹션을 추가했다.
+  - 새 프로젝트, 프롬프트, Build Log, Wiki 문서를 어디에 추가하는지 짧게 정리했다.
+  - Daily Work Logging System의 검증 명령을 `npm run verify` 기준으로 갱신했다.
