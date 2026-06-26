@@ -350,3 +350,18 @@
   - Preview Deployment URL이 생긴 뒤 safe GET smoke test를 실행할 수 있게 했다.
   - smoke test는 `/api/ask`, `/ask/eval`, Preview readiness Wiki 페이지를 확인한다.
   - 질문 POST를 보내지 않기 때문에 provider answer generation이나 비용 발생을 트리거하지 않는다.
+
+## [2026-06-26] ui | Ask Eval Deployment Gates
+
+- Source: Next Recommended Step
+- Updated:
+  - `app/ask/eval/page.tsx`
+  - `lib/ask-evaluation.ts`
+  - `app/globals.css`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+  - `content/logs/2026-06-26-ask-eval-deployment-gates.md`
+- Notes:
+  - `/ask/eval`에 Preview Deployment Gates 섹션을 추가했다.
+  - 로컬 readiness, Preview smoke test, manual sample review 순서를 화면에 노출했다.
+  - 실제 Vercel 연결 전에도 사용자가 다음 실행 명령과 관련 문서를 찾을 수 있게 했다.

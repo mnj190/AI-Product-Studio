@@ -3,6 +3,7 @@ import {
   askCostGates,
   askEvalSamples,
   askQualityRubric,
+  deploymentGates,
   realModeReadinessChecklist,
 } from "@/lib/ask-evaluation";
 
@@ -117,6 +118,35 @@ export default function AskEvalPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-header">
+          <div>
+            <p className="eyebrow">Deployment Gates</p>
+            <h2>Preview URL이 생긴 뒤 따라갈 실행 순서.</h2>
+          </div>
+          <Link className="button" href="/wiki/vercel-preview-smoke-test-runbook">
+            Smoke test runbook
+          </Link>
+        </div>
+        <div className="deployment-gates">
+          {deploymentGates.map((gate, index) => (
+            <article className="deployment-gate" key={gate.title}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <div>
+                <h3>{gate.title}</h3>
+                <p>{gate.body}</p>
+                {gate.command ? <code>{gate.command}</code> : null}
+                {gate.href ? (
+                  <Link className="text-link" href={gate.href}>
+                    관련 문서 보기
+                  </Link>
+                ) : null}
+              </div>
+            </article>
+          ))}
         </div>
       </section>
     </main>

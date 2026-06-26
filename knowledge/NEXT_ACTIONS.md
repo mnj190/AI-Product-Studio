@@ -82,6 +82,7 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 - [x] Preview 환경 변수 로컬 점검 스크립트 작성
 - [x] Preview URL smoke test 스크립트 작성
 - [x] Vercel Preview smoke test runbook 작성
+- [x] `/ask/eval`에 Preview deployment gates 노출
 - [ ] Vercel Preview Deployment 연결 여부 결정
 - [ ] Preview environment variable 설정
 

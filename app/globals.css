@@ -374,6 +374,41 @@ p {
   line-height: 1.7;
 }
 
+.deployment-gates {
+  display: grid;
+  gap: 1rem;
+}
+
+.deployment-gate {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1.2rem;
+  background: var(--panel);
+  padding: 1.1rem;
+}
+
+.deployment-gate > span {
+  color: #c4b5fd;
+  font-weight: 800;
+}
+
+.deployment-gate code {
+  display: inline-block;
+  margin: 0.2rem 0 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  background: var(--panel-soft);
+  padding: 0.45rem 0.65rem;
+  color: var(--text);
+}
+
+.text-link {
+  color: #c4b5fd;
+  font-weight: 800;
+}
+
 .timeline-grid,
 .stage-grid {
   display: grid;

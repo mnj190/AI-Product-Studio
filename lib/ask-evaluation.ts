@@ -9,6 +9,13 @@ export type AskEvalSample = {
   passCriteria: string[];
 };
 
+export type DeploymentGate = {
+  title: string;
+  body: string;
+  command?: string;
+  href?: string;
+};
+
 export const askQualityRubric = [
   {
     title: "Grounded",
@@ -137,4 +144,24 @@ export const realModeReadinessChecklist = [
   "provider 실패 시 draft answer fallback이 동작한다.",
   "비용 알림과 사용량 모니터링 위치가 정해져 있다.",
   "production persistent rate limit store가 선택되어 있다.",
+];
+
+export const deploymentGates: DeploymentGate[] = [
+  {
+    title: "Local readiness",
+    body: "Vercel 연결 전, 로컬 환경 변수가 mock/preview 전략과 충돌하지 않는지 확인한다.",
+    command: "npm run check:preview-env",
+    href: "/wiki/vercel-preview-readiness-checklist",
+  },
+  {
+    title: "Preview smoke test",
+    body: "Preview URL이 생긴 뒤 safe GET 요청만으로 API metadata와 검수 페이지 접근성을 확인한다.",
+    command: "npm run check:ask-url -- https://your-preview-url.vercel.app",
+    href: "/wiki/vercel-preview-smoke-test-runbook",
+  },
+  {
+    title: "Manual sample review",
+    body: "자동 smoke test 후 answerable, blocked, unknown, feedback 샘플을 사람이 직접 확인한다.",
+    href: "/wiki/ask-real-mode-evaluation",
+  },
 ];
