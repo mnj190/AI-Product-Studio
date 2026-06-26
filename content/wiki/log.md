@@ -410,3 +410,18 @@
   - 실제 Vercel 연결 전에 Option A/B/C 의사결정 브리프를 추가했다.
   - 현재 추천은 Vercel 연결 + Production mock-only 배포인 Option B로 정리했다.
   - Preview real mode는 여전히 별도 검수 단계로 남긴다.
+
+## [2026-06-26] ui | Vercel Decision Visibility
+
+- Source: Next Recommended Step
+- Created:
+  - `content/logs/2026-06-26-vercel-decision-visibility.md`
+- Updated:
+  - `app/page.tsx`
+  - `lib/ask-evaluation.ts`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 홈 Current Operating Mode 섹션에 Vercel 선택지 링크를 추가했다.
+  - `/ask/eval` Deployment Gates의 첫 단계로 Connection decision을 추가했다.
+  - 실제 연결 전에 Option A/B/C 선택지를 사용자 화면에서 찾을 수 있게 했다.

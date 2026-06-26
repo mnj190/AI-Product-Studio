@@ -86,6 +86,7 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 - [x] `/ask/eval`에 Preview deployment gates 노출
 - [x] 홈/Ask 페이지에 현재 운영 모드와 Preview 검수 흐름 노출
 - [x] Vercel 연결 여부 Decision Brief 작성
+- [x] 홈/Ask Eval에 Vercel 선택지 노출
 - [ ] Vercel Preview Deployment 연결 여부 결정
 - [ ] Preview environment variable 설정
 

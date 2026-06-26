@@ -148,6 +148,11 @@ export const realModeReadinessChecklist = [
 
 export const deploymentGates: DeploymentGate[] = [
   {
+    title: "Connection decision",
+    body: "Vercel 연결을 보류할지, Production mock-only로 갈지, Preview real mode까지 준비할지 먼저 선택한다.",
+    href: "/wiki/vercel-connection-decision-brief",
+  },
+  {
     title: "Local readiness",
     body: "Vercel 연결 전, 로컬 환경 변수가 mock/preview 전략과 충돌하지 않는지 확인한다.",
     command: "npm run check:preview-env",

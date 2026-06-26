@@ -56,9 +56,14 @@ export default function HomePage() {
             <p className="eyebrow">Current Operating Mode</p>
             <h2>Production은 안전하게, Preview는 검수 가능하게.</h2>
           </div>
-          <Link className="button" href="/ask/eval">
-            Deployment Gates 보기
-          </Link>
+          <div className="actions">
+            <Link className="button" href="/wiki/vercel-connection-decision-brief">
+              Vercel 선택지 보기
+            </Link>
+            <Link className="button" href="/ask/eval">
+              Deployment Gates 보기
+            </Link>
+          </div>
         </div>
         <div className="cards">
           {[
