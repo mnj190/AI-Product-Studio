@@ -619,3 +619,16 @@
   - README에 Content Authoring 섹션을 추가했다.
   - 새 프로젝트, 프롬프트, Build Log, Wiki 문서를 어디에 추가하는지 짧게 정리했다.
   - Daily Work Logging System의 검증 명령을 `npm run verify` 기준으로 갱신했다.
+
+## [2026-06-26] planning | Next Actions Ops Refresh
+
+- Source: Next Actions consistency check
+- Created:
+  - `content/logs/2026-06-26-next-actions-ops-refresh.md`
+- Updated:
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 최근 완료한 README와 npm script 기반 운영 루틴을 Next Actions에 반영했다.
+  - `운영/온보딩 루틴 정리` 섹션을 추가했다.
+  - Vercel 연결 전 로컬 확인 기준을 `npm run verify`로 갱신했다.

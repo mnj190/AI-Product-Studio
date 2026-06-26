@@ -95,11 +95,21 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 - [ ] Vercel Preview Deployment 연결 여부 결정
 - [ ] Preview environment variable 설정
 
+### 6. 운영/온보딩 루틴 정리
+
+- [x] README Repository Map 추가
+- [x] README Local Development 섹션 추가
+- [x] `npm run dev:local` 추가
+- [x] `npm run verify` 추가
+- [x] README Git Sync 섹션 추가
+- [x] README Content Authoring 섹션 추가
+- [x] Daily Work Logging System 검증 기준을 `npm run verify`로 갱신
+
 ## Next Recommended Step
 
 다음 작업은 Vercel 연결 방향을 Option A/B/C 중 하나로 결정하는 것이다.
 
-외부 Vercel 계정/프로젝트를 건드리기 전에는 `npm run check:preview-env`로 로컬 readiness를 먼저 확인한다.
+외부 Vercel 계정/프로젝트를 건드리기 전에는 `npm run verify`로 로컬 build와 readiness를 먼저 확인한다.
 
 Preview URL이 생기면 `npm run check:ask-url -- <preview-url>`로 safe GET smoke test를 실행한다.
 
