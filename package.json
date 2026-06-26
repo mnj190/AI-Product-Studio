@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "check:ask-url": "node scripts/check-ask-url.mjs",
     "check:preview-env": "node scripts/check-preview-env.mjs",
     "start": "next start",
     "lint": "next lint"

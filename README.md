@@ -55,11 +55,18 @@ real mode 관련 문서는 다음을 먼저 확인한다.
 - `knowledge/PRODUCTION_RATE_LIMIT_STORE_DECISION.md`
 - `knowledge/REAL_MODE_DEPLOYMENT_ENVIRONMENT.md`
 - `knowledge/VERCEL_PREVIEW_READINESS_CHECKLIST.md`
+- `knowledge/VERCEL_PREVIEW_SMOKE_TEST_RUNBOOK.md`
 
 로컬에서 Preview real mode 준비 상태를 점검하려면 다음을 실행한다.
 
 ```bash
 npm run check:preview-env
+```
+
+Preview Deployment URL이 생긴 뒤 안전한 GET smoke test를 실행하려면 다음을 사용한다.
+
+```bash
+npm run check:ask-url -- https://your-preview-url.vercel.app
 ```
 
 ## Work Logging

@@ -331,3 +331,22 @@
   - 실제 Vercel 계정을 건드리기 전, Preview real mode 준비 상태를 로컬에서 점검하는 명령을 추가했다.
   - `npm run check:preview-env`는 secret 값을 출력하지 않고 설정 여부와 위험 상태만 확인한다.
   - Production real mode는 여전히 금지 상태이며, Preview에서만 제한 검수한다.
+
+## [2026-06-26] deploy | Preview Smoke Test Runbook
+
+- Source: Next Recommended Step
+- Created:
+  - `scripts/check-ask-url.mjs`
+  - `knowledge/VERCEL_PREVIEW_SMOKE_TEST_RUNBOOK.md`
+  - `content/wiki/vercel-preview-smoke-test-runbook.md`
+  - `content/logs/2026-06-26-preview-smoke-test-runbook.md`
+- Updated:
+  - `package.json`
+  - `README.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/index.md`
+  - `content/wiki/log.md`
+- Notes:
+  - Preview Deployment URL이 생긴 뒤 safe GET smoke test를 실행할 수 있게 했다.
+  - smoke test는 `/api/ask`, `/ask/eval`, Preview readiness Wiki 페이지를 확인한다.
+  - 질문 POST를 보내지 않기 때문에 provider answer generation이나 비용 발생을 트리거하지 않는다.
