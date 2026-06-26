@@ -131,6 +131,30 @@ npm run build
 npm run check:preview-env
 ```
 
+## Git Sync
+
+로컬 작업이 GitHub보다 앞서 있는지 확인하려면 다음을 사용한다.
+
+```bash
+git status --short --branch
+```
+
+`[ahead N]`이 보이면 로컬에 아직 GitHub로 push하지 않은 커밋이 `N`개 있다는 뜻이다.
+
+최근 커밋을 확인하려면 다음을 사용한다.
+
+```bash
+git log --oneline --decorate -10
+```
+
+작업을 GitHub에 올릴 때는 다음을 실행한다.
+
+```bash
+git push origin main
+```
+
+push 전에는 먼저 `npm run verify`가 통과했는지 확인한다.
+
 ## Work Logging
 
 매일 작업 기록은 다음 문서를 기준으로 운영한다.

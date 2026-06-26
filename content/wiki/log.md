@@ -579,3 +579,16 @@
   - `npm run verify` script를 추가했다.
   - 이 명령은 `npm run build`와 `npm run check:preview-env`를 순서대로 실행한다.
   - Preview URL smoke test는 실제 URL이 생긴 뒤 별도로 실행하도록 분리했다.
+
+## [2026-06-26] docs | Git Sync Docs
+
+- Source: Local/remote commit state cleanup
+- Created:
+  - `content/logs/2026-06-26-git-sync-docs.md`
+- Updated:
+  - `README.md`
+  - `content/wiki/log.md`
+- Notes:
+  - README에 `git status --short --branch`로 로컬/원격 차이를 확인하는 방법을 추가했다.
+  - `[ahead N]`이 로컬에 아직 push하지 않은 커밋 수라는 점을 설명했다.
+  - push 전에는 `npm run verify`를 먼저 통과시키도록 정리했다.
