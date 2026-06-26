@@ -507,3 +507,18 @@
   - 홈과 Build Log 목록에서 직접 `reverse()`를 호출하던 최신순 표현을 `getLatestEntries()` helper로 모았다.
   - “최신 작업을 보여준다”는 의도를 페이지 코드가 아니라 콘텐츠 유틸에서 드러내도록 정리했다.
   - 상세 페이지의 이전/다음 탐색은 기존 전체 정렬을 유지했다.
+
+## [2026-06-26] ui | Featured Home Content
+
+- Source: Home content discoverability check
+- Created:
+  - `content/logs/2026-06-26-featured-home-content.md`
+- Updated:
+  - `lib/content.ts`
+  - `app/page.tsx`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 홈 Projects와 Prompt Library 섹션이 파일명 알파벳순 앞 3개를 보여주던 방식을 대표 콘텐츠 기준으로 바꿨다.
+  - 대표 프로젝트는 `portfolio-site`, `ask-about-me-chatbot`, `llm-wiki`로 정했다.
+  - 대표 프롬프트는 `project-planning`, `daily-work-log`, `code-review`로 정했다.

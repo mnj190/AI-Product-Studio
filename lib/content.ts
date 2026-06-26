@@ -70,6 +70,14 @@ export const getLatestEntries = (
   return typeof limit === "number" ? entries.slice(0, limit) : entries;
 };
 
+export const getEntriesBySlugs = (
+  section: ContentSection,
+  slugs: string[],
+): ContentEntry[] =>
+  slugs
+    .filter((slug) => hasEntry(section, slug))
+    .map((slug) => getEntry(section, slug));
+
 export const getEntry = (section: ContentSection, slug: string): ContentEntry => {
   const body = fs.readFileSync(filePath(section, slug), "utf8");
 
