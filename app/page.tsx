@@ -53,6 +53,47 @@ export default function HomePage() {
       <section className="section">
         <div className="section-header">
           <div>
+            <p className="eyebrow">Current Operating Mode</p>
+            <h2>Production은 안전하게, Preview는 검수 가능하게.</h2>
+          </div>
+          <Link className="button" href="/ask/eval">
+            Deployment Gates 보기
+          </Link>
+        </div>
+        <div className="cards">
+          {[
+            [
+              "Production",
+              "mock mode",
+              "공개 포트폴리오는 외부 LLM provider를 호출하지 않는 안전한 상태를 유지합니다.",
+            ],
+            [
+              "Preview",
+              "gated real mode",
+              "Vercel Preview URL이 생기면 readiness check와 safe smoke test를 먼저 통과해야 합니다.",
+            ],
+            [
+              "Verification",
+              "script-ready",
+              "`check:preview-env`와 `check:ask-url`로 secret 노출 없이 준비 상태를 확인합니다.",
+            ],
+          ].map(([title, label, body]) => (
+            <div className="card" key={title}>
+              <div>
+                <div className="result-meta">
+                  <span>{title}</span>
+                  <span>{label}</span>
+                </div>
+                <h3>{body}</h3>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-header">
+          <div>
             <p className="eyebrow">Core Concept</p>
             <h2>읽는 포트폴리오에서 질문하는 포트폴리오로.</h2>
           </div>

@@ -378,3 +378,18 @@
   - 2026-06-26의 작업 단위 로그를 하루치 공유용 Daily Digest로 묶었다.
   - Preview readiness check, Preview URL smoke test, `/ask/eval` Deployment Gates UI를 하나의 흐름으로 정리했다.
   - 실제 Vercel 연결은 여전히 사용자 결정이 필요한 다음 단계로 남겼다.
+
+## [2026-06-26] ui | Operating Mode Visibility
+
+- Source: Next Recommended Step
+- Created:
+  - `content/logs/2026-06-26-operating-mode-visibility.md`
+- Updated:
+  - `app/page.tsx`
+  - `app/ask/page.tsx`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 홈에 Current Operating Mode 섹션을 추가했다.
+  - Production mock mode, Preview gated real mode, script-ready verification 상태를 한눈에 보여준다.
+  - Ask 페이지의 Next Step을 Preview readiness와 smoke test 중심으로 갱신했다.
