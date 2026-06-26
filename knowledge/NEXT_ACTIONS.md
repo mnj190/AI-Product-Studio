@@ -88,6 +88,7 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 - [x] Vercel 연결 여부 Decision Brief 작성
 - [x] 홈/Ask Eval에 Vercel 선택지 노출
 - [x] Option B mock-only Production runbook 작성
+- [x] Vercel mock-only 배포 결과 기록 템플릿 작성
 - [ ] Vercel Preview Deployment 연결 여부 결정
 - [ ] Preview environment variable 설정
 

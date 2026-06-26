@@ -148,6 +148,14 @@ real mode가 아니기 때문에 persistent rate limit store가 아직 없어도
 - `content/logs/YYYY-MM-DD-vercel-mock-production-deploy.md`
 - 또는 해당 날짜의 Daily Digest
 
+기록 템플릿:
+
+- `knowledge/VERCEL_MOCK_PRODUCTION_DEPLOY_REPORT_TEMPLATE.md`
+
+재사용 프롬프트:
+
+- `content/prompts/vercel-mock-production-deploy-report.md`
+
 기록할 내용:
 
 - Production URL

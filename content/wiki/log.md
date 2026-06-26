@@ -444,3 +444,21 @@
   - Option B 선택 시 따라갈 mock-only Production 배포 절차를 추가했다.
   - Production에서는 `ASK_API_MODE=mock`을 유지하고 `LLM_API_KEY`를 넣지 않는 것을 명확히 했다.
   - 배포 후 `npm run check:ask-url -- <production-url>`로 safe smoke test를 실행하도록 정리했다.
+
+## [2026-06-26] workflow | Vercel Mock Production Deploy Report Template
+
+- Source: Next Recommended Step
+- Created:
+  - `knowledge/VERCEL_MOCK_PRODUCTION_DEPLOY_REPORT_TEMPLATE.md`
+  - `content/prompts/vercel-mock-production-deploy-report.md`
+  - `content/logs/2026-06-26-vercel-mock-production-deploy-report-template.md`
+- Updated:
+  - `README.md`
+  - `knowledge/VERCEL_MOCK_PRODUCTION_RUNBOOK.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/index.md`
+  - `content/wiki/log.md`
+- Notes:
+  - Option B 배포 후 결과를 기록하기 위한 Build Log 템플릿을 추가했다.
+  - Production URL, `/api/ask` metadata, smoke test 결과, manual page check, 안전 제약을 빠뜨리지 않도록 정리했다.
+  - Prompt Library에 mock-only Production 배포 결과 기록 프롬프트를 추가했다.
