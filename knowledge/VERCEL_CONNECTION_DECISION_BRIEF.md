@@ -6,7 +6,7 @@
 
 ## Current State
 
-- GitHub `main`과 로컬 `main`은 동기화되어 있다.
+- GitHub `main`과 로컬 `main`의 동기화 여부는 작업 시점에 `git status --short --branch`로 확인한다.
 - Production real mode는 켜지지 않았다.
 - `/api/ask` 기본값은 mock mode이다.
 - Preview readiness check가 준비되어 있다.

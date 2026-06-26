@@ -476,3 +476,17 @@
   - 홈 Build Log 섹션이 오래된 로그를 보여주던 문제를 수정했다.
   - `getEntries("logs").reverse().slice(0, 3)`로 최신 작업 3개를 보여주도록 변경했다.
   - 섹션 제목도 “가장 최근에 AI와 함께 만든 기록”으로 갱신했다.
+
+## [2026-06-26] docs | README Current Direction Refresh
+
+- Source: Current direction consistency check
+- Created:
+  - `content/logs/2026-06-26-readme-current-direction-refresh.md`
+- Updated:
+  - `README.md`
+  - `knowledge/VERCEL_CONNECTION_DECISION_BRIEF.md`
+  - `content/wiki/log.md`
+- Notes:
+  - README의 Next Direction을 현재 추천인 Option B 중심으로 정리했다.
+  - Production은 mock mode를 유지하고, real mode는 이후 Preview에서 제한적으로 검수한다는 순서를 명확히 했다.
+  - GitHub/로컬 main 동기화 상태처럼 자주 바뀌는 문장은 고정 상태값 대신 확인 명령 기준으로 바꿨다.
