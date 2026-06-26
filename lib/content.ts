@@ -61,6 +61,15 @@ export const getEntries = (section: ContentSection): ContentEntry[] => {
     });
 };
 
+export const getLatestEntries = (
+  section: ContentSection,
+  limit?: number,
+): ContentEntry[] => {
+  const entries = [...getEntries(section)].reverse();
+
+  return typeof limit === "number" ? entries.slice(0, limit) : entries;
+};
+
 export const getEntry = (section: ContentSection, slug: string): ContentEntry => {
   const body = fs.readFileSync(filePath(section, slug), "utf8");
 

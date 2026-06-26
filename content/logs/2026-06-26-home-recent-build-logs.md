@@ -25,6 +25,7 @@ Build Log 목록 페이지는 최신순으로 보여주고 있었지만, 홈은 
 ## Code Updated
 
 - `app/page.tsx`
+- `lib/content.ts`
 
 ## Documents Updated
 
@@ -51,4 +52,5 @@ npm run check:preview-env
 
 ## Next Step
 
-- 홈의 다른 섹션도 최신성/발견성 기준으로 점검한다.
+- 홈과 Build Log 목록은 `getLatestEntries("logs")` helper를 기준으로 최신 작업을 보여준다.
+- 다음에는 홈의 다른 섹션도 최신성/발견성 기준으로 점검한다.

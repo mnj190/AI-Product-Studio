@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { ContentCard } from "@/components/content-card";
-import { getEntries } from "@/lib/content";
+import { getEntries, getLatestEntries } from "@/lib/content";
 
 export default function HomePage() {
   const projects = getEntries("projects").slice(0, 3);
   const prompts = getEntries("prompts").slice(0, 3);
-  const logs = getEntries("logs").reverse().slice(0, 3);
+  const logs = getLatestEntries("logs", 3);
   const wikiCount = getEntries("wiki").length;
   const projectCount = getEntries("projects").length;
   const logCount = getEntries("logs").length;

@@ -40,6 +40,7 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 - [x] Markdown 로딩 방식 결정
 - [x] 콘텐츠 목록/상세 라우팅 설계
 - [x] 홈 Build Log 최신순 노출
+- [x] Build Log 최신순 helper 정리
 - [x] 상세 페이지 읽기 경험 개선
 - [x] Prompt Library 페이지 추가
 - [x] AI Stack 페이지 추가

@@ -1,8 +1,8 @@
 import { ContentCard } from "@/components/content-card";
-import { getEntries } from "@/lib/content";
+import { getLatestEntries } from "@/lib/content";
 
 export default function LogsPage() {
-  const entries = getEntries("logs").reverse();
+  const entries = getLatestEntries("logs");
 
   return (
     <main className="container">

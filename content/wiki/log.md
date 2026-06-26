@@ -474,7 +474,7 @@
   - `content/wiki/log.md`
 - Notes:
   - 홈 Build Log 섹션이 오래된 로그를 보여주던 문제를 수정했다.
-  - `getEntries("logs").reverse().slice(0, 3)`로 최신 작업 3개를 보여주도록 변경했다.
+  - `getLatestEntries("logs", 3)`로 최신 작업 3개를 보여주도록 변경했다.
   - 섹션 제목도 “가장 최근에 AI와 함께 만든 기록”으로 갱신했다.
 
 ## [2026-06-26] docs | README Current Direction Refresh
@@ -490,3 +490,20 @@
   - README의 Next Direction을 현재 추천인 Option B 중심으로 정리했다.
   - Production은 mock mode를 유지하고, real mode는 이후 Preview에서 제한적으로 검수한다는 순서를 명확히 했다.
   - GitHub/로컬 main 동기화 상태처럼 자주 바뀌는 문장은 고정 상태값 대신 확인 명령 기준으로 바꿨다.
+
+## [2026-06-26] refactor | Latest Content Entries Helper
+
+- Source: Build Log ordering follow-up
+- Created:
+  - `content/logs/2026-06-26-latest-content-helper.md`
+- Updated:
+  - `lib/content.ts`
+  - `app/page.tsx`
+  - `app/logs/page.tsx`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/logs/2026-06-26-home-recent-build-logs.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 홈과 Build Log 목록에서 직접 `reverse()`를 호출하던 최신순 표현을 `getLatestEntries()` helper로 모았다.
+  - “최신 작업을 보여준다”는 의도를 페이지 코드가 아니라 콘텐츠 유틸에서 드러내도록 정리했다.
+  - 상세 페이지의 이전/다음 탐색은 기존 전체 정렬을 유지했다.
