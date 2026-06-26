@@ -11,6 +11,22 @@ AI 활용 과정을 보여주는 개인 포트폴리오 프로젝트.
 - `knowledge/`: 프로젝트 방향, 작업 규칙, 대화 요약, 아이디어 저장소
 - `content/`: 웹사이트와 LLM Wiki가 사용할 공개 콘텐츠 원본
 
+## Repository Map
+
+- `app/`: Next.js App Router 페이지와 API route
+- `app/api/ask/route.ts`: Ask About Me API endpoint
+- `components/`: 카드, 문서 상세, Markdown 렌더링 같은 공통 UI
+- `lib/`: 콘텐츠 로딩, Wiki lookup, draft answer, provider adapter, rate limit 로직
+- `scripts/`: 로컬 검증과 배포 전 smoke test helper
+- `content/about/`: 공개 프로필, 경력, 기술, 관심사
+- `content/projects/`: 포트폴리오 프로젝트 문서
+- `content/prompts/`: 재사용 가능한 프롬프트 라이브러리
+- `content/logs/`: 작업 단위 Build Log와 Daily Digest
+- `content/wiki/`: 공개 LLM Wiki 문서
+- `content/ai-stack/`: AI 도구별 사용 방식
+- `knowledge/`: 공개 전 기획, 정책, 운영 규칙, 의사결정 문서
+- `raw/`: 공개 콘텐츠로 정리하기 전 원본 자료 보관 위치
+
 ## First Principle
 
 코드는 결과물이고, 문서와 기록은 포트폴리오의 핵심 자산이다.

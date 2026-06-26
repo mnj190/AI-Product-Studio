@@ -592,3 +592,16 @@
   - README에 `git status --short --branch`로 로컬/원격 차이를 확인하는 방법을 추가했다.
   - `[ahead N]`이 로컬에 아직 push하지 않은 커밋 수라는 점을 설명했다.
   - push 전에는 `npm run verify`를 먼저 통과시키도록 정리했다.
+
+## [2026-06-26] docs | Repository Map Docs
+
+- Source: README onboarding check
+- Created:
+  - `content/logs/2026-06-26-repository-map-docs.md`
+- Updated:
+  - `README.md`
+  - `content/wiki/log.md`
+- Notes:
+  - README에 Repository Map 섹션을 추가했다.
+  - `app`, `components`, `lib`, `scripts`, `content`, `knowledge`, `raw`의 역할을 정리했다.
+  - 새 작업자가 코드와 공개 콘텐츠, 기획 문서, 원본 자료 위치를 빠르게 구분할 수 있게 했다.
