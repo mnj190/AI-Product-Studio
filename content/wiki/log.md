@@ -393,3 +393,20 @@
   - 홈에 Current Operating Mode 섹션을 추가했다.
   - Production mock mode, Preview gated real mode, script-ready verification 상태를 한눈에 보여준다.
   - Ask 페이지의 Next Step을 Preview readiness와 smoke test 중심으로 갱신했다.
+
+## [2026-06-26] deploy | Vercel Connection Decision Brief
+
+- Source: Next Recommended Step
+- Created:
+  - `knowledge/VERCEL_CONNECTION_DECISION_BRIEF.md`
+  - `content/wiki/vercel-connection-decision-brief.md`
+  - `content/logs/2026-06-26-vercel-connection-decision-brief.md`
+- Updated:
+  - `README.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/index.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 실제 Vercel 연결 전에 Option A/B/C 의사결정 브리프를 추가했다.
+  - 현재 추천은 Vercel 연결 + Production mock-only 배포인 Option B로 정리했다.
+  - Preview real mode는 여전히 별도 검수 단계로 남긴다.

@@ -54,6 +54,7 @@ real mode 관련 문서는 다음을 먼저 확인한다.
 - `knowledge/ASK_REAL_MODE_EVALUATION.md`
 - `knowledge/PRODUCTION_RATE_LIMIT_STORE_DECISION.md`
 - `knowledge/REAL_MODE_DEPLOYMENT_ENVIRONMENT.md`
+- `knowledge/VERCEL_CONNECTION_DECISION_BRIEF.md`
 - `knowledge/VERCEL_PREVIEW_READINESS_CHECKLIST.md`
 - `knowledge/VERCEL_PREVIEW_SMOKE_TEST_RUNBOOK.md`
 

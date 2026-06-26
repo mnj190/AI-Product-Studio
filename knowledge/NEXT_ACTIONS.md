@@ -85,13 +85,20 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 - [x] Vercel Preview smoke test runbook 작성
 - [x] `/ask/eval`에 Preview deployment gates 노출
 - [x] 홈/Ask 페이지에 현재 운영 모드와 Preview 검수 흐름 노출
+- [x] Vercel 연결 여부 Decision Brief 작성
 - [ ] Vercel Preview Deployment 연결 여부 결정
 - [ ] Preview environment variable 설정
 
 ## Next Recommended Step
 
-다음 작업은 Vercel Preview Deployment 연결과 Preview environment variable 설정을 실제로 진행할지 결정하는 것이다.
+다음 작업은 Vercel 연결 방향을 Option A/B/C 중 하나로 결정하는 것이다.
 
 외부 Vercel 계정/프로젝트를 건드리기 전에는 `npm run check:preview-env`로 로컬 readiness를 먼저 확인한다.
 
 Preview URL이 생기면 `npm run check:ask-url -- <preview-url>`로 safe GET smoke test를 실행한다.
+
+현재 추천은 Option B이다.
+
+- Option A: Vercel 연결 보류
+- Option B: Vercel 연결 + Production mock-only 배포
+- Option C: Vercel 연결 + Preview real mode 검수 준비
