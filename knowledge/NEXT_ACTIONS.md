@@ -58,6 +58,7 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 - [x] Daily Work Logging System 운영 기준 보강
 - [x] 2026-06-18 Daily Digest 작성
 - [x] 2026-06-19 Daily Digest 작성
+- [x] 2026-06-26 Daily Digest 작성
 
 ### 5. Ask About Me 준비
 

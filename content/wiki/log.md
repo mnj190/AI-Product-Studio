@@ -365,3 +365,16 @@
   - `/ask/eval`에 Preview Deployment Gates 섹션을 추가했다.
   - 로컬 readiness, Preview smoke test, manual sample review 순서를 화면에 노출했다.
   - 실제 Vercel 연결 전에도 사용자가 다음 실행 명령과 관련 문서를 찾을 수 있게 했다.
+
+## [2026-06-26] workflow | 2026-06-26 Daily Digest
+
+- Source: Daily Work Logging System 루틴 실행
+- Created:
+  - `content/logs/2026-06-26-daily-digest.md`
+- Updated:
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 2026-06-26의 작업 단위 로그를 하루치 공유용 Daily Digest로 묶었다.
+  - Preview readiness check, Preview URL smoke test, `/ask/eval` Deployment Gates UI를 하나의 흐름으로 정리했다.
+  - 실제 Vercel 연결은 여전히 사용자 결정이 필요한 다음 단계로 남겼다.
