@@ -522,3 +522,17 @@
   - 홈 Projects와 Prompt Library 섹션이 파일명 알파벳순 앞 3개를 보여주던 방식을 대표 콘텐츠 기준으로 바꿨다.
   - 대표 프로젝트는 `portfolio-site`, `ask-about-me-chatbot`, `llm-wiki`로 정했다.
   - 대표 프롬프트는 `project-planning`, `daily-work-log`, `code-review`로 정했다.
+
+## [2026-06-26] guard | Featured Content Guard
+
+- Source: Featured home content follow-up
+- Created:
+  - `content/logs/2026-06-26-featured-content-guard.md`
+- Updated:
+  - `lib/content.ts`
+  - `content/logs/2026-06-26-featured-home-content.md`
+  - `content/wiki/log.md`
+- Notes:
+  - `getEntriesBySlugs()`가 누락된 slug를 조용히 필터링하지 않도록 바꿨다.
+  - 대표 콘텐츠 파일이 삭제되거나 이름이 바뀌면 빌드에서 바로 `Missing content entry` 에러가 나도록 했다.
+  - 홈 대표 콘텐츠는 fallback보다 명시적 실패가 더 안전하다고 판단했다.

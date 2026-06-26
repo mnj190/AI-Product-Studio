@@ -53,4 +53,5 @@ npm run build
 ## Next Step
 
 - 홈 대표 콘텐츠가 늘어나면 slug 목록을 조정한다.
-- 필요해지면 대표 콘텐츠 기준을 문서화하거나 frontmatter로 옮긴다.
+- 대표 콘텐츠 slug가 누락되면 빌드에서 바로 실패하도록 다음 작업에서 guard를 추가했다.
+- 필요해지면 대표 콘텐츠 기준을 frontmatter로 옮긴다.

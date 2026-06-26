@@ -74,9 +74,13 @@ export const getEntriesBySlugs = (
   section: ContentSection,
   slugs: string[],
 ): ContentEntry[] =>
-  slugs
-    .filter((slug) => hasEntry(section, slug))
-    .map((slug) => getEntry(section, slug));
+  slugs.map((slug) => {
+    if (!hasEntry(section, slug)) {
+      throw new Error(`Missing content entry: ${section}/${slug}.md`);
+    }
+
+    return getEntry(section, slug);
+  });
 
 export const getEntry = (section: ContentSection, slug: string): ContentEntry => {
   const body = fs.readFileSync(filePath(section, slug), "utf8");
