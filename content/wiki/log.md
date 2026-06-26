@@ -311,3 +311,23 @@
   - 2026-06-19의 작업 단위 로그를 하루치 공유용 Daily Digest로 묶었다.
   - 읽기 경험 개선, Ask About Me real mode 준비, rate limit store 결정, Preview Deployment 결정, 작업 기록 시스템 보강을 하나의 흐름으로 정리했다.
   - 다음 작업은 Vercel Preview 환경 준비 여부 결정 또는 로컬 readiness 체크리스트 작성이다.
+
+## [2026-06-26] deploy | Vercel Preview Readiness Checklist
+
+- Source: Next Recommended Step
+- Created:
+  - `knowledge/VERCEL_PREVIEW_READINESS_CHECKLIST.md`
+  - `content/wiki/vercel-preview-readiness-checklist.md`
+  - `scripts/check-preview-env.mjs`
+  - `content/logs/2026-06-26-vercel-preview-readiness-checklist.md`
+- Updated:
+  - `package.json`
+  - `README.md`
+  - `knowledge/REAL_MODE_DEPLOYMENT_ENVIRONMENT.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/index.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 실제 Vercel 계정을 건드리기 전, Preview real mode 준비 상태를 로컬에서 점검하는 명령을 추가했다.
+  - `npm run check:preview-env`는 secret 값을 출력하지 않고 설정 여부와 위험 상태만 확인한다.
+  - Production real mode는 여전히 금지 상태이며, Preview에서만 제한 검수한다.

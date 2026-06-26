@@ -78,6 +78,8 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 - [x] real mode 비용/품질 샘플 기준 작성
 - [x] production persistent rate limit store 결정
 - [x] real mode 제한 배포 환경 결정
+- [x] Vercel Preview readiness 체크리스트 작성
+- [x] Preview 환경 변수 로컬 점검 스크립트 작성
 - [ ] Vercel Preview Deployment 연결 여부 결정
 - [ ] Preview environment variable 설정
 
@@ -85,4 +87,4 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 
 다음 작업은 Vercel Preview Deployment 연결과 Preview environment variable 설정을 실제로 진행할지 결정하는 것이다.
 
-외부 Vercel 계정/프로젝트를 건드리기 전, 로컬에서 Preview 환경 변수 readiness를 점검하는 체크리스트와 스크립트를 먼저 만들 수 있다.
+외부 Vercel 계정/프로젝트를 건드리기 전에는 `npm run check:preview-env`로 로컬 readiness를 먼저 확인한다.

@@ -104,4 +104,6 @@ Production real mode로 가려면 다음이 추가로 필요하다.
 
 ## Current Recommendation
 
-다음 구현 단계는 배포 연결이 아니라 `deployment checklist`를 README와 Wiki에 노출하고, preview 환경에서 검증할 명령/URL 체크를 준비하는 것이다.
+배포 연결 전에는 `knowledge/VERCEL_PREVIEW_READINESS_CHECKLIST.md`와 `npm run check:preview-env`로 Preview readiness를 먼저 확인한다.
+
+실제 Vercel project 연결과 secret 설정은 사용자의 명시적 결정 후 진행한다.
