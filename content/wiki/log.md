@@ -536,3 +536,16 @@
   - `getEntriesBySlugs()`가 누락된 slug를 조용히 필터링하지 않도록 바꿨다.
   - 대표 콘텐츠 파일이 삭제되거나 이름이 바뀌면 빌드에서 바로 `Missing content entry` 에러가 나도록 했다.
   - 홈 대표 콘텐츠는 fallback보다 명시적 실패가 더 안전하다고 판단했다.
+
+## [2026-06-26] docs | Local Development Docs
+
+- Source: Local web restart check
+- Created:
+  - `content/logs/2026-06-26-local-development-docs.md`
+- Updated:
+  - `README.md`
+  - `content/wiki/log.md`
+- Notes:
+  - README에 로컬 개발 서버 실행, 재기동, 상태 확인 방법을 추가했다.
+  - 기본 `npm run dev`와 포트 충돌 회피용 `127.0.0.1:3001` 실행 방식을 함께 남겼다.
+  - `curl -I`로 `200 OK` 응답을 확인하는 기준을 문서화했다.

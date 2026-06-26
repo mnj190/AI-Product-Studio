@@ -80,6 +80,42 @@ Preview Deployment URL이 생긴 뒤 안전한 GET smoke test를 실행하려면
 npm run check:ask-url -- https://your-preview-url.vercel.app
 ```
 
+## Local Development
+
+로컬 웹을 실행하려면 다음을 사용한다.
+
+```bash
+npm run dev
+```
+
+브라우저에서 기본 주소를 연다.
+
+```text
+http://localhost:3000
+```
+
+다른 작업과 포트 충돌을 피하고 싶으면 `127.0.0.1:3001`로 실행한다.
+
+```bash
+npm run dev -- -H 127.0.0.1 -p 3001
+```
+
+이 경우 브라우저에서 다음 주소를 연다.
+
+```text
+http://127.0.0.1:3001
+```
+
+재기동은 서버를 띄운 터미널에서 `Ctrl + C`로 중지한 뒤 같은 명령을 다시 실행한다.
+
+이미 켜져 있는지 확인하려면 다음을 사용한다.
+
+```bash
+curl -I http://127.0.0.1:3001
+```
+
+`HTTP/1.1 200 OK`가 나오면 로컬 웹이 정상 응답 중이다.
+
 ## Work Logging
 
 매일 작업 기록은 다음 문서를 기준으로 운영한다.
