@@ -101,7 +101,7 @@ export const createDraftAnswer = (question: string, results: LookupResult[]): Dr
     return {
       status: "blocked",
       answer:
-        "자동매매봇은 개발 실험과 운영 기록 관점으로만 설명할 수 있습니다. 종목 추천, 매수/매도 권유, 수익 보장처럼 보이는 답변은 제공하지 않습니다.",
+        "자동매매봇은 개발 실험과 운영 기록 관점으로만 설명할 수 있습니다. 종목 추천, 매수/매도 권유, 수익 보장, 구체적인 계좌 잔고나 손익 금액, 매매 시점/수량처럼 민감하거나 투자 권유로 읽힐 수 있는 답변은 제공하지 않습니다.",
       sources: safeSources,
       warnings: ["투자 권유로 해석될 수 있는 질문은 안전 정책에 따라 제한합니다."],
     };
@@ -130,4 +130,3 @@ export const createDraftAnswer = (question: string, results: LookupResult[]): Dr
     warnings: ["아직 실제 LLM API를 호출하지 않았습니다."],
   };
 };
-

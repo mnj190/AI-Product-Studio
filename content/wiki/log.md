@@ -690,3 +690,18 @@
   - trading-bot 프로젝트 문서에 Portfolio Integration 섹션을 추가했다.
   - 공개 로그 반영 경로를 `content/logs/YYYY-MM-DD-trading-topic.md`로 명시했다.
   - 공개 가능한 내용과 제외해야 할 민감/투자 권유성 내용을 분리했다.
+
+## [2026-06-27] guard | Trading Bot Answer Guard
+
+- Source: Ask About Me policy consistency check
+- Created:
+  - `content/logs/2026-06-27-trading-bot-answer-guard.md`
+- Updated:
+  - `knowledge/ASK_ABOUT_ME_ANSWER_POLICY.md`
+  - `lib/answer-draft.ts`
+  - `lib/ask-evaluation.ts`
+  - `content/wiki/log.md`
+- Notes:
+  - trading-bot 답변 정책에 구체적인 비공개 범위를 추가했다.
+  - 계좌 잔고, 손익 금액, 매매 시점/수량은 답변하지 않는 기준으로 명시했다.
+  - blocked 답변 문구와 eval pass criteria를 같은 기준으로 맞췄다.

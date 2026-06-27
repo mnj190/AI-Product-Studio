@@ -173,6 +173,9 @@ AI Trading Bot 관련 답변은 투자 권유처럼 보이면 안 된다.
 - 개발 실험과 운영 기록 관점
 - API 연동, 전략 테스트, 로그 분석
 - 투자 권유가 아니라 개발 프로젝트로 설명
+- 공개 가능한 기술적 의사결정과 AI 활용 방식 중심으로 설명
+- API key, 계좌번호, 구체적인 잔고/손익, 매매 시점/수량은 공개하지 않음
+- 공개 작업 로그가 생기면 `content/logs/YYYY-MM-DD-trading-topic.md` 형식의 Build Log를 참고
 
 ## Unknown Answer Template
 
@@ -190,4 +193,3 @@ AI Trading Bot 관련 답변은 투자 권유처럼 보이면 안 된다.
 실제 LLM API를 붙일 때도 이 정책을 시스템 프롬프트 또는 서버 측 answer guard로 사용한다.
 
 질문과 답변이 유용한 새 정리로 이어지면, 답변 내용을 Wiki에 반영할지 사용자에게 제안한다.
-
