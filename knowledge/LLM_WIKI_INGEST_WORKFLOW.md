@@ -147,7 +147,7 @@ Ingest를 마치기 전에 확인한다.
 - [ ] `content/wiki/log.md`에 기록했다.
 - [ ] 필요한 경우 `knowledge/NEXT_ACTIONS.md`를 업데이트했다.
 - [ ] 필요한 경우 Build Log를 작성했다.
-- [ ] `npm run build`로 웹 렌더링을 확인했다.
+- [ ] `npm run verify`로 웹 렌더링과 preview readiness를 확인했다.
 
 ## Anti-Patterns
 
@@ -159,4 +159,3 @@ Ingest를 마치기 전에 확인한다.
 - 출처 없이 강한 주장 남기기
 - 민감한 정보가 포함된 원문을 공개 저장소에 커밋하기
 - 질문에 대한 좋은 답변을 채팅 기록에만 남기고 Wiki에 반영하지 않기
-

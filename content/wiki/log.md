@@ -645,3 +645,18 @@
   - 2026-06-26 Daily Digest에 누락된 후반 작업을 보강했다.
   - 홈 콘텐츠 품질 개선, README 온보딩 문서, local dev/verify script, Git sync, Content Authoring, Next Actions 갱신을 하루 요약에 추가했다.
   - Important Prompts와 Related Build Logs도 후반 작업 기준으로 확장했다.
+
+## [2026-06-27] docs | Verify Docs Alignment
+
+- Source: Verification workflow consistency check
+- Created:
+  - `content/logs/2026-06-27-verify-docs-alignment.md`
+- Updated:
+  - `knowledge/LLM_WIKI_INGEST_WORKFLOW.md`
+  - `knowledge/LLM_WIKI_LINT_CHECKLIST.md`
+  - `knowledge/VERCEL_MOCK_PRODUCTION_RUNBOOK.md`
+  - `content/wiki/log.md`
+- Notes:
+  - LLM Wiki ingest/lint 체크리스트의 검증 기준을 `npm run verify`로 갱신했다.
+  - Vercel mock-only Production runbook의 pre-flight도 `npm run verify` 중심으로 정리했다.
+  - Vercel 배포 설정의 build command 안내는 `npm run build`로 유지했다.

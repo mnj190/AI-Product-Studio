@@ -34,8 +34,7 @@
 
 ```bash
 git status --short --branch
-npm run check:preview-env
-npm run build
+npm run verify
 ```
 
 기대 상태:
@@ -44,6 +43,7 @@ npm run build
 - `ASK_API_MODE=mock`
 - `RATE_LIMIT_STORE=memory`
 - build 성공
+- preview readiness check 통과
 
 ## Vercel Project Setup
 
