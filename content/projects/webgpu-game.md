@@ -65,7 +65,9 @@ AI는 다음에 활용할 계획이다.
 
 아직 구현 전 단계이다.
 
-현재는 장기 목표로 관리하며, AI Product Studio 안에서는 프로젝트 소개와 계획을 먼저 정리한다.
+현재는 장기 목표로 관리하며, AI Product Studio 안에서는 프로젝트 소개, 학습 경로, 관련 Wiki를 먼저 정리한다.
+
+구현이 시작되기 전까지는 별도 레포를 만들지 않고, 공개 가능한 계획과 학습 기록만 이 포트폴리오에 남긴다.
 
 ## Lessons Learned
 
@@ -75,5 +77,12 @@ AI는 다음에 활용할 계획이다.
 
 ## Links
 
-추후 추가 예정.
-
+- 연결된 Wiki:
+  - `/wiki/webgpu`
+- 관련 프로젝트:
+  - `/projects/webgpu-game`
+- 관련 프롬프트:
+  - `/prompts/project-planning`
+  - `/prompts/documentation`
+- 향후 기록 위치:
+  - WebGPU 학습과 실험이 시작되면 `content/logs/YYYY-MM-DD-webgpu-topic.md` 형식으로 Build Log를 추가한다.

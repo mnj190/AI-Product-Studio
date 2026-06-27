@@ -761,3 +761,19 @@
   - 대표 프로젝트 문서의 비어 있던 Links 섹션을 실제 작업 로그, 프롬프트, Wiki, 운영 문서로 연결했다.
   - 프로젝트 설명을 읽은 사람이 구현 과정과 의사결정 기록을 따라갈 수 있도록 했다.
   - 별도 자동 추천 UI 대신 Markdown 링크 보강으로 먼저 안전하게 개선했다.
+
+## [2026-06-27] lint | LLM Wiki Health Check
+
+- Source: `knowledge/LLM_WIKI_LINT_CHECKLIST.md`
+- Created:
+  - `content/logs/2026-06-27-llm-wiki-health-check.md`
+- Updated:
+  - `content/projects/trading-bot.md`
+  - `content/projects/webgpu-game.md`
+  - `knowledge/PROJECT_CONTEXT.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - Wiki index와 실제 Wiki 문서 목록을 대조하고, orphan/stale/security 후보를 점검했다.
+  - Trading Bot 공개 범위가 과하게 넓게 읽힐 수 있던 오래된 설명을 현재 공개/답변 정책에 맞게 조정했다.
+  - WebGPU Game 문서의 비어 있던 Links 섹션을 Wiki, 프롬프트, 향후 Build Log 경로로 연결했다.
