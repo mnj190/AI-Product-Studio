@@ -677,3 +677,16 @@
   - 멀티 프로젝트/멀티 에이전트 운영 문서를 정식 공유 지식으로 편입했다.
   - trading-bot 공개 로그 전달 경로를 현재 자동 노출되는 `content/logs/YYYY-MM-DD-trading-topic.md` 형식으로 정리했다.
   - `content/logs/trading/` 하위 폴더를 쓰려면 콘텐츠 로더 확장이 먼저 필요하다고 명시했다.
+
+## [2026-06-27] docs | Trading Bot Portfolio Integration
+
+- Source: Cross-project documentation follow-up
+- Created:
+  - `content/logs/2026-06-27-trading-bot-portfolio-integration.md`
+- Updated:
+  - `content/projects/trading-bot.md`
+  - `content/wiki/log.md`
+- Notes:
+  - trading-bot 프로젝트 문서에 Portfolio Integration 섹션을 추가했다.
+  - 공개 로그 반영 경로를 `content/logs/YYYY-MM-DD-trading-topic.md`로 명시했다.
+  - 공개 가능한 내용과 제외해야 할 민감/투자 권유성 내용을 분리했다.
