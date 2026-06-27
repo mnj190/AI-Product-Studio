@@ -744,3 +744,20 @@
   - 실제 Wiki 파일 목록과 `content/wiki/index.md` 연결 상태를 점검했다.
   - Wiki 문서 자체는 모두 index에 연결되어 있었다.
   - Project Pages에 빠져 있던 `content/projects/trading-bot.md` 링크를 추가했다.
+
+## [2026-06-27] content | Project Related Links
+
+- Source: Safe Local Backlog / Home and Project Archive quality
+- Created:
+  - `content/logs/2026-06-27-project-related-links.md`
+- Updated:
+  - `content/projects/portfolio-site.md`
+  - `content/projects/ask-about-me-chatbot.md`
+  - `content/projects/llm-wiki.md`
+  - `content/projects/trading-bot.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 대표 프로젝트 문서의 비어 있던 Links 섹션을 실제 작업 로그, 프롬프트, Wiki, 운영 문서로 연결했다.
+  - 프로젝트 설명을 읽은 사람이 구현 과정과 의사결정 기록을 따라갈 수 있도록 했다.
+  - 별도 자동 추천 UI 대신 Markdown 링크 보강으로 먼저 안전하게 개선했다.

@@ -126,7 +126,8 @@ Preview URL이 생기면 `npm run check:ask-url -- <preview-url>`로 safe GET sm
 Vercel 선택이 아직 없을 때는 외부 계정, secret, 배포를 건드리지 않고 아래 작업을 진행한다.
 
 1. Home/Project Archive 품질 개선
-   - 프로젝트 카드에 관련 로그/프롬프트 연결 기준 추가
+   - [x] 대표 프로젝트 문서에 관련 로그/프롬프트/기준 문서 연결 추가
+   - [ ] 프로젝트 카드에 관련 로그/프롬프트 연결 기준 추가
    - trading-bot, WebGPU Game, LLM Wiki의 공개 상태 설명 보강
 
 2. LLM Wiki 품질 점검

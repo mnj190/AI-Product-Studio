@@ -100,4 +100,18 @@ AI를 활용한 개발 과정을 기록한다.
 
 ## Links
 
-추후 추가 예정.
+- 웹 페이지: `/`, `/projects`, `/logs`, `/prompts`, `/wiki`
+- 핵심 작업 로그:
+  - `/logs/2026-06-18-static-portfolio-mvp`
+  - `/logs/2026-06-26-featured-home-content`
+  - `/logs/2026-06-26-home-recent-build-logs`
+  - `/logs/2026-06-26-repository-map-docs`
+  - `/logs/2026-06-27-safe-local-backlog`
+- 관련 프롬프트:
+  - `/prompts/project-planning`
+  - `/prompts/documentation`
+  - `/prompts/daily-work-log`
+- 운영 문서:
+  - `README.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `knowledge/WORKSPACE_GUIDE.md`

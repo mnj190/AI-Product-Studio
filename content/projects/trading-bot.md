@@ -112,4 +112,13 @@ content/logs/YYYY-MM-DD-trading-topic.md
 
 ## Links
 
-추후 추가 예정.
+- 공개 프로젝트 페이지: `/projects/trading-bot`
+- 관련 작업 로그:
+  - `/logs/2026-06-27-trading-bot-portfolio-integration`
+  - `/logs/2026-06-27-trading-bot-answer-guard`
+- 관련 기준 문서:
+  - `knowledge/CROSS_PROJECT.md`
+  - `knowledge/WORKSPACE_GUIDE.md`
+  - `knowledge/ASK_ABOUT_ME_ANSWER_POLICY.md`
+- 연결된 Wiki:
+  - `/wiki/index`

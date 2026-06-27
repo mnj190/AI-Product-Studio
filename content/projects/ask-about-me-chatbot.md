@@ -97,5 +97,18 @@
 ## Links
 
 - `/ask`
+- `/ask/eval`
 - `/wiki/index`
 - `/wiki/llm-wiki-pattern`
+- `/wiki/ask-real-mode-evaluation`
+- `/wiki/vercel-preview-readiness-checklist`
+- 핵심 작업 로그:
+  - `/logs/2026-06-18-ask-about-me-mock-page`
+  - `/logs/2026-06-18-local-wiki-lookup`
+  - `/logs/2026-06-18-draft-answer-guard`
+  - `/logs/2026-06-18-ask-feedback-loop`
+  - `/logs/2026-06-26-ask-eval-deployment-gates`
+  - `/logs/2026-06-27-trading-bot-answer-guard`
+- 관련 기준 문서:
+  - `knowledge/ASK_ABOUT_ME_ANSWER_POLICY.md`
+  - `knowledge/ASK_REAL_MODE_EVALUATION.md`
