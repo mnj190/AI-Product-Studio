@@ -27,6 +27,12 @@ AI 활용 과정을 보여주는 개인 포트폴리오 프로젝트.
 - `knowledge/`: 공개 전 기획, 정책, 운영 규칙, 의사결정 문서
 - `raw/`: 공개 콘텐츠로 정리하기 전 원본 자료 보관 위치
 
+멀티 프로젝트/멀티 에이전트 운영 문서는 다음을 먼저 확인한다.
+
+- `knowledge/WORKSPACE_GUIDE.md`
+- `knowledge/AGENT_SYNC.md`
+- `knowledge/CROSS_PROJECT.md`
+
 ## First Principle
 
 코드는 결과물이고, 문서와 기록은 포트폴리오의 핵심 자산이다.

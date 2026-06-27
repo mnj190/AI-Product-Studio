@@ -660,3 +660,20 @@
   - LLM Wiki ingest/lint 체크리스트의 검증 기준을 `npm run verify`로 갱신했다.
   - Vercel mock-only Production runbook의 pre-flight도 `npm run verify` 중심으로 정리했다.
   - Vercel 배포 설정의 build command 안내는 `npm run build`로 유지했다.
+
+## [2026-06-27] docs | Workspace Coordination Docs
+
+- Source: Untracked workspace knowledge review
+- Created:
+  - `content/logs/2026-06-27-workspace-coordination-docs.md`
+- Updated:
+  - `knowledge/WORKSPACE_GUIDE.md`
+  - `knowledge/AGENT_SYNC.md`
+  - `knowledge/CROSS_PROJECT.md`
+  - `README.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 멀티 프로젝트/멀티 에이전트 운영 문서를 정식 공유 지식으로 편입했다.
+  - trading-bot 공개 로그 전달 경로를 현재 자동 노출되는 `content/logs/YYYY-MM-DD-trading-topic.md` 형식으로 정리했다.
+  - `content/logs/trading/` 하위 폴더를 쓰려면 콘텐츠 로더 확장이 먼저 필요하다고 명시했다.

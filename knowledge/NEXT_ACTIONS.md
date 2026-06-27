@@ -104,6 +104,7 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 - [x] README Git Sync 섹션 추가
 - [x] README Content Authoring 섹션 추가
 - [x] Daily Work Logging System 검증 기준을 `npm run verify`로 갱신
+- [x] 멀티 프로젝트/에이전트 공유 문서 정리
 
 ## Next Recommended Step
 
