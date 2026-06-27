@@ -705,3 +705,16 @@
   - trading-bot 답변 정책에 구체적인 비공개 범위를 추가했다.
   - 계좌 잔고, 손익 금액, 매매 시점/수량은 답변하지 않는 기준으로 명시했다.
   - blocked 답변 문구와 eval pass criteria를 같은 기준으로 맞췄다.
+
+## [2026-06-27] digest | Daily Digest
+
+- Source: Daily work logging routine
+- Created:
+  - `content/logs/2026-06-27-daily-digest.md`
+- Updated:
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 2026-06-27 작업을 하루치 공유용 Daily Digest로 묶었다.
+  - 기록 보강, verify 기준 정렬, 멀티 프로젝트 운영 문서, trading-bot 공개/답변 가드레일을 하나의 흐름으로 정리했다.
+  - 초보자가 재사용할 수 있는 프롬프트 패턴 4개를 추가했다.
