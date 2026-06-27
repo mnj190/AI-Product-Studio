@@ -120,3 +120,27 @@ Preview URL이 생기면 `npm run check:ask-url -- <preview-url>`로 safe GET sm
 - Option A: Vercel 연결 보류
 - Option B: Vercel 연결 + Production mock-only 배포
 - Option C: Vercel 연결 + Preview real mode 검수 준비
+
+## Safe Local Backlog Before Vercel Decision
+
+Vercel 선택이 아직 없을 때는 외부 계정, secret, 배포를 건드리지 않고 아래 작업을 진행한다.
+
+1. Home/Project Archive 품질 개선
+   - 프로젝트 카드에 관련 로그/프롬프트 연결 기준 추가
+   - trading-bot, WebGPU Game, LLM Wiki의 공개 상태 설명 보강
+
+2. LLM Wiki 품질 점검
+   - `knowledge/LLM_WIKI_LINT_CHECKLIST.md` 기준으로 stale claim, orphan page, 중복 설명 점검
+   - `content/wiki/index.md`와 실제 Wiki 문서 목록 일치 여부 확인
+
+3. Ask About Me 품질 개선
+   - blocked/unknown/answered 샘플 추가
+   - trading-bot, Vercel, LLM Wiki 관련 질문의 출처와 답변 기준 보강
+
+4. Daily Work Logging 운영
+   - 최근 커밋과 Build Log가 Daily Digest에 반영되었는지 확인
+   - 중요한 프롬프트를 Prompt Library에 추가할지 판단
+
+5. GitHub 동기화 준비
+   - `npm run verify` 통과 확인
+   - 사용자가 push를 승인하면 `git push origin main` 실행

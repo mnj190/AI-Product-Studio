@@ -718,3 +718,16 @@
   - 2026-06-27 작업을 하루치 공유용 Daily Digest로 묶었다.
   - 기록 보강, verify 기준 정렬, 멀티 프로젝트 운영 문서, trading-bot 공개/답변 가드레일을 하나의 흐름으로 정리했다.
   - 초보자가 재사용할 수 있는 프롬프트 패턴 4개를 추가했다.
+
+## [2026-06-27] planning | Safe Local Backlog
+
+- Source: Next Actions planning check
+- Created:
+  - `content/logs/2026-06-27-safe-local-backlog.md`
+- Updated:
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - Vercel 결정 전에도 진행 가능한 안전한 로컬 백로그를 추가했다.
+  - 외부 계정, secret, 배포를 건드리지 않는 작업 후보를 분리했다.
+  - Home/Project Archive, LLM Wiki lint, Ask 품질, Daily Work Logging, GitHub 동기화 준비를 후보로 정리했다.
