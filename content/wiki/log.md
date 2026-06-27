@@ -731,3 +731,16 @@
   - Vercel 결정 전에도 진행 가능한 안전한 로컬 백로그를 추가했다.
   - 외부 계정, secret, 배포를 건드리지 않는 작업 후보를 분리했다.
   - Home/Project Archive, LLM Wiki lint, Ask 품질, Daily Work Logging, GitHub 동기화 준비를 후보로 정리했다.
+
+## [2026-06-27] lint | Wiki Index Project Coverage
+
+- Source: LLM Wiki lint check
+- Created:
+  - `content/logs/2026-06-27-wiki-index-project-coverage.md`
+- Updated:
+  - `content/wiki/index.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 실제 Wiki 파일 목록과 `content/wiki/index.md` 연결 상태를 점검했다.
+  - Wiki 문서 자체는 모두 index에 연결되어 있었다.
+  - Project Pages에 빠져 있던 `content/projects/trading-bot.md` 링크를 추가했다.
