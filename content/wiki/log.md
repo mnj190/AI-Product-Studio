@@ -632,3 +632,16 @@
   - 최근 완료한 README와 npm script 기반 운영 루틴을 Next Actions에 반영했다.
   - `운영/온보딩 루틴 정리` 섹션을 추가했다.
   - Vercel 연결 전 로컬 확인 기준을 `npm run verify`로 갱신했다.
+
+## [2026-06-27] docs | Daily Digest Refresh
+
+- Source: Daily work logging routine
+- Created:
+  - `content/logs/2026-06-27-daily-digest-refresh.md`
+- Updated:
+  - `content/logs/2026-06-26-daily-digest.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 2026-06-26 Daily Digest에 누락된 후반 작업을 보강했다.
+  - 홈 콘텐츠 품질 개선, README 온보딩 문서, local dev/verify script, Git sync, Content Authoring, Next Actions 갱신을 하루 요약에 추가했다.
+  - Important Prompts와 Related Build Logs도 후반 작업 기준으로 확장했다.

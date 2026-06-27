@@ -2,7 +2,7 @@
 
 ## One-line Summary
 
-Ask About Me real mode를 실제 Vercel에 연결하기 전, readiness check, smoke test, decision brief, mock-only Production runbook, 배포 기록 템플릿까지 갖춘 안전한 배포 준비 흐름을 만들었다.
+Ask About Me real mode를 실제 Vercel에 연결하기 전 안전한 배포 준비 흐름을 만들고, 이후 홈 콘텐츠 품질과 README 기반 운영/온보딩 루틴까지 정리했다.
 
 ## What Changed
 
@@ -18,13 +18,20 @@ Ask About Me real mode를 실제 Vercel에 연결하기 전, readiness check, sm
 - 현재 추천인 Option B를 위한 mock-only Production 배포 runbook을 만들었다.
 - Option B 배포 후 결과를 기록할 deploy report template과 Prompt Library 항목을 추가했다.
 - Production real mode는 여전히 켜지지 않았고, 실제 Vercel 계정이나 secret은 건드리지 않았다.
+- 홈 Build Log 섹션을 최신순으로 바꾸고 최근 로그 3개를 보여주도록 했다.
+- 홈 Projects와 Prompt Library 섹션을 파일명 순서가 아니라 대표 콘텐츠 기준으로 정리했다.
+- 대표 콘텐츠 slug가 누락되면 빌드에서 바로 실패하도록 guard를 추가했다.
+- README에 Repository Map, Local Development, Verification, Git Sync, Content Authoring 섹션을 추가했다.
+- `npm run dev:local`로 로컬 확인용 개발 서버 실행 명령을 짧게 만들었다.
+- `npm run verify`로 `npm run build`와 `npm run check:preview-env`를 한 번에 실행하도록 했다.
+- `knowledge/NEXT_ACTIONS.md`에 운영/온보딩 루틴 완료 상태를 반영했다.
 
 ## How AI Was Used
 
 - Planning: 실제 Vercel 연결로 바로 가지 않고, 연결 전 검수 체계와 의사결정 흐름을 먼저 만드는 순서로 작업을 쪼갰다.
-- Building: 환경 변수 점검 스크립트, URL smoke test 스크립트, `/ask/eval` Deployment Gates UI, 홈/Ask 운영 상태 UI, Option B runbook, 배포 결과 기록 템플릿을 구현했다.
-- Reviewing: `npm run build`, `npm run check:preview-env`, `npm run check:ask-url`, 로컬 HTML 확인으로 결과를 검증했다.
-- Reflecting: 각 작업 단위 Build Log를 남기고 하루치 Daily Digest로 묶었다.
+- Building: 환경 변수 점검 스크립트, URL smoke test 스크립트, `/ask/eval` Deployment Gates UI, 홈/Ask 운영 상태 UI, Option B runbook, 배포 결과 기록 템플릿, 홈 대표 콘텐츠 helper, 로컬 개발/검증 npm script를 구현했다.
+- Reviewing: `npm run build`, `npm run check:preview-env`, `npm run check:ask-url`, `npm run verify`, 로컬 HTML 확인, git 상태 확인으로 결과를 검증했다.
+- Reflecting: 각 작업 단위 Build Log를 남기고, 누락된 후반 작업까지 Daily Digest에 다시 묶었다.
 
 ## Human Decisions
 
@@ -37,6 +44,10 @@ Ask About Me real mode를 실제 Vercel에 연결하기 전, readiness check, sm
 - Vercel 연결은 Option A/B/C 중 사용자가 선택한 뒤 진행한다.
 - 현재 추천은 Option B, 즉 Vercel 연결 + Production mock-only 배포이다.
 - Option B 배포 후에는 Production URL, `/api/ask` metadata, smoke test 결과를 별도 Build Log로 기록한다.
+- 홈 첫 화면은 최신 작업과 대표 콘텐츠를 우선 보여준다.
+- 자주 쓰는 로컬 실행은 `npm run dev:local`, 작업 마무리 검증은 `npm run verify`를 기본 루틴으로 사용한다.
+- push 전에는 `npm run verify`를 먼저 통과시킨다.
+- 새 공개 콘텐츠는 `content/`에 두고, 공개 전 원본 자료는 `raw/`에 보관한다.
 
 ## Important Prompts
 
@@ -124,6 +135,34 @@ Reusable pattern:
 [배포 작업] 이후 사용할 report template을 만들어줘. 배포 URL, API metadata, smoke test 결과, manual check, 안전 제약, 다음 작업을 포함하고 secret은 기록하지 않게 해줘.
 ```
 
+### 7. 운영 루틴을 README에 고정한 패턴
+
+> 자주 쓰는 로컬 실행, 검증, Git 동기화, 콘텐츠 작성 루틴을 README에서 바로 찾을 수 있게 정리해줘.
+
+Why it mattered:
+
+프로젝트가 커질수록 “어떻게 실행하지?”, “커밋 전 뭘 확인하지?”, “어디에 문서를 추가하지?” 같은 작은 마찰이 쌓인다. README에 운영 루틴을 고정하면서 다음 작업을 시작하는 비용이 줄었다.
+
+Reusable pattern:
+
+```text
+현재 레포에서 반복해서 쓰는 실행/검증/git/content 작성 루틴을 README에 온보딩 문서처럼 정리해줘. 실제 package script와 문서 경로를 기준으로 쓰고, 오래된 명령이 있으면 최신 명령으로 맞춰줘.
+```
+
+### 8. 홈 콘텐츠를 의도적으로 고른 패턴
+
+> 홈에 보이는 프로젝트와 프롬프트를 파일명 순서가 아니라 이 포트폴리오의 방향을 가장 잘 보여주는 대표 콘텐츠 기준으로 골라줘.
+
+Why it mattered:
+
+포트폴리오 첫 화면은 모든 콘텐츠의 목록이 아니라, 방문자가 프로젝트의 정체성을 빠르게 이해하는 입구다. 대표 콘텐츠를 명시하면서 홈의 메시지가 더 선명해졌다.
+
+Reusable pattern:
+
+```text
+홈이나 랜딩 페이지에 노출되는 콘텐츠를 단순 최신순/파일명순으로 두지 말고, 방문자에게 가장 먼저 보여야 할 대표 항목을 의도적으로 골라줘. 선택 기준과 slug 목록도 작업 로그에 남겨줘.
+```
+
 ## Decisions
 
 - `npm run check:preview-env`는 로컬 환경 변수 상태를 점검하되 secret 값을 출력하지 않는다.
@@ -138,6 +177,12 @@ Reusable pattern:
 - Option B에는 별도 mock-only Production runbook을 둔다.
 - Option B 배포 후 결과는 deploy report template으로 기록한다.
 - 실제 Vercel 연결 여부는 여전히 별도 사용자 결정이 필요한 단계로 남긴다.
+- 홈 Build Log는 최신순 helper를 사용한다.
+- 홈 대표 프로젝트는 `portfolio-site`, `ask-about-me-chatbot`, `llm-wiki`로 둔다.
+- 홈 대표 프롬프트는 `project-planning`, `daily-work-log`, `code-review`로 둔다.
+- 대표 콘텐츠 slug가 누락되면 조용히 숨기지 않고 빌드에서 실패하게 한다.
+- README는 실행, 검증, Git sync, 콘텐츠 작성의 시작점 역할을 한다.
+- Daily Work Logging System의 검증 기준은 `npm run verify`로 둔다.
 
 ## Lessons for Vibe Coding Beginners
 
@@ -158,7 +203,9 @@ Reusable pattern:
 - `npm run check:ask-url -- --help` 성공
 - `npm run check:ask-url -- http://127.0.0.1:3001` 성공
 - `npm run build` 여러 차례 성공
+- `npm run verify` 여러 차례 성공
 - 정적 페이지 72개 생성 확인
+- 정적 페이지 84개 생성 확인
 - `/ask/eval` HTML에서 Deployment Gates, smoke test 명령, readiness 명령, runbook 링크 렌더링 확인
 - 홈 HTML에서 Current Operating Mode, Production, Preview, script-ready 렌더링 확인
 - `/ask` HTML에서 Deployment Gates, Smoke test runbook 링크 렌더링 확인
@@ -174,9 +221,23 @@ Reusable pattern:
 - `content/logs/2026-06-26-vercel-decision-visibility.md`
 - `content/logs/2026-06-26-vercel-mock-production-runbook.md`
 - `content/logs/2026-06-26-vercel-mock-production-deploy-report-template.md`
+- `content/logs/2026-06-26-home-recent-build-logs.md`
+- `content/logs/2026-06-26-latest-content-helper.md`
+- `content/logs/2026-06-26-featured-home-content.md`
+- `content/logs/2026-06-26-featured-content-guard.md`
+- `content/logs/2026-06-26-readme-current-direction-refresh.md`
+- `content/logs/2026-06-26-local-development-docs.md`
+- `content/logs/2026-06-26-dev-local-script.md`
+- `content/logs/2026-06-26-verify-script.md`
+- `content/logs/2026-06-26-git-sync-docs.md`
+- `content/logs/2026-06-26-repository-map-docs.md`
+- `content/logs/2026-06-26-content-authoring-docs.md`
+- `content/logs/2026-06-26-next-actions-ops-refresh.md`
 
 ## Next Step
 
 - 사용자가 Option A/B/C 중 하나를 선택한다.
 - 현재 추천은 Option B: Vercel 연결 + Production mock-only 배포이다.
 - Option B를 선택하면 `knowledge/VERCEL_MOCK_PRODUCTION_RUNBOOK.md`를 따라 진행하고, 배포 후 `knowledge/VERCEL_MOCK_PRODUCTION_DEPLOY_REPORT_TEMPLATE.md`로 결과를 기록한다.
+- Vercel 결정을 보류하는 동안에는 `npm run verify`를 기준으로 콘텐츠/UI/LLM Wiki 품질 개선을 계속한다.
+- GitHub에 올릴 준비가 되면 `npm run verify` 후 `git push origin main`을 실행한다.
