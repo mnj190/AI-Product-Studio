@@ -910,3 +910,17 @@
   - 기존 CSS 기반 디자인을 유지하기 위해 preflight는 import하지 않고 `theme`와 `utilities`만 연결했다.
   - `body`에 `antialiased` utility를 적용해 Tailwind pipeline이 실제 빌드에서 동작하도록 했다.
   - npm audit은 Next.js 관련 advisory를 보고했지만 자동 수정이 Next 16 breaking change로 이어져 배포 전 별도 검토 항목으로 남겼다.
+
+## [2026-06-30] security | Next Audit Triage
+
+- Source: `npm audit --audit-level=moderate`
+- Created:
+  - `knowledge/NEXT_AUDIT_TRIAGE.md`
+  - `content/logs/2026-06-30-next-audit-triage.md`
+- Updated:
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - Next.js 관련 high advisory와 Next 내부 PostCSS moderate advisory를 배포 전 판단 문서로 정리했다.
+  - `npm audit fix --force`가 Next 16 major upgrade를 제안하므로 자동 적용하지 않았다.
+  - 현재 앱은 `next/image`, image remote patterns, middleware/proxy, rewrites, beforeInteractive script, WebSocket upgrade route를 사용하지 않음을 확인했다.
