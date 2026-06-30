@@ -6,12 +6,14 @@ export function generateStaticParams() {
   return getEntries("logs").map((entry) => ({ slug: entry.slug }));
 }
 
-export default function LogDetailPage({ params }: { params: { slug: string } }) {
-  if (!hasEntry("logs", params.slug)) {
+export default async function LogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+
+  if (!hasEntry("logs", slug)) {
     notFound();
   }
 
-  const entry = getEntry("logs", params.slug);
+  const entry = getEntry("logs", slug);
   const entries = getEntries("logs");
 
   return <DocumentPage entry={entry} entries={entries} eyebrow="Build Log" section="logs" />;

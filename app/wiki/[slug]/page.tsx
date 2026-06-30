@@ -6,12 +6,14 @@ export function generateStaticParams() {
   return getEntries("wiki").map((entry) => ({ slug: entry.slug }));
 }
 
-export default function WikiDetailPage({ params }: { params: { slug: string } }) {
-  if (!hasEntry("wiki", params.slug)) {
+export default async function WikiDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+
+  if (!hasEntry("wiki", slug)) {
     notFound();
   }
 
-  const entry = getEntry("wiki", params.slug);
+  const entry = getEntry("wiki", slug);
   const entries = getEntries("wiki");
 
   return <DocumentPage entry={entry} entries={entries} eyebrow="Wiki" section="wiki" />;

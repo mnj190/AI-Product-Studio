@@ -925,3 +925,28 @@
   - `npm audit fix --force`가 Next 16 major upgrade를 제안하므로 자동 적용하지 않았다.
   - npm registry 기준 Next 14 최신은 현재 사용 중인 `14.2.35`라서 14 라인 안의 추가 패치 경로는 없음을 확인했다.
   - 현재 앱은 `next/image`, image remote patterns, middleware/proxy, rewrites, beforeInteractive script, WebSocket upgrade route를 사용하지 않음을 확인했다.
+
+## [2026-06-30] dependency | Next 15 Upgrade
+
+- Source: Next.js audit triage
+- Created:
+  - `content/logs/2026-06-30-next15-upgrade.md`
+- Updated:
+  - `package.json`
+  - `package-lock.json`
+  - `next-env.d.ts`
+  - `next.config.mjs`
+  - `app/ai-stack/[slug]/page.tsx`
+  - `app/projects/[slug]/page.tsx`
+  - `app/logs/[slug]/page.tsx`
+  - `app/prompts/[slug]/page.tsx`
+  - `app/wiki/[slug]/page.tsx`
+  - `app/ask/page.tsx`
+  - `knowledge/NEXT_AUDIT_TRIAGE.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - Next 15.5.19로 업그레이드하고 `npm run verify` 통과를 확인했다.
+  - Next 15의 async page props 타입에 맞춰 dynamic route `params`와 `/ask`의 `searchParams`를 await하는 형태로 수정했다.
+  - Next 16.2.9는 Turbopack build 중 sandbox port binding 오류로 실패했고 audit 개선도 없어 보류했다.
+  - 남은 Next 내부 PostCSS moderate advisory는 배포 전 risk acceptance 또는 upstream patch 확인 대상으로 남겼다.

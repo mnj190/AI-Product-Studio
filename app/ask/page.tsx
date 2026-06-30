@@ -66,12 +66,13 @@ const policies = [
   ["Safety", "민감 정보와 투자 권유성 답변은 차단합니다."],
 ];
 
-export default function AskPage({
+export default async function AskPage({
   searchParams,
 }: {
-  searchParams?: { q?: string };
+  searchParams?: Promise<{ q?: string }>;
 }) {
-  const query = searchParams?.q?.trim() ?? "";
+  const resolvedSearchParams = await searchParams;
+  const query = resolvedSearchParams?.q?.trim() ?? "";
   const results = query ? lookupWiki(query, 6) : [];
   const terms = query ? tokenizeQuery(query).slice(0, 10) : [];
   const draft = query ? createDraftAnswer(query, results) : null;

@@ -6,12 +6,14 @@ export function generateStaticParams() {
   return getEntries("ai-stack").map((entry) => ({ slug: entry.slug }));
 }
 
-export default function AiStackDetailPage({ params }: { params: { slug: string } }) {
-  if (!hasEntry("ai-stack", params.slug)) {
+export default async function AiStackDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+
+  if (!hasEntry("ai-stack", slug)) {
     notFound();
   }
 
-  const entry = getEntry("ai-stack", params.slug);
+  const entry = getEntry("ai-stack", slug);
   const entries = getEntries("ai-stack");
 
   return <DocumentPage entry={entry} entries={entries} eyebrow="AI Stack" section="ai-stack" />;
