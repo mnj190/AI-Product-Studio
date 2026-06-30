@@ -923,4 +923,5 @@
 - Notes:
   - Next.js 관련 high advisory와 Next 내부 PostCSS moderate advisory를 배포 전 판단 문서로 정리했다.
   - `npm audit fix --force`가 Next 16 major upgrade를 제안하므로 자동 적용하지 않았다.
+  - npm registry 기준 Next 14 최신은 현재 사용 중인 `14.2.35`라서 14 라인 안의 추가 패치 경로는 없음을 확인했다.
   - 현재 앱은 `next/image`, image remote patterns, middleware/proxy, rewrites, beforeInteractive script, WebSocket upgrade route를 사용하지 않음을 확인했다.
