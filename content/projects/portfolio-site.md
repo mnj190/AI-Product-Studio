@@ -90,9 +90,11 @@ AI를 활용한 개발 과정을 기록한다.
 
 ## Result
 
-아직 초기 기초 작업 단계이다.
+Next.js 기반 포트폴리오 MVP를 구현했다.
 
-현재 목표는 코드보다 문서 구조와 원본 데이터를 먼저 만드는 것이다.
+현재는 Markdown 기반 콘텐츠를 웹에서 탐색할 수 있고, Project Archive, Prompt Library, Build Log, AI Stack, Wiki, Ask About Me mock flow가 연결되어 있다.
+
+Vercel 연결과 real LLM mode는 사용자 결정 전까지 보류하고, 로컬 검증과 mock mode 운영 기준을 먼저 안정화한다.
 
 ## Lessons Learned
 

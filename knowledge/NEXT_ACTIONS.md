@@ -63,6 +63,7 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 - [x] 2026-06-19 Daily Digest 작성
 - [x] 2026-06-26 Daily Digest 작성
 - [x] 2026-06-27 Daily Digest 작성
+- [x] 2026-06-30 Daily Digest 작성
 
 ### 5. Ask About Me 준비
 
@@ -127,21 +128,23 @@ Vercel 선택이 아직 없을 때는 외부 계정, secret, 배포를 건드리
 
 1. Home/Project Archive 품질 개선
    - [x] 대표 프로젝트 문서에 관련 로그/프롬프트/기준 문서 연결 추가
-   - [ ] 프로젝트 카드에 관련 로그/프롬프트 연결 기준 추가
+   - [x] 프로젝트 카드에 관련 로그/프롬프트 연결 기준 추가
    - [x] trading-bot, WebGPU Game, LLM Wiki의 공개 상태 설명 보강
 
 2. LLM Wiki 품질 점검
-   - `knowledge/LLM_WIKI_LINT_CHECKLIST.md` 기준으로 stale claim, orphan page, 중복 설명 점검
-   - `content/wiki/index.md`와 실제 Wiki 문서 목록 일치 여부 확인
+   - [x] Prompt Library와 AI Stack 문서가 Wiki index에서 발견 가능한지 확인
+   - [x] `content/wiki/index.md`와 실제 Wiki 문서 목록 일치 여부 확인
+   - [x] 기본 프로젝트 문서의 stale claim 일부 정리
+   - [x] `knowledge/LLM_WIKI_LINT_CHECKLIST.md` 기준 1차 stale/orphan/security 점검
 
 3. Ask About Me 품질 개선
-   - blocked/unknown/answered 샘플 추가
-   - trading-bot, Vercel, LLM Wiki 관련 질문의 출처와 답변 기준 보강
+   - [x] blocked/unknown/answered 샘플 추가
+   - [x] trading-bot, Vercel, LLM Wiki 관련 질문의 출처와 답변 기준 보강
 
 4. Daily Work Logging 운영
-   - 최근 커밋과 Build Log가 Daily Digest에 반영되었는지 확인
-   - 중요한 프롬프트를 Prompt Library에 추가할지 판단
+   - [x] 최근 커밋과 Build Log가 Daily Digest에 반영되었는지 확인
+   - [x] 중요한 프롬프트를 Prompt Library에 추가할지 판단
 
 5. GitHub 동기화 준비
-   - `npm run verify` 통과 확인
+   - [x] `npm run verify` 통과 확인
    - 사용자가 push를 승인하면 `git push origin main` 실행

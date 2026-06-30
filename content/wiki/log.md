@@ -777,3 +777,116 @@
   - Wiki index와 실제 Wiki 문서 목록을 대조하고, orphan/stale/security 후보를 점검했다.
   - Trading Bot 공개 범위가 과하게 넓게 읽힐 수 있던 오래된 설명을 현재 공개/답변 정책에 맞게 조정했다.
   - WebGPU Game 문서의 비어 있던 Links 섹션을 Wiki, 프롬프트, 향후 Build Log 경로로 연결했다.
+
+## [2026-06-27] eval | Ask Quality Samples
+
+- Source: Safe Local Backlog / Ask About Me quality
+- Created:
+  - `content/logs/2026-06-27-ask-quality-samples.md`
+- Updated:
+  - `lib/answer-draft.ts`
+  - `lib/ask-evaluation.ts`
+  - `content/wiki/ask-real-mode-evaluation.md`
+  - `knowledge/ASK_ABOUT_ME_ANSWER_POLICY.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - Trading Bot의 구체적인 수익률, 계좌 잔고, 거래 내역 요청을 blocked 샘플과 guard에 추가했다.
+  - 실제 Vercel Preview URL처럼 문서에 없는 배포 상태는 unknown으로 처리하도록 샘플과 guard를 보강했다.
+  - 문서에 없는 프로젝트 성과를 과장해달라는 요청도 unknown으로 처리하도록 기준을 명확히 했다.
+
+## [2026-06-30] ui | Project Card Resource Links
+
+- Source: Safe Local Backlog / Home and Project Archive quality
+- Created:
+  - `content/logs/2026-06-30-project-card-resource-links.md`
+- Updated:
+  - `app/projects/page.tsx`
+  - `app/globals.css`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - `/projects` 카드에서 관련 로그, 프롬프트, Wiki, 주요 화면으로 이어지는 짧은 링크를 노출했다.
+  - 공용 `ContentCard`는 유지하고 Project Archive 화면에만 전용 카드 구성을 적용했다.
+  - Trading Bot은 별도 에이전트 담당 범위로 두고 이번 카드 큐레이션 대상에서 제외했다.
+
+## [2026-06-30] log | Daily Digest
+
+- Source: Daily Work Logging routine
+- Created:
+  - `content/logs/2026-06-30-daily-digest.md`
+- Updated:
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 2026-06-30 작업을 하루치 공유용 Daily Digest로 묶었다.
+  - Trading Bot은 별도 에이전트 담당 범위로 분리하고, 기본 포트폴리오 Project Archive 개선과 검증 결과를 정리했다.
+  - 다음 후보를 Prompt Library 기록 판단과 LLM Wiki 발견 가능성 점검으로 남겼다.
+
+## [2026-06-30] prompt | Multi-Agent Scope Handoff
+
+- Source: Daily Work Logging / Prompt Library curation
+- Created:
+  - `content/prompts/multi-agent-scope-handoff.md`
+  - `content/logs/2026-06-30-multi-agent-scope-prompt.md`
+- Updated:
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 여러 에이전트가 같은 워크스페이스에서 일할 때 제외 범위와 진행 범위를 분리하는 프롬프트를 추가했다.
+  - Trading Bot을 별도 담당 범위로 두고 기본 포트폴리오 작업을 이어간 오늘의 요청 패턴을 재사용 가능하게 정리했다.
+
+## [2026-06-30] lint | Prompt And AI Stack Discovery
+
+- Source: LLM Wiki quality check
+- Created:
+  - `content/logs/2026-06-30-prompt-ai-stack-discovery.md`
+- Updated:
+  - `content/wiki/index.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - Prompt Library와 AI Stack 문서가 Wiki index에서 바로 발견되도록 별도 섹션을 추가했다.
+  - Ask About Me 답변 정책과 Local Wiki Lookup 설계에서 중요 지식 계층으로 쓰는 문서들이 index에서도 보이도록 맞췄다.
+  - 실제 Wiki 문서 목록과 index 링크를 비교해 `index.md` 자체를 제외한 Wiki 문서가 모두 연결되어 있음을 확인했다.
+
+## [2026-06-30] lint | Project Stale Claims
+
+- Source: `knowledge/LLM_WIKI_LINT_CHECKLIST.md`
+- Created:
+  - `content/logs/2026-06-30-project-stale-claims.md`
+- Updated:
+  - `content/projects/portfolio-site.md`
+  - `content/projects/llm-wiki.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - Portfolio Site와 Personal LLM Wiki 프로젝트 문서의 Result 섹션이 현재 구현 상태보다 초기 단계처럼 읽히던 표현을 갱신했다.
+  - Vercel 연결과 real LLM mode는 여전히 사용자 결정 전 보류 상태로 유지했다.
+
+## [2026-06-30] lint | Ask Stale Design Refresh
+
+- Source: `knowledge/LLM_WIKI_LINT_CHECKLIST.md`
+- Created:
+  - `content/logs/2026-06-30-ask-stale-design-refresh.md`
+- Updated:
+  - `knowledge/ASK_ABOUT_ME_INTERFACE_DESIGN.md`
+  - `knowledge/ROADMAP.md`
+  - `content/wiki/llm-wiki-pattern.md`
+  - `content/wiki/log.md`
+- Notes:
+  - `/ask`가 예시 질문과 source mapping만 보여주는 초기 mock page처럼 설명되던 오래된 상태 문구를 갱신했다.
+  - Local Wiki Lookup, deterministic draft answer, feedback candidate, `/api/ask` mock route, `/ask/eval` 평가 페이지가 연결된 현재 상태를 반영했다.
+
+## [2026-06-30] lint | LLM Wiki Lint Follow-up
+
+- Source: `knowledge/LLM_WIKI_LINT_CHECKLIST.md`
+- Created:
+  - `content/logs/2026-06-30-llm-wiki-lint-followup.md`
+- Updated:
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 트레이딩 봇 자체 작업을 제외하고 기본 포트폴리오, Ask About Me, LLM Wiki 운영 문서 중심으로 1차 stale/orphan/security 점검을 마무리했다.
+  - 보안 키워드 검색 결과는 실제 secret 값이 아니라 placeholder, 정책 문구, 차단 패턴, runbook 안내로 분류했다.
+  - 깊은 중복 설명 정리는 별도 리팩토링 패스로 남겼다.

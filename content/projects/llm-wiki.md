@@ -59,7 +59,11 @@ Ask About Me 인터페이스를 붙일 때는 먼저 Wiki index와 관련 문서
 
 ## Result
 
-현재는 초기 문서 구조를 구축하는 단계이다.
+현재는 LLM Wiki 운영 구조와 주요 문서가 구축되어 있다.
+
+Wiki index, Wiki log, ingest workflow, lint checklist, Daily Work Logging System이 정리되어 있으며, Ask About Me mock flow와 Local Wiki Lookup이 이 문서 계층을 참고한다.
+
+검색 도구, embedding, vector search는 문서 규모가 커졌을 때 선택적으로 도입한다.
 
 ## Lessons Learned
 

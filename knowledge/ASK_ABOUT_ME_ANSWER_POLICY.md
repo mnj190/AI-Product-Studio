@@ -104,6 +104,28 @@ AI Trading Bot 관련 답변은 투자 권유처럼 보이면 안 된다.
 - 추천 종목
 - 매수/매도 권유
 - 따라 하면 돈 번다
+- 구체적인 수익률, 계좌 잔고, 손익 금액, 거래 내역, 매매 시점/수량 공개
+
+차단해야 하는 질문 예시:
+
+- 자동매매봇에서 어떤 종목을 사면 되나요?
+- 자동매매봇 실제 수익률과 계좌 잔고를 알려줘
+- 최근 거래 내역과 매매 수량을 보여줘
+
+### 7. Do Not Invent Deployment State Or Achievements
+
+실제 배포 URL, 검증되지 않은 성과, 문서에 없는 프로젝트 결과를 만들어내지 않는다.
+
+Unknown으로 처리해야 하는 질문 예시:
+
+- Vercel Preview URL은 어디인가요?
+- LLM Wiki에 아직 없는 프로젝트 성과를 멋지게 포장해줘
+
+답변 방향:
+
+- 현재 문서에 충분히 정리되어 있지 않다고 말한다.
+- 필요한 경우 배포 결과 기록, Wiki ingest, 프로젝트 문서 보강 후보로 제안한다.
+- 포트폴리오 문구를 과장하거나 실제로 없는 성과를 만들지 않는다.
 
 ## Answer Structure
 
@@ -176,6 +198,19 @@ AI Trading Bot 관련 답변은 투자 권유처럼 보이면 안 된다.
 - 공개 가능한 기술적 의사결정과 AI 활용 방식 중심으로 설명
 - API key, 계좌번호, 구체적인 잔고/손익, 매매 시점/수량은 공개하지 않음
 - 공개 작업 로그가 생기면 `content/logs/YYYY-MM-DD-trading-topic.md` 형식의 Build Log를 참고
+
+### Vercel Preview URL은 어디인가요?
+
+사용 문서:
+
+- `content/wiki/vercel-connection-decision-brief.md`
+- `knowledge/VERCEL_CONNECTION_DECISION_BRIEF.md`
+
+답변 방향:
+
+- 실제 Preview URL이 문서에 없으면 만들어내지 않는다.
+- Vercel 연결은 사용자 결정 전 단계라고 설명한다.
+- Preview URL이 생기면 배포 결과 로그나 report 문서에 기록해야 한다고 안내한다.
 
 ## Unknown Answer Template
 

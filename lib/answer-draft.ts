@@ -40,9 +40,26 @@ const tradingAdvicePatterns = [
   /매수/,
   /매도/,
   /수익\s*보장/,
+  /수익률\s*(얼마|몇|공개|알려)/,
+  /손익\s*(얼마|몇|공개|알려)/,
+  /잔고\s*(얼마|몇|공개|알려)/,
+  /거래\s*내역/,
+  /매매\s*(시점|수량|내역)/,
   /따라\s*하면\s*돈/,
   /뭐\s*사/,
   /뭘\s*사/,
+];
+
+const unavailableFactPatterns = [
+  /preview\s*url.*(어디|알려|무엇|뭐)/i,
+  /vercel.*preview\s*url.*(어디|알려|무엇|뭐)/i,
+  /배포\s*url.*(어디|알려|무엇|뭐)/i,
+];
+
+const overclaimPatterns = [
+  /없는.*성과.*(포장|멋지게|부풀)/,
+  /성과.*(포장|부풀|과장)/,
+  /문서에\s*없는.*(만들|써줘|포장)/,
 ];
 
 const makeExcerpt = (body: string, matchedTerms: string[]) => {
@@ -74,6 +91,12 @@ const isSensitiveQuestion = (question: string) =>
 const isTradingAdviceQuestion = (question: string) =>
   tradingAdvicePatterns.some((pattern) => pattern.test(question));
 
+const isUnavailableFactQuestion = (question: string) =>
+  unavailableFactPatterns.some((pattern) => pattern.test(question));
+
+const isOverclaimQuestion = (question: string) =>
+  overclaimPatterns.some((pattern) => pattern.test(question));
+
 export const createDraftAnswer = (question: string, results: LookupResult[]): DraftAnswer => {
   const trimmedQuestion = question.trim();
 
@@ -104,6 +127,16 @@ export const createDraftAnswer = (question: string, results: LookupResult[]): Dr
         "자동매매봇은 개발 실험과 운영 기록 관점으로만 설명할 수 있습니다. 종목 추천, 매수/매도 권유, 수익 보장, 구체적인 계좌 잔고나 손익 금액, 매매 시점/수량처럼 민감하거나 투자 권유로 읽힐 수 있는 답변은 제공하지 않습니다.",
       sources: safeSources,
       warnings: ["투자 권유로 해석될 수 있는 질문은 안전 정책에 따라 제한합니다."],
+    };
+  }
+
+  if (isUnavailableFactQuestion(trimmedQuestion) || isOverclaimQuestion(trimmedQuestion)) {
+    return {
+      status: "unknown",
+      answer:
+        "현재 LLM Wiki에는 해당 내용이 충분히 정리되어 있지 않습니다. 실제 배포 URL, 검증되지 않은 성과, 문서에 없는 주장은 만들어내지 않고 관련 문서를 먼저 추가하거나 기존 문서를 보강해야 합니다.",
+      sources: [],
+      warnings: ["현재 문서로 검증할 수 없는 질문입니다."],
     };
   }
 

@@ -128,11 +128,14 @@ RAG는 여전히 나중에 사용할 수 있다.
 
 ## First Implementation Direction
 
-다음 순서로 진행한다.
+초기 구현은 다음 흐름으로 진행했다.
 
 1. LLM Wiki 관리 규칙을 만든다.
 2. Wiki index와 log를 만든다.
 3. 기존 문서를 LLM Wiki 구조에 맞게 정리한다.
 4. 새 대화나 자료를 ingest하는 작업 흐름을 만든다.
-5. 나중에 Ask About Me Chatbot이 Wiki를 읽고 답변하도록 만든다.
+5. Ask About Me mock flow가 Wiki를 읽고 관련 문서, draft answer, feedback candidate를 보여준다.
 
+현재는 provider adapter-ready 상태이다.
+
+Production은 mock mode를 유지하고, real LLM provider 검수는 Vercel Preview 같은 제한된 환경에서만 진행하는 방향으로 둔다.

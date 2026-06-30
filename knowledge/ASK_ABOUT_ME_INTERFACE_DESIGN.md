@@ -2,6 +2,10 @@
 
 이 문서는 Ask About Me 인터페이스의 초기 설계를 정의한다.
 
+현재 구현은 초기 mock page를 넘어 Local Wiki Lookup, deterministic draft answer, feedback candidate, `/api/ask` mock route, `/ask/eval` 평가 페이지까지 포함한다.
+
+외부 LLM provider 호출은 아직 공개 운영하지 않으며, 기본 운영 모드는 mock이다.
+
 ## Goal
 
 방문자가 조정민의 경력, 프로젝트, AI 활용 방식, 프롬프트, 개발 로그에 대해 질문할 수 있는 인터페이스를 만든다.
@@ -50,7 +54,7 @@ Ask About Me는 단순 챗봇 UI가 아니다.
 
 - 구현 완료.
 - `/ask?q=...` 형태로 질문을 입력하면 관련 문서 후보를 보여준다.
-- 아직 답변 생성은 하지 않는다.
+- 검색 결과를 기반으로 deterministic draft answer를 함께 보여준다.
 
 ### Phase 3. LLM Answer API
 
@@ -96,7 +100,7 @@ Ask About Me는 단순 챗봇 UI가 아니다.
 
 1. Hero
    - “조정민에 대해 질문해보세요”
-   - 현재는 LLM Wiki 기반 mock 인터페이스라는 설명
+   - 현재 운영 모드와 LLM Wiki 기반 mock/preview 흐름 설명
 
 2. Example Questions
    - 조정민은 어떤 개발자인가요?
@@ -116,8 +120,8 @@ Ask About Me는 단순 챗봇 UI가 아니다.
    - 질문별 참고 문서 목록
 
 5. Next Step
-   - 로컬 Wiki 검색
-   - LLM API 연동
+   - `/ask/eval` 평가 기준
+   - Preview real mode 검수 흐름
    - 답변을 Wiki에 반영하는 workflow
 
 ## Source Map
@@ -133,9 +137,9 @@ Ask About Me는 단순 챗봇 UI가 아니다.
 
 ## Non-Goals For Now
 
-초기 `/ask` 페이지에서는 하지 않는다.
+현재 공개 운영에서는 하지 않는다.
 
-- 실제 LLM API 호출
+- Production real LLM API 호출
 - 사용자 질문 저장
 - 로그인
 - Vector DB
@@ -144,9 +148,10 @@ Ask About Me는 단순 챗봇 UI가 아니다.
 
 ## Success Criteria
 
-초기 설계가 성공한 상태:
+현재 설계가 성공한 상태:
 
 - `/ask` 페이지가 존재한다.
 - 사용자가 질문 가능한 주제를 이해한다.
 - 답변 기준과 출처 정책이 드러난다.
-- 다음 구현 단계가 명확하다.
+- Local Wiki Lookup, draft answer, feedback candidate가 연결된다.
+- real mode 전환 전 평가 기준과 배포 gate가 명확하다.
