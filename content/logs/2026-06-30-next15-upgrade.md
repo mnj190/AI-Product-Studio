@@ -31,6 +31,7 @@ Vercel 배포 전 Next.js audit 대응 경로를 확인하기 위해 Next 15와 
 - `/ask` page의 `searchParams`를 Promise 기반 타입으로 맞췄다.
 - `next.config.mjs`에 `outputFileTracingRoot`를 명시해 상위 lockfile로 인한 workspace root 경고를 막았다.
 - `knowledge/NEXT_AUDIT_TRIAGE.md`와 `knowledge/NEXT_ACTIONS.md`에 결정 결과를 반영했다.
+- Next audit triage 문서에서 과거 Next 14 lockfile 상태와 현재 Next 15 결정 상태가 섞이지 않도록 표현을 정리했다.
 
 ## Verification
 
