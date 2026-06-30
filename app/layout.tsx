@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>
+      <body className="antialiased">
         <div className="site-shell">
           <header className="site-header">
             <nav className="site-nav">

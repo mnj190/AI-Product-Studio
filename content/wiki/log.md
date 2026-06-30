@@ -890,3 +890,23 @@
   - 트레이딩 봇 자체 작업을 제외하고 기본 포트폴리오, Ask About Me, LLM Wiki 운영 문서 중심으로 1차 stale/orphan/security 점검을 마무리했다.
   - 보안 키워드 검색 결과는 실제 secret 값이 아니라 placeholder, 정책 문구, 차단 패턴, runbook 안내로 분류했다.
   - 깊은 중복 설명 정리는 별도 리팩토링 패스로 남겼다.
+
+## [2026-06-30] setup | Tailwind CSS
+
+- Source: Web MVP remaining task
+- Created:
+  - `content/logs/2026-06-30-tailwind-setup.md`
+- Updated:
+  - `package.json`
+  - `package-lock.json`
+  - `postcss.config.mjs`
+  - `app/globals.css`
+  - `app/layout.tsx`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `knowledge/TECH_DECISIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - Tailwind CSS v4와 `@tailwindcss/postcss`를 dev dependency로 추가했다.
+  - 기존 CSS 기반 디자인을 유지하기 위해 preflight는 import하지 않고 `theme`와 `utilities`만 연결했다.
+  - `body`에 `antialiased` utility를 적용해 Tailwind pipeline이 실제 빌드에서 동작하도록 했다.
+  - npm audit은 Next.js 관련 advisory를 보고했지만 자동 수정이 Next 16 breaking change로 이어져 배포 전 별도 검토 항목으로 남겼다.

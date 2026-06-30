@@ -45,7 +45,7 @@ PATH=/Users/jo/.nvm/versions/node/v20.19.5/bin:/usr/local/bin:/usr/bin:/bin:/usr
 `npm run verify`는 성공했다.
 
 - `npm run build` 성공
-- 정적 페이지 103개 생성
+- 정적 페이지 104개 생성
 - `npm run check:preview-env` 성공
 - local mock mode 기준 preview readiness check 통과
 

@@ -35,7 +35,7 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 
 - [x] Next.js 생성
 - [x] TypeScript 적용
-- [ ] Tailwind CSS 적용
+- [x] Tailwind CSS 적용
 - [x] 기본 레이아웃 설계
 - [x] Markdown 로딩 방식 결정
 - [x] 콘텐츠 목록/상세 라우팅 설계
@@ -147,4 +147,5 @@ Vercel 선택이 아직 없을 때는 외부 계정, secret, 배포를 건드리
 
 5. GitHub 동기화 준비
    - [x] `npm run verify` 통과 확인
+   - [ ] Vercel 배포 전 Next.js audit 결과 검토
    - 사용자가 push를 승인하면 `git push origin main` 실행

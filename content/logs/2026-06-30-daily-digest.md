@@ -14,6 +14,7 @@
 - 오늘 작업 단위 Build Log를 Daily Digest에 반영했다.
 - 멀티 에이전트 담당 범위 분리 요청을 Prompt Library 문서로 승격했다.
 - Portfolio Site와 Personal LLM Wiki 프로젝트 문서의 오래된 Result 설명을 현재 구현 상태에 맞게 갱신했다.
+- Tailwind CSS v4를 PostCSS pipeline에 적용하고 기존 CSS 디자인을 유지한 채 utility 사용 기반을 마련했다.
 
 ## How AI Was Used
 
@@ -22,6 +23,7 @@
 - Reviewing: `npm run verify`와 로컬 `/projects` HTTP 응답으로 빌드와 렌더링을 확인했다.
 - Reflecting: 작업 로그, Wiki Log, Next Actions, Daily Digest를 같은 상태로 맞췄다.
 - Curating: 재사용 가치가 높은 멀티 에이전트 scope handoff 요청을 Prompt Library에 추가했다.
+- Setup: Tailwind CSS를 기존 UI를 흔들지 않는 방식으로 빌드 파이프라인에 연결했다.
 
 ## Human Decisions
 
@@ -78,7 +80,7 @@ PATH=/Users/jo/.nvm/versions/node/v20.19.5/bin:/usr/local/bin:/usr/bin:/bin:/usr
 검증 결과:
 
 - `npm run build` 성공
-- 정적 페이지 103개 생성
+- 정적 페이지 104개 생성
 - `npm run check:preview-env` 성공
 - local mock mode 기준 preview readiness check 통과
 
@@ -95,6 +97,7 @@ PATH=/Users/jo/.nvm/versions/node/v20.19.5/bin:/usr/local/bin:/usr/bin:/bin:/usr
 - `content/logs/2026-06-30-project-stale-claims.md`
 - `content/logs/2026-06-30-ask-stale-design-refresh.md`
 - `content/logs/2026-06-30-llm-wiki-lint-followup.md`
+- `content/logs/2026-06-30-tailwind-setup.md`
 
 ## Next Step
 

@@ -32,11 +32,16 @@ TypeScript를 사용한다.
 
 Tailwind CSS를 사용한다.
 
+현재 프로젝트에는 Tailwind CSS v4를 PostCSS plugin으로 적용한다.
+
+기존 전역 CSS 기반 디자인을 유지하기 위해 Tailwind preflight는 도입하지 않고, `theme`와 `utilities`만 import한다.
+
 ### Reason
 
 - 빠르게 MVP UI를 만들 수 있다.
 - shadcn/ui와 함께 쓰기 좋다.
 - 포트폴리오 특성상 커스텀 디자인을 점진적으로 다듬기 좋다.
+- 기존 CSS를 유지하면서 필요한 화면부터 utility class를 점진적으로 적용할 수 있다.
 
 ## UI Components
 
