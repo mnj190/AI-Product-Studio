@@ -968,3 +968,21 @@
   - `npm run verify`는 Next.js 15.5.20 기준으로 통과했고 정적 페이지 107개를 생성했다.
   - `npm audit --audit-level=moderate`는 Next 내부 PostCSS moderate advisory 2건을 계속 보고했다.
   - Option B 진행 전 risk acceptance 또는 upstream patch 대기 결정을 명시해야 한다.
+
+## [2026-07-08] deploy | Vercel Mock-only Production
+
+- Source: Vercel Dashboard connection and CLI verification
+- Created:
+  - `content/logs/2026-07-08-vercel-dashboard-connection.md`
+  - `content/logs/2026-07-08-vercel-mock-production-deploy.md`
+- Updated:
+  - `.gitignore`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - 사용자가 Vercel Dashboard에서 `ai-product-studio` 프로젝트를 연결했다.
+  - `git push origin main`으로 로컬 커밋을 GitHub `main`에 반영했다.
+  - Production URL `https://ai-product-studio-psi.vercel.app`에서 safe GET smoke test를 통과했다.
+  - `/api/ask` metadata는 `mode=mock`, `realModeReady=false`, `rateLimitStore=memory`로 확인됐다.
+  - Vercel CLI 54.21.1을 전역 설치하고 로컬 프로젝트를 `ai-vibe-project/ai-product-studio`에 연결했다.
+  - Production environment variable은 설정되어 있지 않음을 확인했다.

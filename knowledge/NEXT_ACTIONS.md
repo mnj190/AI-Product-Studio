@@ -153,7 +153,9 @@ Vercel 선택이 아직 없을 때는 외부 계정, secret, 배포를 건드리
    - [x] Next 15 최신 패치(`15.5.20`) 적용 및 `npm run verify` 재확인
    - [x] Vercel Dashboard에서 프로젝트 연결 완료
    - [x] `git push origin main` 완료
-   - [ ] Vercel 배포 전 남은 Next 내부 PostCSS advisory risk acceptance 여부 결정
-   - [ ] Vercel Production URL 확인
-   - [ ] `npm run check:ask-url -- <production-url>` smoke test 실행
-   - [ ] Vercel mock-only Production 배포 결과 로그 작성
+   - [x] Vercel 배포 전 남은 Next 내부 PostCSS advisory risk acceptance 여부 결정
+   - [x] Vercel Production URL 확인
+   - [x] `npm run check:ask-url -- <production-url>` smoke test 실행
+   - [x] Vercel CLI 설치 및 로컬 프로젝트 연결
+   - [x] Vercel mock-only Production 배포 결과 로그 작성
+   - [x] 공개 URL 공유 전 홈/Ask/Logs 수동 화면 점검
