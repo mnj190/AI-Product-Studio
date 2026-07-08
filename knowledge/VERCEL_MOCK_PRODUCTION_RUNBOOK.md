@@ -35,6 +35,7 @@
 ```bash
 git status --short --branch
 npm run verify
+npm audit --audit-level=moderate
 ```
 
 기대 상태:
@@ -44,6 +45,14 @@ npm run verify
 - `RATE_LIMIT_STORE=memory`
 - build 성공
 - preview readiness check 통과
+- 남은 Next 내부 PostCSS moderate advisory를 배포 전 risk acceptance로 수용했거나, upstream patch를 기다리기로 결정함
+
+2026-07-08 기준으로 `next@15.5.20`까지 패치 업그레이드했지만 Next 내부 PostCSS moderate advisory는 남아 있다.
+
+Option B를 진행하려면 아래 둘 중 하나를 명시적으로 선택한다.
+
+- Risk acceptance: mock-only Production 배포를 진행한다. 현재 앱은 `next/image`, image remote patterns, middleware/proxy, rewrites, `beforeInteractive` script, WebSocket upgrade route를 사용하지 않고, Production real mode와 LLM secret도 켜지 않는다.
+- Wait for upstream patch: Vercel 연결을 보류하고 Next/Vercel ecosystem patch를 기다린다.
 
 ## Vercel Project Setup
 

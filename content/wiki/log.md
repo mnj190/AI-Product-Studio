@@ -950,3 +950,21 @@
   - Next 15의 async page props 타입에 맞춰 dynamic route `params`와 `/ask`의 `searchParams`를 await하는 형태로 수정했다.
   - Next 16.2.9는 Turbopack build 중 sandbox port binding 오류로 실패했고 audit 개선도 없어 보류했다.
   - 남은 Next 내부 PostCSS moderate advisory는 배포 전 risk acceptance 또는 upstream patch 확인 대상으로 남겼다.
+
+## [2026-07-08] dependency | Next 15 Patch and Audit Refresh
+
+- Source: Vercel deployment pre-flight
+- Created:
+  - `content/logs/2026-07-08-next15-patch-audit-refresh.md`
+- Updated:
+  - `package.json`
+  - `package-lock.json`
+  - `knowledge/NEXT_AUDIT_TRIAGE.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `knowledge/VERCEL_MOCK_PRODUCTION_RUNBOOK.md`
+  - `content/wiki/log.md`
+- Notes:
+  - Next 15 라인의 최신 패치인 `15.5.20`으로 업그레이드했다.
+  - `npm run verify`는 Next.js 15.5.20 기준으로 통과했고 정적 페이지 107개를 생성했다.
+  - `npm audit --audit-level=moderate`는 Next 내부 PostCSS moderate advisory 2건을 계속 보고했다.
+  - Option B 진행 전 risk acceptance 또는 upstream patch 대기 결정을 명시해야 한다.

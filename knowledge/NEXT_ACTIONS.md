@@ -150,5 +150,6 @@ Vercel 선택이 아직 없을 때는 외부 계정, secret, 배포를 건드리
    - [x] Vercel 배포 전 Next.js audit 결과 검토
    - [x] Vercel 배포 전 Next.js 보안 패치 경로 확인
    - [x] Vercel 배포 전 Next 15/16 업그레이드 여부 결정
+   - [x] Next 15 최신 패치(`15.5.20`) 적용 및 `npm run verify` 재확인
    - [ ] Vercel 배포 전 남은 Next 내부 PostCSS advisory risk acceptance 여부 결정
    - 사용자가 push를 승인하면 `git push origin main` 실행
