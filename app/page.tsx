@@ -65,8 +65,8 @@ export default function HomePage() {
             <h2>Production은 안전하게, Preview는 검수 가능하게.</h2>
           </div>
           <div className="actions">
-            <Link className="button" href="/wiki/vercel-connection-decision-brief">
-              Vercel 선택지 보기
+            <Link className="button" href="/logs/2026-07-08-vercel-mock-production-deploy">
+              배포 기록 보기
             </Link>
             <Link className="button" href="/ask/eval">
               Deployment Gates 보기
@@ -78,12 +78,12 @@ export default function HomePage() {
             [
               "Production",
               "mock mode",
-              "공개 포트폴리오는 외부 LLM provider를 호출하지 않는 안전한 상태를 유지합니다.",
+              "공개 URL은 배포되었고 외부 LLM provider를 호출하지 않는 안전한 상태를 유지합니다.",
             ],
             [
               "Preview",
               "gated real mode",
-              "Vercel Preview URL이 생기면 readiness check와 safe smoke test를 먼저 통과해야 합니다.",
+              "real mode 검수는 Production이 아니라 Vercel Preview에서만 별도로 진행합니다.",
             ],
             [
               "Verification",

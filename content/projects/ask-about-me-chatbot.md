@@ -86,7 +86,11 @@
 
 외부 LLM API를 호출하지 않고 Local Wiki Lookup, draft answer, feedback candidate를 JSON으로 반환한다.
 
-다음 단계는 real provider adapter와 rate limit 정책을 설계할지, UI/콘텐츠 품질을 먼저 다듬을지 결정하는 것이다.
+Production에서는 mock mode를 유지하며, 공개 URL에서도 외부 LLM API를 호출하지 않는다.
+
+real provider adapter 검수는 Vercel Preview에서만 별도로 진행한다.
+
+다음 단계는 Preview real mode 검수를 준비할지, 공개 전 UI/콘텐츠 품질을 더 다듬을지 결정하는 것이다.
 
 ## Lessons Learned
 
@@ -109,6 +113,7 @@
   - `/logs/2026-06-18-ask-feedback-loop`
   - `/logs/2026-06-26-ask-eval-deployment-gates`
   - `/logs/2026-06-27-trading-bot-answer-guard`
+  - `/logs/2026-07-08-vercel-mock-production-deploy`
 - 관련 기준 문서:
   - `knowledge/ASK_ABOUT_ME_ANSWER_POLICY.md`
   - `knowledge/ASK_REAL_MODE_EVALUATION.md`

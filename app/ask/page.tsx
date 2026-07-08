@@ -309,7 +309,7 @@ export default async function AskPage({
             <p>
               지금은 mock API route가 Local Wiki Lookup과 draft answer를 반환하면서,
               provider adapter와 rate limit gate를 통과할 수 있는 구조까지 준비했습니다.
-              실제 Vercel 연결 전에는 readiness check를 먼저 실행하고, Preview URL이 생긴 뒤
+              Production은 mock-only로 공개되어 있고, real mode는 Preview URL이 생긴 뒤
               safe GET smoke test와 `/ask/eval` 샘플 검수를 통과해야 합니다.
             </p>
           </div>

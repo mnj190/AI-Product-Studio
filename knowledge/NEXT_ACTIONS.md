@@ -4,7 +4,7 @@
 
 ## Current Priority
 
-Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템을 다듬고, 이후 real LLM 연동 여부를 결정한다.
+Vercel mock-only Production 배포가 완료된 상태에서 공개 URL 공유 전 콘텐츠/UI 품질을 다듬고, 이후 Preview real LLM 검수 여부를 결정한다.
 
 ## Immediate Tasks
 
@@ -110,21 +110,32 @@ Static Portfolio MVP의 화면 흐름, 콘텐츠 품질, 작업 기록 시스템
 
 ## Next Recommended Step
 
-다음 작업은 Vercel 연결 방향을 Option A/B/C 중 하나로 결정하는 것이다.
+다음 작업은 공개 URL을 바로 공유할지, 공유 전 콘텐츠/UI를 더 다듬을지 결정하는 것이다.
 
-외부 Vercel 계정/프로젝트를 건드리기 전에는 `npm run verify`로 로컬 build와 readiness를 먼저 확인한다.
+현재 공개 URL은 다음과 같다.
+
+```text
+https://ai-product-studio-psi.vercel.app/
+```
+
+mock-only Production smoke test는 통과했다.
+
+- `mode=mock`
+- `realModeReady=false`
+- `rateLimitStore=memory`
+- `/ask/eval` 200
+- `/wiki/vercel-preview-readiness-checklist` 200
+
+다음 선택지는 두 가지다.
+
+- 공개 URL 공유 전 홈/프로젝트/About/Ask 문구를 한 번 더 다듬는다.
+- Vercel Preview에서 real LLM mode 검수를 준비한다.
 
 Preview URL이 생기면 `npm run check:ask-url -- <preview-url>`로 safe GET smoke test를 실행한다.
 
-현재 추천은 Option B이다.
+## Safe Local Backlog After Mock Production
 
-- Option A: Vercel 연결 보류
-- Option B: Vercel 연결 + Production mock-only 배포
-- Option C: Vercel 연결 + Preview real mode 검수 준비
-
-## Safe Local Backlog Before Vercel Decision
-
-Vercel 선택이 아직 없을 때는 외부 계정, secret, 배포를 건드리지 않고 아래 작업을 진행한다.
+Production real mode, secret, provider 호출을 건드리지 않고 아래 작업을 진행한다.
 
 1. Home/Project Archive 품질 개선
    - [x] 대표 프로젝트 문서에 관련 로그/프롬프트/기준 문서 연결 추가
@@ -159,3 +170,13 @@ Vercel 선택이 아직 없을 때는 외부 계정, secret, 배포를 건드리
    - [x] Vercel CLI 설치 및 로컬 프로젝트 연결
    - [x] Vercel mock-only Production 배포 결과 로그 작성
    - [x] 공개 URL 공유 전 홈/Ask/Logs 수동 화면 점검
+
+6. 공개 URL 공유 전 polish
+   - [x] 홈 첫 화면에서 공개 URL 이후 상태가 자연스럽게 보이는지 점검
+   - [x] About/Projects 문서가 현재 공개 상태와 어긋나지 않는지 점검
+   - [x] Ask About Me가 mock mode임을 방문자가 오해하지 않게 설명되는지 점검
+
+7. Preview real mode 준비 여부 결정
+   - [ ] Preview Deployment real mode 검수 여부 결정
+   - [ ] Preview environment variable 설정 여부 결정
+   - [ ] Upstash Redis 준비 여부 결정
