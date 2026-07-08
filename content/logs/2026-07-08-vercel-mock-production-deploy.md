@@ -16,6 +16,8 @@ Production에서는 Ask About Me real mode를 켜지 않았고, 외부 LLM provi
 - URL: https://ai-product-studio-psi.vercel.app
 - Mode: mock-only
 
+Note: Vercel CLI also showed `https://ai-product-studio-ai-vibe-project.vercel.app` as a latest Production URL, but that alias redirects `/api/ask` to Vercel SSO. The public smoke-test target for sharing and API verification is `https://ai-product-studio-psi.vercel.app`.
+
 ## Safety Constraints
 
 - Production에 `ASK_API_MODE=real` 없음
@@ -63,7 +65,7 @@ ai-vibe-project/ai-product-studio
 
 ```text
 Project Name: ai-product-studio
-Latest Production URL: https://ai-product-studio-psi.vercel.app
+Latest Production URL: https://ai-product-studio-ai-vibe-project.vercel.app
 ```
 
 Production environment variable 조회 결과:
@@ -93,6 +95,7 @@ No Environment Variables found
 
 - Vercel CLI를 프로젝트 dev dependency로 설치하면 audit 항목이 크게 늘어나므로 적용하지 않았다.
 - 전역 Vercel CLI 설치로 전환했다.
+- Vercel CLI가 표시한 latest Production URL은 `/api/ask` 요청에서 Vercel SSO로 redirect되어 smoke test 대상에서 제외했다.
 - Next 내부 PostCSS moderate advisory는 여전히 남아 있으며, mock-only Production 범위에서만 수용한다.
 
 ## Next Step
