@@ -986,3 +986,36 @@
   - `/api/ask` metadata는 `mode=mock`, `realModeReady=false`, `rateLimitStore=memory`로 확인됐다.
   - Vercel CLI 54.21.1을 전역 설치하고 로컬 프로젝트를 `ai-vibe-project/ai-product-studio`에 연결했다.
   - Production environment variable은 설정되어 있지 않음을 확인했다.
+
+## [2026-07-08] digest | Vercel Deployment Daily Digest
+
+- Source: 2026-07-08 Vercel deployment work logs
+- Created:
+  - `content/logs/2026-07-08-daily-digest.md`
+- Updated:
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - Next 15 patch, audit refresh, Vercel Dashboard connection, GitHub push, Production smoke test, Vercel CLI connection을 하루 단위 기록으로 묶었다.
+  - Production은 mock-only로 유지하고 real LLM mode는 Preview에서만 별도 검수한다는 결정을 정리했다.
+  - 공개 URL 공유 여부와 Preview real mode 검수 여부를 다음 선택지로 남겼다.
+
+## [2026-07-09] docs | Post-deployment Status Refresh
+
+- Source: post-deployment polish checklist
+- Created:
+  - `content/logs/2026-07-09-post-deployment-status-refresh.md`
+- Updated:
+  - `README.md`
+  - `app/page.tsx`
+  - `app/ask/page.tsx`
+  - `content/projects/portfolio-site.md`
+  - `content/projects/ask-about-me-chatbot.md`
+  - `content/wiki/vercel-connection-decision-brief.md`
+  - `knowledge/VERCEL_CONNECTION_DECISION_BRIEF.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - README, 홈, Ask 페이지, 프로젝트 문서, 공개 Wiki decision brief를 mock-only Production 배포 완료 상태로 갱신했다.
+  - 공개 URL 공유 전 polish 체크리스트를 완료 처리했다.
+  - 다음 결정은 공개 URL 공유 여부 또는 Preview real mode 검수 준비 여부로 남겼다.
