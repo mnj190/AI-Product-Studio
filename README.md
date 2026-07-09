@@ -205,6 +205,14 @@ Production smoke test는 다음 명령으로 확인한다.
 npm run check:ask-url -- https://ai-product-studio-psi.vercel.app/
 ```
 
+Vercel CLI 연결, Production/Preview environment variable 이름 목록, 공개 URL smoke test를 함께 확인하려면 다음을 사용한다.
+
+```bash
+npm run check:vercel
+```
+
+이 명령은 secret 값을 출력하지 않는다.
+
 ## Work Logging
 
 매일 작업 기록은 다음 문서를 기준으로 운영한다.

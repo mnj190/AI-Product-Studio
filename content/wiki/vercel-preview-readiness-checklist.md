@@ -43,6 +43,14 @@ Production 공개 URL의 mock-only 상태는 아래 명령으로 확인한다.
 npm run check:ask-url -- https://ai-product-studio-psi.vercel.app/
 ```
 
+Vercel CLI 연결, Production/Preview env 이름 목록, 공개 URL smoke test를 함께 확인하려면 아래 명령을 사용한다.
+
+```bash
+npm run check:vercel
+```
+
+이 명령은 secret 값을 출력하지 않는다.
+
 ## Preview Requirements
 
 Preview real mode에는 다음 설정이 필요하다.
@@ -72,4 +80,5 @@ Preview real mode에는 다음 설정이 필요하다.
 - `knowledge/ASK_REAL_MODE_EVALUATION.md`
 - `knowledge/PRODUCTION_RATE_LIMIT_STORE_DECISION.md`
 - `content/logs/2026-07-08-vercel-mock-production-deploy.md`
+- `scripts/check-vercel.mjs`
 - `scripts/check-preview-env.mjs`

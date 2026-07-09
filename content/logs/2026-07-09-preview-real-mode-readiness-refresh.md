@@ -25,6 +25,7 @@ mock-only Production 배포가 완료된 이후 상태에 맞춰 Preview real mo
 - `knowledge/ASK_ABOUT_ME_ANSWER_POLICY.md`에서 Preview URL 답변 기준을 현재 상태에 맞게 수정했다.
 - `/ask/eval`의 deployment gate와 Vercel Preview sample 기준에서 오래된 "Vercel 연결 전" 표현을 제거했다.
 - `knowledge/NEXT_ACTIONS.md`에 Preview readiness 문서 갱신과 Vercel Preview env 상태 확인을 완료 처리했다.
+- `npm run check:vercel` 스크립트를 추가해 Vercel CLI 연결, env 목록, 공개 URL smoke test를 한 번에 확인할 수 있게 했다.
 
 ## Verification
 
@@ -41,6 +42,20 @@ No Environment Variables found for ai-vibe-project/ai-product-studio
 ```
 
 즉, 현재 Preview real mode secret은 아직 설정되지 않았다.
+
+추가로 Vercel safety check를 확인했다.
+
+```bash
+PATH=/Users/jo/.nvm/versions/node/v20.19.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin npm run check:vercel
+```
+
+결과:
+
+- Vercel CLI authenticated: pass
+- Local Vercel link points to `ai-product-studio`: pass
+- Production env does not expose real mode markers: pass
+- Preview env list is readable: pass
+- Production public URL passes Ask smoke test: pass
 
 ## Safety Notes
 

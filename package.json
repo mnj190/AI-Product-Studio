@@ -9,6 +9,7 @@
     "verify": "npm run build && npm run check:preview-env",
     "check:ask-url": "node scripts/check-ask-url.mjs",
     "check:preview-env": "node scripts/check-preview-env.mjs",
+    "check:vercel": "node scripts/check-vercel.mjs",
     "start": "next start",
     "lint": "next lint"
   },

@@ -1043,3 +1043,4 @@
   - Vercel CLI helper와 Production URL smoke test 기준을 Preview 준비 문서에 추가했다.
   - `/ask/eval`의 deployment gate와 Preview URL 샘플 기준에서 오래된 "Vercel 연결 전" 표현을 정리했다.
   - `vercel env ls preview` 결과 Preview environment variable은 아직 설정되어 있지 않음을 확인했다.
+  - `npm run check:vercel`을 추가해 Vercel CLI 연결, env 목록, 공개 URL smoke test를 한 번에 확인할 수 있게 했다.

@@ -132,6 +132,14 @@ Preview environment variable 이름 목록만 확인한다. secret 값은 출력
 vercel env ls preview
 ```
 
+위 항목과 공개 Production URL smoke test를 한 번에 확인하려면 다음을 실행한다.
+
+```bash
+npm run check:vercel
+```
+
+이 명령은 Vercel CLI 로그인, 로컬 `.vercel/repo.json` 연결, Production env real mode marker 부재, Preview env 목록 조회 가능 여부, 공개 URL smoke test를 확인한다.
+
 ## Do Not
 
 - Production에서 바로 real mode를 켜지 않는다.
@@ -143,4 +151,4 @@ vercel env ls preview
 
 다음 작업은 Preview real mode 검수를 진행할지 사용자가 결정하는 것이다.
 
-그 전까지는 `npm run check:preview-env`, `npm run check:ask-url -- https://ai-product-studio-psi.vercel.app/`, 문서 체크리스트만 사용한다.
+그 전까지는 `npm run check:preview-env`, `npm run check:vercel`, 문서 체크리스트만 사용한다.
