@@ -2,7 +2,9 @@
 
 이 문서는 Ask About Me 인터페이스가 질문에 답할 때 따르는 기준이다.
 
-현재 단계에서는 실제 LLM API를 붙이기 전이며, LLM Wiki 기반 답변 정책을 먼저 고정한다.
+현재 Production은 mock-only로 공개되어 있으며, LLM Wiki 기반 답변 정책을 먼저 고정한다.
+
+real LLM provider 호출은 Production이 아니라 Vercel Preview에서만 별도로 검수한다.
 
 ## Purpose
 
@@ -204,12 +206,14 @@ Unknown으로 처리해야 하는 질문 예시:
 사용 문서:
 
 - `content/wiki/vercel-connection-decision-brief.md`
+- `content/logs/2026-07-08-vercel-mock-production-deploy.md`
 - `knowledge/VERCEL_CONNECTION_DECISION_BRIEF.md`
 
 답변 방향:
 
-- 실제 Preview URL이 문서에 없으면 만들어내지 않는다.
-- Vercel 연결은 사용자 결정 전 단계라고 설명한다.
+- Production URL은 `https://ai-product-studio-psi.vercel.app/`로 공개되어 있다고 설명할 수 있다.
+- 실제 Preview real mode URL이 문서에 없으면 만들어내지 않는다.
+- Vercel 연결과 mock-only Production 배포는 완료되었지만, Preview real mode 검수는 별도 결정으로 남아 있다고 설명한다.
 - Preview URL이 생기면 배포 결과 로그나 report 문서에 기록해야 한다고 안내한다.
 
 ## Unknown Answer Template

@@ -6,6 +6,8 @@ Vercel Preview Smoke Test Runbook은 Ask About Me real mode를 Preview Deploymen
 
 핵심 원칙은 real provider 호출을 바로 테스트하기 전에, 먼저 안전한 GET 요청으로 배포 URL과 metadata를 확인하는 것이다.
 
+Production은 이미 mock-only로 배포되어 있으며, 공유 기준 URL은 `https://ai-product-studio-psi.vercel.app/`이다.
+
 ## Smoke Test Command
 
 Preview URL이 생기면 아래 명령을 실행한다.
@@ -63,5 +65,6 @@ LLM 기능은 작은 설정 실수로도 비용, 품질, 보안 문제가 생길
 
 - `knowledge/VERCEL_PREVIEW_SMOKE_TEST_RUNBOOK.md`
 - `knowledge/VERCEL_PREVIEW_READINESS_CHECKLIST.md`
+- `content/logs/2026-07-08-vercel-mock-production-deploy.md`
 - `scripts/check-ask-url.mjs`
 - `scripts/check-preview-env.mjs`

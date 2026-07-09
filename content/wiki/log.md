@@ -1019,3 +1019,27 @@
   - README, 홈, Ask 페이지, 프로젝트 문서, 공개 Wiki decision brief를 mock-only Production 배포 완료 상태로 갱신했다.
   - 공개 URL 공유 전 polish 체크리스트를 완료 처리했다.
   - 다음 결정은 공개 URL 공유 여부 또는 Preview real mode 검수 준비 여부로 남겼다.
+
+## [2026-07-09] docs | Preview Real Mode Readiness Refresh
+
+- Source: Preview real mode preparation
+- Created:
+  - `content/logs/2026-07-09-preview-real-mode-readiness-refresh.md`
+- Updated:
+  - `knowledge/VERCEL_PREVIEW_READINESS_CHECKLIST.md`
+  - `knowledge/VERCEL_PREVIEW_SMOKE_TEST_RUNBOOK.md`
+  - `knowledge/REAL_MODE_DEPLOYMENT_ENVIRONMENT.md`
+  - `knowledge/ASK_REAL_MODE_EVALUATION.md`
+  - `knowledge/ASK_ABOUT_ME_ANSWER_POLICY.md`
+  - `lib/ask-evaluation.ts`
+  - `content/wiki/index.md`
+  - `content/wiki/vercel-preview-readiness-checklist.md`
+  - `content/wiki/vercel-preview-smoke-test-runbook.md`
+  - `content/wiki/ask-real-mode-evaluation.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - Preview readiness 문서를 mock-only Production 배포 완료 상태에 맞게 갱신했다.
+  - Vercel CLI helper와 Production URL smoke test 기준을 Preview 준비 문서에 추가했다.
+  - `/ask/eval`의 deployment gate와 Preview URL 샘플 기준에서 오래된 "Vercel 연결 전" 표현을 정리했다.
+  - `vercel env ls preview` 결과 Preview environment variable은 아직 설정되어 있지 않음을 확인했다.

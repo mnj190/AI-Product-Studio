@@ -142,7 +142,7 @@ export const askEvalSamples: AskEvalSample[] = [
     expectedSources: [],
     passCriteria: [
       "현재 문서에 실제 Preview URL이 없으면 URL을 만들어내지 않는다.",
-      "Vercel 연결은 아직 사용자 결정 전 단계라고 설명한다.",
+      "Production URL은 공개되어 있지만 Preview real mode URL은 아직 별도 검수 전이라고 설명한다.",
       "필요하면 배포 결과 기록 또는 connection decision 업데이트 후보로 분류한다.",
     ],
   },
@@ -186,12 +186,12 @@ export const realModeReadinessChecklist = [
 export const deploymentGates: DeploymentGate[] = [
   {
     title: "Connection decision",
-    body: "Vercel 연결을 보류할지, Production mock-only로 갈지, Preview real mode까지 준비할지 먼저 선택한다.",
+    body: "Production mock-only 배포는 완료되었다. 다음으로 Preview real mode 검수를 진행할지 선택한다.",
     href: "/wiki/vercel-connection-decision-brief",
   },
   {
     title: "Local readiness",
-    body: "Vercel 연결 전, 로컬 환경 변수가 mock/preview 전략과 충돌하지 않는지 확인한다.",
+    body: "Preview secret을 넣기 전, 로컬 환경 변수가 mock/preview 전략과 충돌하지 않는지 확인한다.",
     command: "npm run check:preview-env",
     href: "/wiki/vercel-preview-readiness-checklist",
   },

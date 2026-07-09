@@ -2,7 +2,11 @@
 
 이 문서는 Ask About Me real mode를 Vercel Preview Deployment에서만 제한적으로 켜기 전 확인할 체크리스트다.
 
-실제 Vercel project 연결, secret 입력, 배포 실행은 사용자가 명시적으로 진행하기 전까지 하지 않는다.
+Vercel project 연결과 mock-only Production 배포는 완료되었다.
+
+이 문서는 다음 단계인 Preview real mode 검수를 시작하기 전, secret 입력과 Preview 배포를 안전하게 준비하기 위한 체크리스트다.
+
+Preview secret 입력, Upstash 연결, real mode Preview 배포 실행은 사용자가 명시적으로 결정하기 전까지 하지 않는다.
 
 ## References
 
@@ -14,6 +18,7 @@
 - Production: `ASK_API_MODE=mock`
 - Preview: 검수 목적일 때만 `ASK_API_MODE=real`
 - Local: 기본값은 `ASK_API_MODE=mock`
+- Current public Production URL: `https://ai-product-studio-psi.vercel.app/`
 
 Vercel은 Local, Preview, Production 환경을 기본으로 제공하며, 환경별 environment variable을 다르게 둘 수 있다.
 
@@ -91,18 +96,41 @@ Preview에서 real mode를 켜려면 다음이 필요하다.
 
 Vercel Preview Deployment가 준비되면 다음을 수동으로 확인한다.
 
-1. Vercel project가 GitHub repo와 연결되어 있다.
+1. Vercel project가 GitHub repo와 연결되어 있다. 완료: `ai-vibe-project/ai-product-studio`
 2. Production branch가 `main`인지 확인한다.
-3. Preview branch 또는 PR을 만든다.
-4. Preview environment variables에만 real mode secret을 설정한다.
-5. Production environment variables는 mock mode를 유지한다.
-6. Upstash Redis integration이 연결되어 있다.
-7. Preview URL에서 `GET /api/ask`를 확인한다.
-8. `mode`, `realModeReady`, `rateLimitStore`, `rateLimitProductionReady` metadata를 확인한다.
-9. `/ask/eval` 샘플 질문을 수동 검수한다.
-10. blocked 질문이 provider 호출 전 차단되는지 확인한다.
-11. unknown 질문이 provider 호출 전 unknown 처리되는지 확인한다.
-12. answerable 질문이 source context를 벗어나지 않는지 확인한다.
+3. Production URL `https://ai-product-studio-psi.vercel.app/`가 mock mode smoke test를 통과한다.
+4. Preview branch 또는 PR을 만든다.
+5. Preview environment variables에만 real mode secret을 설정한다.
+6. Production environment variables는 mock mode를 유지한다.
+7. Upstash Redis integration이 연결되어 있다.
+8. Preview URL에서 `GET /api/ask`를 확인한다.
+9. `mode`, `realModeReady`, `rateLimitStore`, `rateLimitProductionReady` metadata를 확인한다.
+10. `/ask/eval` 샘플 질문을 수동 검수한다.
+11. blocked 질문이 provider 호출 전 차단되는지 확인한다.
+12. unknown 질문이 provider 호출 전 unknown 처리되는지 확인한다.
+13. answerable 질문이 source context를 벗어나지 않는지 확인한다.
+
+## Vercel CLI Helpers
+
+로컬 프로젝트는 Vercel CLI로 `ai-vibe-project/ai-product-studio`에 연결되어 있다.
+
+프로젝트 연결 상태를 확인한다.
+
+```bash
+vercel project ls
+```
+
+Production environment variable이 비어 있거나 mock-only 상태인지 확인한다.
+
+```bash
+vercel env ls production
+```
+
+Preview environment variable 이름 목록만 확인한다. secret 값은 출력하지 않는다.
+
+```bash
+vercel env ls preview
+```
 
 ## Do Not
 
@@ -113,6 +141,6 @@ Vercel Preview Deployment가 준비되면 다음을 수동으로 확인한다.
 
 ## Next Step
 
-다음 작업은 실제 Vercel project 연결 여부를 사용자가 결정하는 것이다.
+다음 작업은 Preview real mode 검수를 진행할지 사용자가 결정하는 것이다.
 
-그 전까지는 `npm run check:preview-env`와 문서 체크리스트만 사용한다.
+그 전까지는 `npm run check:preview-env`, `npm run check:ask-url -- https://ai-product-studio-psi.vercel.app/`, 문서 체크리스트만 사용한다.

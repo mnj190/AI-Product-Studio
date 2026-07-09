@@ -4,9 +4,9 @@
 
 Ask Real Mode Evaluation은 Ask About Me를 실제 LLM provider와 연결하기 전 통과해야 할 품질, 안전, 비용 기준이다.
 
-현재 프로젝트는 기본적으로 mock mode를 유지한다.
+현재 Production은 mock-only로 공개되어 있다.
 
-real mode는 API key가 있다는 이유만으로 켜지 않는다.
+real mode는 API key가 있다는 이유만으로 Production에 켜지 않는다.
 
 먼저 샘플 질문이 안전하게 처리되고, source 기반 답변 품질이 충분하며, 비용 제한이 준비되어야 한다.
 
@@ -65,4 +65,4 @@ Ask About Me는 공개 포트폴리오의 얼굴이 될 수 있다.
 
 즉, provider adapter와 rate limit gate는 준비되어 있지만 공개 real mode는 아직 켜지 않는다.
 
-다음 단계는 production persistent rate limit store를 선택하는 것이다.
+다음 단계는 Preview real mode 검수를 진행할지 결정하고, 진행한다면 Preview environment variable과 Upstash Redis를 준비하는 것이다.

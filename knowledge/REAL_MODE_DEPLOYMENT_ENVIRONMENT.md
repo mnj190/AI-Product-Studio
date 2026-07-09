@@ -71,8 +71,9 @@ RATE_LIMIT_STORE=memory
 
 Preview real mode를 켜기 전 다음을 완료한다.
 
-- GitHub repo와 Vercel project 연결
+- GitHub repo와 Vercel project 연결: 완료, `ai-vibe-project/ai-product-studio`
 - production branch가 `main`인지 확인
+- Production URL `https://ai-product-studio-psi.vercel.app/`가 mock mode smoke test를 통과했는지 확인
 - preview branch 생성
 - Preview environment variable에만 `ASK_API_MODE=real` 설정
 - Preview environment variable에만 `LLM_API_KEY` 설정
@@ -104,6 +105,8 @@ Production real mode로 가려면 다음이 추가로 필요하다.
 
 ## Current Recommendation
 
-배포 연결 전에는 `knowledge/VERCEL_PREVIEW_READINESS_CHECKLIST.md`와 `npm run check:preview-env`로 Preview readiness를 먼저 확인한다.
+Production은 mock-only로 배포 완료된 상태다.
 
-실제 Vercel project 연결과 secret 설정은 사용자의 명시적 결정 후 진행한다.
+Preview real mode를 진행하기 전에는 `knowledge/VERCEL_PREVIEW_READINESS_CHECKLIST.md`와 `npm run check:preview-env`로 readiness를 먼저 확인한다.
+
+Preview secret 설정, Upstash Redis 연결, real mode Preview 배포는 사용자의 명시적 결정 후 진행한다.

@@ -4,7 +4,9 @@
 
 ## Decision
 
-현재는 real mode를 켜지 않는다.
+Production에서는 real mode를 켜지 않는다.
+
+real mode는 Vercel Preview에서만 제한적으로 검수한다.
 
 먼저 `/ask/eval`에서 평가 기준과 샘플 질문을 관리한다.
 
@@ -121,6 +123,6 @@ provider 호출 전에 차단되어야 하는 질문이다.
 
 ## Current Recommendation
 
-당장은 mock mode를 유지한다.
+Production은 mock mode를 유지한다.
 
-다음 단계는 production persistent rate limit store를 결정하고, real mode를 제한적으로 켤 수 있는 배포 환경을 정하는 것이다.
+다음 단계는 Preview real mode 검수를 진행할지 결정하고, 진행한다면 Preview environment variable과 Upstash Redis를 준비하는 것이다.
