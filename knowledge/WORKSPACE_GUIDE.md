@@ -159,3 +159,5 @@ git status
 | `ROADMAP.md` | 전체 로드맵 |
 | `NEXT_ACTIONS.md` | 포트폴리오 사이트 다음 작업 |
 | `AI_WORK_RULES.md` | AI 작업 규칙 |
+| `CONTENT_STRUCTURE.md` | content/ Markdown 구조 규칙 |
+| `CODE_STRUCTURE.md` | app/components/lib 코드 파일 구조 규칙 |

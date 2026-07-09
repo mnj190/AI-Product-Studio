@@ -1044,3 +1044,17 @@
   - `/ask/eval`의 deployment gate와 Preview URL 샘플 기준에서 오래된 "Vercel 연결 전" 표현을 정리했다.
   - `vercel env ls preview` 결과 Preview environment variable은 아직 설정되어 있지 않음을 확인했다.
   - `npm run check:vercel`을 추가해 Vercel CLI 연결, env 목록, 공개 URL smoke test를 한 번에 확인할 수 있게 했다.
+
+## [2026-07-09] docs | Code Structure Guide
+
+- Source: workspace onboarding cleanup
+- Created:
+  - `knowledge/CODE_STRUCTURE.md`
+- Updated:
+  - `knowledge/WORKSPACE_GUIDE.md`
+  - `knowledge/NEXT_ACTIONS.md`
+  - `content/wiki/log.md`
+- Notes:
+  - `app/`, `components/`, `lib/`, `scripts/`에 코드를 배치하는 기준을 문서화했다.
+  - 콘텐츠 구조 문서와 겹치지 않도록 코드 파일 위치와 책임 경계만 다뤘다.
+  - Ask API route는 orchestration만 하고 실제 로직은 `lib/`에 둔다는 기준을 명시했다.
